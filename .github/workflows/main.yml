@@ -5,7 +5,20 @@ env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
   
 jobs:
+privateRepo:
+  name: Accessing private repos
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - uses: webfactory/ssh-agent@v0.5.2
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - uses: game-ci/unity-builder@v2
+      with:
+        sshAgent: ${{ env.SSH_AUTH_SOCK }}
+
   testRunner:
+  needs: privateRepo
     name: Test in ${{ matrix.testMode }}
     runs-on: ubuntu-latest
     strategy:
@@ -50,154 +63,34 @@ jobs:
           name: Coverage results for ${{ matrix.testMode }}
           path: ${{ steps.testRunner.outputs.coveragePath }}
 
-  buildWebGL:
+  buildForAllSupportedPlatforms:
     needs: testRunner
-    name: Build for WebGL
+    name: Build for ${{ matrix.targetPlatform }}
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
+      fail-fast: true
+      matrix:
+        targetPlatform:
+          - StandaloneWindows # Build a Windows standalone.
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
+          - StandaloneLinux64 # Build a Linux 64-bit standalone.
+          - WebGL # WebGL.
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Create LFS file list
-        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
-
-      - name: Restore LFS cache
-        uses: actions/cache@v2
-        id: lfs-cache
+      - uses: actions/checkout@v2
         with:
-          path: .git/lfs
-          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
-
-      - name: Git LFS Pull
-        run: |
-          git lfs pull
-          git add .
-          git reset --hard
-
-      - name: Restore Library cache
-        uses: actions/cache@v2
+          fetch-depth: 0
+          lfs: true
+      - uses: actions/cache@v2
         with:
           path: Library
-          key: Library-build-WebGL
-          restore-keys: |
-            Library-build-
-            Library-
-
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
       - uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
-          targetPlatform: WebGL
-
+          targetPlatform: ${{ matrix.targetPlatform }}
       - uses: actions/upload-artifact@v2
         with:
-          name: build-WebGL
-          path: build/WebGL
-
-  buildWindows:
-    needs: testRunner
-    name: Build for Windows
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Create LFS file list
-        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
-
-      - name: Restore LFS cache
-        uses: actions/cache@v2
-        id: lfs-cache
-        with:
-          path: .git/lfs
-          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
-
-      - name: Git LFS Pull
-        run: |
-          git lfs pull
-          git add .
-          git reset --hard
-
-      - name: Restore Library cache
-        uses: actions/cache@v2
-        with:
-          path: Library
-          key: Library-build-StandaloneWindows64
-          restore-keys: |
-            Library-build-
-            Library-
-
-      - uses: game-ci/unity-builder@v2
-        with:
-          targetPlatform: StandaloneWindows64
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: build-StandaloneWindows64
-          path: build/StandaloneWindows64
-
-  buildAndroid:
-    needs: testRunner
-    name: Build for Android
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Create LFS file list
-        run: git lfs ls-files -l | cut -d' ' -f1 | sort > .lfs-assets-id
-
-      - name: Restore LFS cache
-        uses: actions/cache@v2
-        id: lfs-cache
-        with:
-          path: .git/lfs
-          key: ${{ runner.os }}-lfs-${{ hashFiles('.lfs-assets-id') }}
-
-      - name: Git LFS Pull
-        run: |
-          git lfs pull
-          git add .
-          git reset --hard
-
-      - name: Restore Library cache
-        uses: actions/cache@v2
-        with:
-          path: Library
-          key: Library-build-Android
-          restore-keys: |
-            Library-build-
-            Library-
-
-      - uses: game-ci/unity-builder@v2
-        with:
-          targetPlatform: Android
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: build-Android
-          path: build/Android
-
-
-  deployPages:
-    needs: buildWebGL
-    name: Deploy to Github Pages
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - uses: actions/download-artifact@v2
-        with:
-          name: build-WebGL
-          path: build
-
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: build/WebGL
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
