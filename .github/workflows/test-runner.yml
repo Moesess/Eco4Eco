@@ -6,7 +6,7 @@ jobs:
     checkLicense:
         name: Check for the Unity License
         runs-on: ubuntu-latest
-        setps:
+        steps:
             - name: Fail - No license
             if: ${{ !startWith(env.UNITY_LICENSE, '<') }}
             run: exit 1
