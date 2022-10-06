@@ -22,7 +22,7 @@ jobs:
                 
       - name: Git LFS Pull
         run:
-                git lfs pull_request
+                git lfs pull
                 git add .
                 git reset --hard
             
