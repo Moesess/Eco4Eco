@@ -3,14 +3,6 @@ name: Game CI
 on: [push, pull_request]
 
 jobs:
-    checkLicense:
-        name: Check for the Unity License
-        runs-on: ubuntu-latest
-        steps:
-            - name: Fail - No license
-            if: ${{ !startWith(env.UNITY_LICENSE, '<') }}
-            run: exit 1
-            
     testRunner:
         name: Test all modes
         runs-on: ubuntu-latest
