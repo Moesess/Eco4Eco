@@ -1,7 +1,9 @@
 name: Test project
 
 on: [push, pull_request]
-
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+  
 jobs:
   testRunner:
     name: Test in ${{ matrix.testMode }}
@@ -29,8 +31,6 @@ jobs:
       - name: Run Tests
         uses: game-ci/unity-test-runner@v2
         id: testRunner
-        env:
-          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           projectPath: ${{ matrix.projectPath }}
           testMode: ${{ matrix.testMode }}
