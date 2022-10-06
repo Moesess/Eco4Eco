@@ -3,19 +3,25 @@ name: Test project
 on: [push, pull_request]
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-  
+  - name: Create .upmconfig.toml UPM authentication file
+  run: |
+    mkdir /home/runner/work/_temp/_github_home
+    cd /home/runner/work/_temp/_github_home
+    echo "[npmAuth.\"https://upm.example.com\"]" >> .upmconfig.toml
+    echo "alwaysAuth = true" >> .upmconfig.toml
+    echo "token = \"${{ secrets.NPM_TOKEN }}\"" >> .upmconfig.toml
 jobs:
-privateRepo:
-  name: Accessing private repos
-  runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v2
-    - uses: webfactory/ssh-agent@v0.5.2
-      with:
-        ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - uses: game-ci/unity-builder@v2
-      with:
-        sshAgent: ${{ env.SSH_AUTH_SOCK }}
+  privateRepo:
+    name: Accessing private repos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: webfactory/ssh-agent@v0.5.2
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+      - uses: game-ci/unity-builder@v2
+        with:
+          sshAgent: ${{ env.SSH_AUTH_SOCK }}
 
   testRunner:
   needs: privateRepo
