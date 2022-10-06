@@ -1,12 +1,18 @@
 name: GameCI Template
 
 on: [push, pull_request]
-
 env:
   UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
 
 jobs:
   testRunner:
+  - uses: game-ci/unity-test-runner@v2
+    env:
+      UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+    with:
+      projectPath: path/to/your/project
+      githubToken: ${{ secrets.GITHUB_TOKEN }}
+  
     name: Test in ${{ matrix.testMode }}
     runs-on: ubuntu-latest
     strategy:
