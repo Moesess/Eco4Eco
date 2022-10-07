@@ -76,13 +76,13 @@ jobs:
           - StandaloneLinux64 # Build a Linux 64-bit standalone.
           - WebGL # WebGL.
     steps:
-      - name: Create .upmconfig.toml UPM authentication file
-        run: |
-          mkdir /home/runner/work/_temp/_github_home
-          cd /home/runner/work/_temp/_github_home
-          echo "[npmAuth.\"https://upm.example.com\"]" >> .upmconfig.toml
-          echo "alwaysAuth = true" >> .upmconfig.toml
-          echo "token = \"${{ secrets.NPM_TOKEN }}\"" >> .upmconfig.toml
+      # - name: Create .upmconfig.toml UPM authentication file
+      #   run: |
+      #     mkdir /home/runner/work/_temp/_github_home
+      #     cd /home/runner/work/_temp/_github_home
+      #     echo "[npmAuth.\"https://upm.example.com\"]" >> .upmconfig.toml
+      #     echo "alwaysAuth = true" >> .upmconfig.toml
+      #     echo "token = \"${{ secrets.NPM_TOKEN }}\"" >> .upmconfig.toml
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
