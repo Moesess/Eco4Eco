@@ -38,6 +38,11 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: ${{ matrix.testMode }} Test Results
           coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
+      
+      - name: Run tests
+        uses: MirageNet/unity-runner@3.1.0
+        with:
+          args: -runTests -projectPath ${{ matrix.projectPath }}
           
       - uses: actions/upload-artifact@v2
         if: always()
