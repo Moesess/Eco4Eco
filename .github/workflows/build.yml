@@ -1,0 +1,43 @@
+name: Build Project
+on: [push, pull_request]
+env:
+  UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+jobs:
+  buildForAllSupportedPlatforms:
+    needs: testRunner
+    name: Build for ${{ matrix.targetPlatform }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        targetPlatform:
+          - StandaloneWindows # Build a Windows standalone.
+          - StandaloneWindows64 # Build a Windows 64-bit standalone.
+          - StandaloneLinux64 # Build a Linux 64-bit standalone.
+          - WebGL # WebGL.
+    steps:
+      # - name: Create .upmconfig.toml UPM authentication file
+      #   run: |
+      #     mkdir /home/runner/work/_temp/_github_home
+      #     cd /home/runner/work/_temp/_github_home
+      #     echo "[npmAuth.\"https://upm.example.com\"]" >> .upmconfig.toml
+      #     echo "alwaysAuth = true" >> .upmconfig.toml
+      #     echo "token = \"${{ secrets.NPM_TOKEN }}\"" >> .upmconfig.toml
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+          lfs: true
+      - uses: actions/cache@v2
+        with:
+          path: Library
+          key: Library-${{ matrix.targetPlatform }}
+          restore-keys: Library-
+      - uses: game-ci/unity-builder@v2
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+        with:
+          targetPlatform: ${{ matrix.targetPlatform }}
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Build-${{ matrix.targetPlatform }}
+          path: build/${{ matrix.targetPlatform }}
