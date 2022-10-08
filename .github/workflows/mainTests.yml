@@ -39,7 +39,12 @@ jobs:
           checkName: ${{ matrix.testMode }} Test Results
           coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
       
-      - name: Run tests
+      - name: Activate license
+        uses: MirageNet/unity-runner@3.1.0
+        with:
+          entrypoint: /activate.sh
+      
+      - name: Run sonar tests
         uses: MirageNet/unity-runner@3.1.0
         with:
           args: -runTests -projectPath ${{ matrix.projectPath }}
