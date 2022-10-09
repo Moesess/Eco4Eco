@@ -39,16 +39,19 @@ jobs:
           checkName: ${{ matrix.testMode }} Test Results
           coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
       
-      - name: Activate license
-        uses: MirageNet/unity-runner@3.1.0
+      - name: Sonarscanner for dotnet
+        uses: Secbyte/dotnet-sonarscanner@v1.2
         with:
-          entrypoint: /activate.sh
-      
-      - name: Run sonar tests
-        uses: MirageNet/unity-runner@3.1.0
-        with:
-          args: -runTests -projectPath ${{ matrix.projectPath }}
-          
+          buildCommand: dotnet build .
+          testCommand: dotnet test .
+          projectKey: a-project-key
+          projectName: a-project-name
+          sonarOrganisation: an-org
+          beginArguments: /d:sonar.verbose="true" /d:sonar.cs.opencover.reportsPaths="/path/to/coverage.xml" /d:sonar.coverage.exclusions="**/*.cs"
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+    
       - uses: actions/upload-artifact@v2
         if: always()
         with:
