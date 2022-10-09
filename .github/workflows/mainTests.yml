@@ -38,18 +38,6 @@ jobs:
           githubToken: ${{ secrets.GITHUB_TOKEN }}
           checkName: ${{ matrix.testMode }} Test Results
           coverageOptions: 'generateAdditionalMetrics;generateHtmlReport;generateBadgeReport;assemblyFilters:+my.assembly.*'
-      
-      - name: Sonarscanner for dotnet
-        uses: Secbyte/dotnet-sonarscanner@v1.2
-        with:
-          buildCommand: dotnet build .
-          testCommand: dotnet test .
-          projectKey: a-project-key
-          sonarOrganisation: moesess
-          beginArguments: /d:sonar.verbose="true" /d:sonar.cs.opencover.reportsPaths="/path/to/coverage.xml" /d:sonar.coverage.exclusions="**/*.cs"
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
     
       - uses: actions/upload-artifact@v2
         if: always()
@@ -61,3 +49,4 @@ jobs:
         with:
           name: Coverage results for ${{ matrix.testMode }}
           path: ${{ steps.testRunner.outputs.coveragePath }}
+         
