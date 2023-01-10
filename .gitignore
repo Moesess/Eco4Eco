@@ -471,3 +471,5 @@ FodyWeavers.xsd
 *.sln.iml
 
 *.dwlt
+
+/UserSettings
