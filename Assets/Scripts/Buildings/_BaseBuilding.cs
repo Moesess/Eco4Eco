@@ -1,3 +1,5 @@
+/// Klasa podstawowa budynku, kazdy budynek musi dziedziczyc po niej
+
 using UnityEngine;
 
 namespace EcoGameCore

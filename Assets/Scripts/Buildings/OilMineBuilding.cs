@@ -1,9 +1,12 @@
-using EcoGameCore;
+using UnityEngine;
 
-namespace Buildings
+namespace EcoGameCore
 {
-    public class OilMineBuilding : _BaseBuilding
+    namespace Buildings
     {
-        
+        public class OilMineBuilding : _BaseBuilding
+        {
+            
+        }
     }
 }

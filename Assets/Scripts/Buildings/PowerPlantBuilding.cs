@@ -1,9 +1,10 @@
-using EcoGameCore;
-
-namespace Buildings
+namespace EcoGameCore
 {
-    public class PowerPlantBuilding : _BaseBuilding
+    namespace Buildings
     {
-        
+        public class PowerPlantBuilding : _BaseBuilding
+        {
+
+        }
     }
 }
