@@ -472,4 +472,4 @@ FodyWeavers.xsd
 
 *.dwlt
 
-/UserSettings
+UserSettings/
