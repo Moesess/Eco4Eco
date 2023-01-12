@@ -37,6 +37,11 @@ namespace EcoGameCore
             get { return this.sName; }
             set { this.sName = value; }
         }
+        public int Pollution
+        {
+            get { return this.iPollution; }
+            set { this.iPollution = value; }
+        }
 
         // To chyba niepotrzebne
         //public Resource Resource
