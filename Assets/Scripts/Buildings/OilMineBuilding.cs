@@ -6,7 +6,10 @@ namespace EcoGameCore
     {
         public class OilMineBuilding : _BaseBuilding
         {
-            
+            public OilMineBuilding()
+            {
+                
+            }
         }
     }
 }
