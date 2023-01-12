@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace EcoGameCore
+namespace EcoGame
 {
     using Resources;
     using System.Collections.Generic;

@@ -2,11 +2,13 @@
 
 using UnityEngine;
 
-namespace EcoGameCore
+namespace EcoGame
 {
     public abstract class _BaseBuilding : MonoBehaviour, IBuilding
     {
-        private int iCost; // Koszt budowy, trzeba wymyslic wzor, cos w stylu -- baseCost * (1 + iLevel)^2 * (1 + poziomTech?)^2
+        private int iBaseCost; // Podstawowy koszt
+        private int iTechLevel; // Poziom technologiczny budynku, budynki podzieli³bym na kategorie technologiczne, kolejne poziomy sa wydajniejsze ale jednoczesnie drozsze
+        private int iCost; // Koszt budowy
         private int iLevel; // Poziom budynku
         private int iAmount; // Iloœæ posiadanych budynkow - technicznie mnoznik
         private int iProduction; // Produkcja surowca Resource(odpowiedni surowiec)
@@ -44,21 +46,42 @@ namespace EcoGameCore
             get { return this.iPollution; }
             set { this.iPollution = value; }
         }
+        public int TechLevel
+        {
+            get { return this.iTechLevel; }
+            set { this.iTechLevel = value; }
+        }
+        public int BaseCost
+        {
+            get { return this.iBaseCost; }
+            set { this.iBaseCost = value; }
+        }
+
         public _BaseBuilding()
         {
             this.Cost = 0;
             this.Level = 0;
             this.Production = 0;
+            this.TechLevel = 0;
+            this.BaseCost = 0;
+            this.Amount = 0;
             this.Name = "";
             this.Pollution = 0;
         }
 
-        // Metody
+        // Abstracts
         public abstract void Tick();
+        
+        public abstract void RecalculateCost(); 
 
+        public abstract void RecalculateProduction(); 
+
+        // Methods
         public void IncreaseLevel()
         {
             this.iLevel++;
+            RecalculateCost();
+            RecalculateProduction();
         }
 
         public void SetCost(int _iVal)
@@ -69,11 +92,15 @@ namespace EcoGameCore
         public void IncreaseAmount(int _iVal)
         {
             this.iAmount += _iVal;
+            RecalculateCost();
+            RecalculateProduction();
         }
 
         public void IncreaseAmount()
         {
             this.iAmount++;
+            RecalculateCost();
+            RecalculateProduction();
         }
     }
 }

@@ -1,4 +1,4 @@
-namespace EcoGameCore
+namespace EcoGame
 {
     namespace Buildings
     {
