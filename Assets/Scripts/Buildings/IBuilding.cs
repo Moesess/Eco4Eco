@@ -8,5 +8,9 @@ namespace EcoGameCore
         int Pollution { get; set; }
         string Name { get; set; }
         void Tick();
+        void IncreaseLevel();
+        void SetCost(int _iVal);
+        void IncreaseAmount(int _iVal);
+        void IncreaseAmount();
     }
 }

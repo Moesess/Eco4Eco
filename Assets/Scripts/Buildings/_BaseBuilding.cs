@@ -6,7 +6,7 @@ namespace EcoGameCore
 {
     public abstract class _BaseBuilding : MonoBehaviour, IBuilding
     {
-        private int iCost; // Koszt budowy
+        private int iCost; // Koszt budowy, trzeba wymyslic wzor, cos w stylu -- baseCost * (1 + iLevel)^2 * (1 + poziomTech?)^2
         private int iLevel; // Poziom budynku
         private int iAmount; // Iloœæ posiadanych budynkow - technicznie mnoznik
         private int iProduction; // Produkcja surowca Resource(odpowiedni surowiec)
@@ -47,13 +47,33 @@ namespace EcoGameCore
         public _BaseBuilding()
         {
             this.Cost = 0;
-            Level = 0;
-            Production = 0;
-            Name = "";
-            Pollution = 0;
+            this.Level = 0;
+            this.Production = 0;
+            this.Name = "";
+            this.Pollution = 0;
         }
 
         // Metody
         public abstract void Tick();
+
+        public void IncreaseLevel()
+        {
+            this.iLevel++;
+        }
+
+        public void SetCost(int _iVal)
+        {
+            this.iCost = _iVal;
+        }
+
+        public void IncreaseAmount(int _iVal)
+        {
+            this.iAmount += _iVal;
+        }
+
+        public void IncreaseAmount()
+        {
+            this.iAmount++;
+        }
     }
 }
