@@ -1,11 +1,21 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace EcoGameCore
 {
-    public static GameManager Instance;
-
-    private void Awake()
+    using Buildings;
+    public class GameManager : MonoBehaviour
     {
-        Instance = this;
+        public static GameManager Instance;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
+
+        private void Update()
+        {
+            Debug.Log(ResourceManager.Instance.Oil.sName + ResourceManager.Instance.Oil.iAmount);
+            Debug.Log(BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Level);
+        }
     }
 }

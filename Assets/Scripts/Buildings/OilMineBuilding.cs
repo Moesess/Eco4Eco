@@ -8,7 +8,7 @@ namespace EcoGameCore
         {
             public OilMineBuilding()
             {
-                
+
             }
         }
     }

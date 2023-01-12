@@ -5,31 +5,38 @@ namespace EcoGameCore
 {
     public class Resource
     {
-        public string sName // Nazwa surowca
-        { 
-            get { return this.sName; }
-            set { this.sName = value; }
-        }
-        public int iAmount // Ilosc surowca
-        { 
-            get { return this.iAmount; }
-            set { this.iAmount = value; }
-        }
+        public string sName; // Nazwa surowca
+        public int iAmount; // Ilosc surowca
 
 // Konstruktory ============================================================
+
+        public Resource()
+        {
+            this.sName = "";
+            this.iAmount = 0;
+        }
         public Resource(int _iVal)
         {
             this.sName = "";
             this.iAmount = _iVal;
         }
-
+        public Resource(string _sName)
+        {
+            this.sName = _sName;
+            this.iAmount = 0;
+        }
         public Resource(string _sName, int _iVal)
         {
             this.sName = _sName;
             this.iAmount = _iVal;
         }
+        public Resource(Resource _Res)
+        {
+            this.sName = _Res.sName;
+            this.iAmount = _Res.iAmount;
+        }
 
-// Operatory ===============================================================
+        // Operatory ===============================================================
         public static Resource operator +(Resource _Res1, Resource _Res2)
         {
             if (_Res1.sName == _Res2.sName)

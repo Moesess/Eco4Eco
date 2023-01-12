@@ -8,13 +8,10 @@ namespace EcoGameCore
     {
         private int iCost; // Koszt budowy
         private int iLevel; // Poziom budynku
+        private int iAmount; // Iloœæ posiadanych budynkow - technicznie mnoznik
         private int iProduction; // Produkcja surowca Resource(odpowiedni surowiec)
         private int iPollution; // Produkcja surowca Pollution
         private string sName; // Nazwa budynku
-
-        // Chyba jednak to nie potrzebne?
-        //private Resource pol; // Zanieczyszczenia
-        //private Resource res; // Surowiec ktory produkuje budynek 
 
         // Gettery settery
         public int Cost
@@ -26,6 +23,11 @@ namespace EcoGameCore
         {
             get { return this.iLevel; }
             set { this.iLevel = value; }
+        }
+        public int Amount
+        {
+            get { return this.iAmount; }
+            set { this.iAmount = value; }
         }
         public int Production
         {
@@ -42,19 +44,14 @@ namespace EcoGameCore
             get { return this.iPollution; }
             set { this.iPollution = value; }
         }
-
-        // To chyba niepotrzebne
-        //public Resource Resource
-        //{
-        //    get { return this.res; }
-        //    set { this.res = value; }
-        //}
-        //public Resource Pollution
-        //{
-        //    get { return this.pol; }
-        //    set { this.pol = value; }
-        //}
-
+        public _BaseBuilding()
+        {
+            this.Cost = 0;
+            Level = 0;
+            Production = 0;
+            Name = "";
+            Pollution = 0;
+        }
         // Metody
     }
 }

@@ -2,73 +2,77 @@ using UnityEngine;
 
 namespace EcoGameCore
 {
+    using Resources;
+    using System.Collections.Generic;
+
     public class ResourceManager : MonoBehaviour
     {
         public static ResourceManager Instance;
+        public Dictionary<string, Resource> Resources = new();
 
-        private Resource Power // Energia
+        public Resource Power // Energia
         {
-            get { return Power; }
-            set { this.Power = value; }
+            get { return Resources[ResourcesConsts.RESOURCE_POWER]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_POWER] = value; }
         }
-        private Resource Budget // Budzet
+        public Resource Budget // Budzet
         {
-            get { return Power; }
-            set { this.Power = value; }
+            get { return Resources[ResourcesConsts.RESOURCE_BUDGET]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_BUDGET] = value; }
         }
-        private Resource Trash // Smieci
+        public Resource Trash // Smieci
         {
-            get { return Power; }
-            set { this.Power = value; }
+            get { return Resources[ResourcesConsts.RESOURCE_TRASH]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_TRASH] = value; }
         }
-        private Resource Food // Zywnosc
+        public Resource Food // Zywnosc
         {
-            get { return Power; }
-            set { this.Power = value; }
+            get { return Resources[ResourcesConsts.RESOURCE_FOOD]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_FOOD] = value; }
         }
-        private Resource Goods // Towary konsumpcyjne
+        public Resource Goods // Towary konsumpcyjne
         {
-            get { return Power; }
-            set { this.Power = value; }
+            get { return Resources[ResourcesConsts.RESOURCE_GOODS]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_GOODS] = value; }
         }
-        private Resource Oil // Ropa naftowa
+        public Resource Oil // Ropa naftowa
         {
-            get { return Oil; }
-            set { this.Oil = value; }
+            get { return Resources[ResourcesConsts.RESOURCE_OIL]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_OIL] = value; }
         }
-        private Resource Coal // Wegiel
+        public Resource Coal // Wegiel
         {
-            get { return Coal; }
-            set { this.Coal = value; }
-        }  
-        private Resource Gas // Gaz ziemny
-        {
-            get { return Gas; }
-            set { this.Gas = value; }
+            get { return Resources[ResourcesConsts.RESOURCE_COAL]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_COAL] = value; }
         }
-        private Resource Pollution // Gaz ziemny
+        public Resource Gas // Gaz ziemny
         {
-            get { return Pollution; }
-            set { this.Pollution = value; }
+            get { return Resources[ResourcesConsts.RESOURCE_GAS]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_GAS] = value; }
+        }
+        public Resource Pollution // Gaz ziemny
+        {
+            get { return Resources[ResourcesConsts.RESOURCE_POLLUTION]; }
+            set { this.Resources[ResourcesConsts.RESOURCE_POLLUTION] = value; }
         }
 
         private void Awake()
         {
             // Set instance on scene awake
             if (Instance == null)
+            {
                 Instance = this;
+                Resources.Add(ResourcesConsts.RESOURCE_POWER, new Resource("Pr¹d", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_BUDGET, new Resource("Bud¿et", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_TRASH, new Resource("Œmieci", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_FOOD, new Resource("¯ywnoœæ", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_GOODS, new Resource("Towary konsumpcyjne", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_OIL, new Resource("Ropa naftowa", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_COAL, new Resource("Wêgiel", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_GAS, new Resource("Gaz ziemny", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
+            }
         }
-
-        /// Metody odpowiadajace za pozyskiwanie aktualnego stanu zasobu
-        public int GetPowerVal() { return this.Power.iAmount; }
-        public int GetBudgetVal() { return this.Budget.iAmount; }
-        public int GetTrashVal() { return this.Trash.iAmount; }
-        public int GetFoodVal() { return this.Food.iAmount; }
-        public int GetGoodsVal() { return this.Goods.iAmount; }
-        public int GetOilVal() { return this.Oil.iAmount; }
-        public int GetCoalVal() { return this.Coal.iAmount; }
-        public int GetGasVal() { return this.Gas.iAmount; }
-        public int GetPollutionVal() { return this.Pollution.iAmount; }
 
         /// Metody odpowiadajace za ustawienie aktualnego stanu zasobu
         public void SetPowerVal(int _iVal) { this.Power = new Resource(_iVal); }
