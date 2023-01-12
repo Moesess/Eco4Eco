@@ -107,5 +107,16 @@ namespace EcoGameCore
         {
             return HashCode.Combine(sName, iAmount);
         }
+
+        // Metody
+        void Add(int _iVal)
+        {
+            this.iAmount += _iVal; 
+
+            if(this.iAmount < 0)
+            {
+                this.iAmount = 0;
+            }
+        }
     }
 }

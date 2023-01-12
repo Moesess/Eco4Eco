@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace EcoGameCore
 {
-    public class _BaseBuilding : MonoBehaviour, IBuilding
+    public abstract class _BaseBuilding : MonoBehaviour, IBuilding
     {
         private int iCost; // Koszt budowy
         private int iLevel; // Poziom budynku
@@ -52,6 +52,8 @@ namespace EcoGameCore
             Name = "";
             Pollution = 0;
         }
+
         // Metody
+        public abstract void Tick();
     }
 }

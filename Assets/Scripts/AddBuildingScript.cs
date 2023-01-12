@@ -11,7 +11,7 @@ namespace EcoGameCore
 
 		public void ClickTheButton()
 		{
-			ResourceManager.Instance.AddPower(1);
+			//ResourceManager.Instance.AddPower(1);
 		}
 	}
 }

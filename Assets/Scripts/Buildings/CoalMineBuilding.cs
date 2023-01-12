@@ -4,7 +4,10 @@ namespace EcoGameCore
     {
         public class CoalMineBuilding : _BaseBuilding
         {
-            
+            public override void Tick()
+            {
+                throw new System.NotImplementedException();
+            }
         }
     }
 }
