@@ -73,16 +73,5 @@ namespace EcoGameCore
                 Resources.Add(ResourcesConsts.RESOURCE_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
             }
         }
-
-        /// Metody odpowiadajace za ustawienie aktualnego stanu zasobu
-        public void SetPowerVal(int _iVal) { this.Power = new Resource(_iVal); }
-        public void SetBudgetVal(int _iVal) { this.Budget = new Resource(_iVal); }
-        public void SetTrashVal(int _iVal) { this.Trash = new Resource(_iVal); }
-        public void SetFoodVal(int _iVal) { this.Food = new Resource(_iVal); }
-        public void SetGoodsVal(int _iVal) { this.Goods = new Resource(_iVal); }
-        public void SetOilVal(int _iVal) { this.Oil = new Resource(_iVal); }
-        public void SetCoalVal(int _iVal) { this.Coal = new Resource(_iVal); }
-        public void SetGasVal(int _iVal) { this.Gas = new Resource(_iVal); }
-        public void SetPollutionVal(int _iVal) { this.Pollution = new Resource(_iVal); }
     }
 }

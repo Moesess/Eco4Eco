@@ -14,7 +14,7 @@ namespace EcoGameCore
 
             public override void Tick()
             {
-                ResourceManager.Instance.Resources[Resources.ResourcesConsts.RESOURCE_OIL] += 100;
+                ResourceManager.Instance.Resources[Resources.ResourcesConsts.RESOURCE_OIL].Add(100);
             }
         }
     }

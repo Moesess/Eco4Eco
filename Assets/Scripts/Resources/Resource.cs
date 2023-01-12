@@ -50,6 +50,19 @@ namespace EcoGameCore
             return new Resource(_Res1.sName, _Res1.iAmount + _iRes2);
         }
 
+        public static Resource operator -(Resource _Res1, Resource _Res2)
+        {
+            if (_Res1.sName == _Res2.sName)
+                return new Resource(_Res1.sName, _Res1.iAmount - _Res2.iAmount);
+            else
+                throw new Exception("Invalid resource type exception");
+        }
+
+        public static Resource operator -(Resource _Res1, int _iRes2)
+        {
+            return new Resource(_Res1.sName, _Res1.iAmount - _iRes2);
+        }
+
         public static bool operator <(Resource _Res1, int _iRes2)
         {
             return (_Res1.iAmount < _iRes2);
@@ -109,7 +122,7 @@ namespace EcoGameCore
         }
 
         // Metody
-        void Add(int _iVal)
+        public void Add(int _iVal)
         {
             this.iAmount += _iVal; 
 
@@ -117,6 +130,14 @@ namespace EcoGameCore
             {
                 this.iAmount = 0;
             }
+        }
+
+        public void SetValue(int _iVal)
+        {
+            if(_iVal < 0)
+                this.iAmount = 0;
+            else
+                this.iAmount = _iVal;
         }
     }
 }
