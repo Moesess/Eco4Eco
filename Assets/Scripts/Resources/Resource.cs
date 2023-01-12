@@ -5,16 +5,17 @@ namespace EcoGameCore
 {
     public class Resource
     {
-        string sName
-        { // Nazwa surowca
+        string sName // Nazwa surowca
+        { 
             get { return this.sName; }
             set { this.sName = value; }
         }
-        int iAmount
-        { // Ilosc surowca
+        int iAmount // Ilosc surowca
+        { 
             get { return this.iAmount; }
             set { this.iAmount = value; }
         }
+
 // Konstruktory ============================================================
         public Resource(int _iVal)
         {
