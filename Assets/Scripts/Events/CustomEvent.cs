@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Assets.Scripts.Events
+namespace EcoGame
 {
 	internal class CustomEvent
 	{
@@ -25,6 +25,23 @@ namespace Assets.Scripts.Events
 		public int GasMineCoefficientDifference { get; set; }
 
 
-		public CustomEvent() { }
+		public CustomEvent()
+		{
+			this.Id = 0;
+			this.Title = "Template Title";
+			this.Description = "Template Description";
+			this.PowerDifference = 0;
+			this.BudgetDifference = 0;
+			this.TrashDifference = 0;
+			this.FoodDifference = 0;
+			this.GoodsDifference = 0;
+			this.OilDifference = 0;
+			this.CoalDifference = 0;
+			this.GasDifference = 0;
+			this.PollutionDifference = 0;
+			this.OilMineCoefficientDifference = 0;
+			this.CoalmineCoefficientDifference = 0;
+			this.GasMineCoefficientDifference = 0;
+		}
 	}
 }
