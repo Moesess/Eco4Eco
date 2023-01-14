@@ -1,9 +1,9 @@
-using EcoGameCore;
-using EcoGameCore.Buildings;
+using EcoGame;
+using EcoGame.Buildings;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace EcoGameCore
+namespace EcoGame
 {
     public class BuildingManager : MonoBehaviour
     {

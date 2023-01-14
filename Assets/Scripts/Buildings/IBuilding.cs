@@ -1,7 +1,9 @@
-namespace EcoGameCore
+namespace EcoGame
 {
     public interface IBuilding {
+        int BaseCost { get; set; }
         int Cost { get; set; }
+        int TechLevel { get; set; }
         int Level { get; set; }
         int Amount { get; set; }
         int Production { get; set; }

@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace EcoGameCore
+namespace EcoGame
 {
     public class Resource
     {

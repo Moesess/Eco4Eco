@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EcoGameCore
+namespace EcoGame
 {
 	using static ResourceManager;
 	public class AddBuildingScript : MonoBehaviour
