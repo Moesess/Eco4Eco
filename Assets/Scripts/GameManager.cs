@@ -19,10 +19,10 @@ namespace EcoGame
 
         private void Update()
         {
-            Debug.Log(ResourceManager.Instance.Oil.sName + ResourceManager.Instance.Oil.iAmount);
-            Debug.Log(ResourceManager.Instance.Coal.sName + ResourceManager.Instance.Coal.iAmount);
-            Debug.Log(ResourceManager.Instance.Power.sName + ResourceManager.Instance.Power.iAmount);
-            Debug.Log(ResourceManager.Instance.Gas.sName + ResourceManager.Instance.Gas.iAmount);
+            //Debug.Log(ResourceManager.Instance.Oil.sName + ResourceManager.Instance.Oil.iAmount);
+            //Debug.Log(ResourceManager.Instance.Coal.sName + ResourceManager.Instance.Coal.iAmount);
+            //Debug.Log(ResourceManager.Instance.Power.sName + ResourceManager.Instance.Power.iAmount);
+            //Debug.Log(ResourceManager.Instance.Gas.sName + ResourceManager.Instance.Gas.iAmount);
         }
 
         // Metoda wywoluje tick we wszystkich budynkach
