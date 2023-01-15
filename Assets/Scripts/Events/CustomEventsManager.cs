@@ -50,7 +50,6 @@ namespace EcoGame
 			CustomEvent drawnEvent = new CustomEvent();
 			GameObject eventPanel = PrefabUtility.InstantiatePrefab(tempEventPanel) as GameObject;
 			eventPanel.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
-			eventPanel.transform.localPosition = new Vector3(-600, -350, 0);
 			TMP_Text title = GameObject.Find("Event Panel/Text Group/Title").GetComponent<TMP_Text>();
 			TMP_Text description = GameObject.Find("Event Panel/Text Group/Description").GetComponent<TMP_Text>();
 			Button yesButton = GameObject.Find("Event Panel/Button Group/Yes Button").GetComponent<Button>();
