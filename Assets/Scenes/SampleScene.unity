@@ -548,6 +548,7 @@ GameObject:
   - component: {fileID: 160604632}
   - component: {fileID: 160604631}
   - component: {fileID: 160604633}
+  - component: {fileID: 160604634}
   m_Layer: 0
   m_Name: UpperBar
   m_TagString: Untagged
@@ -639,9 +640,21 @@ MonoBehaviour:
   m_StartCorner: 0
   m_StartAxis: 1
   m_CellSize: {x: 385, y: 72}
-  m_Spacing: {x: 0, y: 0}
+  m_Spacing: {x: 0, y: -0.42}
   m_Constraint: 0
   m_ConstraintCount: 2
+--- !u!114 &160604634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160604629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27041eb6c70cfb54989ddd637bfffa7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &162317553 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1175587417355436431, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
@@ -2617,7 +2630,7 @@ PrefabInstance:
       objectReference: {fileID: -7965072538430801676, guid: 8a498846b4c2b474392ddb484993199b, type: 2}
     - target: {fileID: 2311111149304359778, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: m_Name
-      value: Energy
+      value: Power
       objectReference: {fileID: 0}
     - target: {fileID: 8501096372712162058, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: m_text
