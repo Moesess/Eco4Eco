@@ -29,7 +29,7 @@ namespace EcoGame
 		{
 			this.Id = 0;
 			this.Title = "Template Title";
-			this.Description = "Template Description";
+			this.Description = "Template description";
 			this.PowerDifference = 0;
 			this.BudgetDifference = 0;
 			this.TrashDifference = 0;

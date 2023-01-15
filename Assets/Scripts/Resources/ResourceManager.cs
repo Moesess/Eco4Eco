@@ -50,7 +50,7 @@ namespace EcoGame
             get { return Resources[ResourcesConsts.RESOURCE_GAS]; }
             set { this.Resources[ResourcesConsts.RESOURCE_GAS] = value; }
         }
-        public Resource Pollution // Gaz ziemny
+        public Resource Pollution // Œmieci
         {
             get { return Resources[ResourcesConsts.RESOURCE_POLLUTION]; }
             set { this.Resources[ResourcesConsts.RESOURCE_POLLUTION] = value; }
