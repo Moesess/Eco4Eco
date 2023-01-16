@@ -15,6 +15,9 @@ namespace EcoGame
         private string sName; // Nazwa budynku
         private string spanelName; // Nazwa panelu, w jakim budynek ma siê wyœwietlaæ
 
+        public delegate void OnIAmountChangeDelegate(int newAmount);
+        public event OnIAmountChangeDelegate OnIAmountChange;
+
         // Gettery settery
         public int Cost
         {
@@ -24,7 +27,11 @@ namespace EcoGame
         public int Amount
         {
             get { return this.iAmount; }
-            set { this.iAmount = value; }
+            set 
+            { 
+                this.iAmount = value;
+                if (OnIAmountChange != null) OnIAmountChange(iAmount);
+            }
         }
         public int Production
         {

@@ -1,10 +1,9 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace EcoGame
 {
-    using EcoGame.Buildings;
-
     public class BuildingInstance : MonoBehaviour
     {
         [SerializeField] public GameObject BuildingName;
@@ -15,6 +14,7 @@ namespace EcoGame
         [SerializeField] public AudioSource Click;
         public int iBuildCost;
         public int iBuildAmount;
+        public string sBuildName;
 
         private void Awake()
         {
@@ -26,7 +26,7 @@ namespace EcoGame
         // Start is called before the first frame update
         void Start()
         {
-
+            BuildingManager.Instance.Buildings[sBuildName].OnIAmountChange += OnAmountChange;
         }
 
         // Update is called once per frame
@@ -53,7 +53,7 @@ namespace EcoGame
         {
             if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost)
             {
-                BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount += 1;
+                BuildingManager.Instance.Buildings[sBuildName].Amount += 1;
                 ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
                 Click.Play();
             }
@@ -63,10 +63,18 @@ namespace EcoGame
         {
             if (iBuildAmount >= 1)
             {
-                BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount -= 1;
+                BuildingManager.Instance.Buildings[sBuildName].Amount -= 1;
                 ResourceManager.Instance.Budget.Amount += this.iBuildCost;
                 Click.Play();
             }
+        }
+
+        void OnAmountChange(int _iVal)
+        {
+            this.AmountText.GetComponent<TMP_Text>().text = _iVal.ToString();
+            BuildingManager.Instance.Buildings[sBuildName].RecalculateCost();
+            BuildingManager.Instance.Buildings[sBuildName].RecalculateProduction();
+            this.GenerateText.GetComponent<TMP_Text>().text = BuildingManager.Instance.Buildings[sBuildName].Production.ToString() + "/s";
         }
     }
 

@@ -2,6 +2,7 @@ using EcoGame;
 using EcoGame.Buildings;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -47,6 +48,7 @@ namespace EcoGame
                 buildingInstance.GenerateText.GetComponent<TMP_Text>().text = _Build.Production.ToString() + "/s";
                 buildingInstance.iBuildAmount = _Build.Amount;
                 buildingInstance.iBuildCost = _Build.Cost;
+                buildingInstance.sBuildName = this.Buildings.FirstOrDefault(x => x.Value.Equals(_Build)).Key;
 
                 GameObject _Building = PrefabUtility.InstantiatePrefab(BuildingPrefab) as GameObject;
                 _Building.transform.SetParent(GameObject.Find("UI/Canvas/"+_Build.PanelName).transform, false);
