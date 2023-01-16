@@ -542,6 +542,7 @@ GameObject:
   - component: {fileID: 7447687761597096693}
   - component: {fileID: 7447687761597096690}
   - component: {fileID: 7447687761597096691}
+  - component: {fileID: 1390534490762300677}
   m_Layer: 0
   m_Name: Yes Button
   m_TagString: Untagged
@@ -652,18 +653,30 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1390534490762300677}
+        m_TargetAssemblyTypeName: EcoGame.PlayButton, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1390534490762300677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7447687761597096689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8211e226cad8e484eb067050424cf608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7447687761680577248
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +689,7 @@ GameObject:
   - component: {fileID: 7447687761680577252}
   - component: {fileID: 7447687761680577253}
   - component: {fileID: 7447687761680577250}
+  - component: {fileID: 6674121785454725209}
   m_Layer: 0
   m_Name: No Button
   m_TagString: Untagged
@@ -785,7 +799,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7447687761680577253}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6674121785454725209}
+        m_TargetAssemblyTypeName: EcoGame.PlayButton, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &6674121785454725209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7447687761680577248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8211e226cad8e484eb067050424cf608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7447687762296008390
 GameObject:
   m_ObjectHideFlags: 0
