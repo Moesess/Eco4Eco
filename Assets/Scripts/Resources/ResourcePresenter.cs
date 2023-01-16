@@ -34,6 +34,7 @@ namespace EcoGame
 		// Start is called before the first frame update
 		void Start()
 		{
+			ResourceManager.Instance.Budget.OnIAmountChange += OnBudgetChanged;
 		}
 
 		private void Awake()
@@ -52,7 +53,6 @@ namespace EcoGame
 				trashValue.text	 = "0";
 				foodValue.text	 = "0";
 				goodsValue.text = "0";
-				//ResourceManager.Instance.Budget.OnIAmountChange += OnBudgetChanged;
 			}
 		}
 		public TMP_Text budgetValue;
