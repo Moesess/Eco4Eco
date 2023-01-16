@@ -13,7 +13,7 @@ namespace EcoGame
             set 
             {
                 iAmount = value;
-                OnIAmountChange(iAmount);
+                if(OnIAmountChange != null) OnIAmountChange(iAmount);
             }
         }
 

@@ -34,7 +34,11 @@ namespace EcoGame
 		// Start is called before the first frame update
 		void Start()
 		{
+			ResourceManager.Instance.Power.OnIAmountChange += OnPowerChanged;
 			ResourceManager.Instance.Budget.OnIAmountChange += OnBudgetChanged;
+			ResourceManager.Instance.Trash.OnIAmountChange += OnTrashChanged;
+			ResourceManager.Instance.Food.OnIAmountChange += OnFoodChanged;
+			ResourceManager.Instance.Goods.OnIAmountChange += OnGoodsChanged;
 		}
 
 		private void Awake()
