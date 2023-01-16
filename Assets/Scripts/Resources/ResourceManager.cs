@@ -3,6 +3,7 @@ using UnityEngine;
 namespace EcoGame
 {
     using Resources;
+    using System;
     using System.Collections.Generic;
 
     public class ResourceManager : MonoBehaviour
@@ -10,7 +11,7 @@ namespace EcoGame
         public static ResourceManager Instance;
         public Dictionary<string, Resource> Resources = new();
 
-        public Resource Power // Energia
+		public Resource Power // Energia
         {
             get { return Resources[ResourcesConsts.RESOURCE_POWER]; }
             set { this.Resources[ResourcesConsts.RESOURCE_POWER] = value; }
@@ -56,7 +57,7 @@ namespace EcoGame
             set { this.Resources[ResourcesConsts.RESOURCE_POLLUTION] = value; }
         }
 
-        private void Awake()
+		private void Awake()
         {
             // Set instance on scene awake
             if (Instance == null)
@@ -71,7 +72,7 @@ namespace EcoGame
                 Resources.Add(ResourcesConsts.RESOURCE_COAL, new Resource("Wêgiel", 0));
                 Resources.Add(ResourcesConsts.RESOURCE_GAS, new Resource("Gaz ziemny", 0));
                 Resources.Add(ResourcesConsts.RESOURCE_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
-            }
+			}
         }
-    }
+	}
 }

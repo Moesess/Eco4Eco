@@ -4,37 +4,61 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-
-public class ResourcePresenter : MonoBehaviour
+namespace EcoGame
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-		InvokeRepeating("UpdateResources", 1f, 1f);
-	}
-
-	// Update is called once per frame
-	private void Awake()
+	public class ResourcePresenter : MonoBehaviour
 	{
-		this.budgetValue = GameObject.Find("Budget/Value").GetComponent<TMP_Text>();
-		this.powerValue = GameObject.Find("Power/Value").GetComponent<TMP_Text>();
-		this.trashValue = GameObject.Find("Trash/Value").GetComponent<TMP_Text>();
-		this.foodValue = GameObject.Find("Food/Value").GetComponent<TMP_Text>();
-		this.goodsValue = GameObject.Find("Goods/Value").GetComponent<TMP_Text>();
-	}
+		public static ResourcePresenter Instance;
 
-	private void UpdateResources()
-	{
-		this.budgetValue.text = ResourceManager.Instance.Budget.iAmount.ToString();
-		this.powerValue.text = ResourceManager.Instance.Power.iAmount.ToString();
-		this.trashValue.text = ResourceManager.Instance.Trash.iAmount.ToString();
-		this.foodValue.text = ResourceManager.Instance.Food.iAmount.ToString();
-		this.goodsValue.text = ResourceManager.Instance.Goods.iAmount.ToString();
-	}
+		public void OnPowerChanged(int value)
+		{
+			powerValue.text = value.ToString();
+		}
+		public void OnBudgetChanged(int value)
+		{
+			budgetValue.text = value.ToString();
+		}
+		public void OnTrashChanged(int value)
+		{
+			trashValue.text = value.ToString();
+		}
+		public void OnFoodChanged(int value)
+		{
+			foodValue.text = value.ToString();
+		}
+		public void OnGoodsChanged(int value)
+		{
+			goodsValue.text = value.ToString();
+		}
 
-	private TMP_Text budgetValue;
-	private TMP_Text powerValue;
-	private TMP_Text trashValue;
-	private TMP_Text foodValue;
-	private TMP_Text goodsValue;
+		// Start is called before the first frame update
+		void Start()
+		{
+		}
+
+		private void Awake()
+		{
+			if (Instance == null)
+			{
+				Instance = this;
+				this.budgetValue = GameObject.Find("Budget/Value").GetComponent<TMP_Text>();
+				this.powerValue = GameObject.Find("Power/Value").GetComponent<TMP_Text>();
+				this.trashValue = GameObject.Find("Trash/Value").GetComponent<TMP_Text>();
+				this.foodValue = GameObject.Find("Food/Value").GetComponent<TMP_Text>();
+				this.goodsValue = GameObject.Find("Goods/Value").GetComponent<TMP_Text>();
+
+				budgetValue.text = "0";
+				powerValue.text	 = "0";
+				trashValue.text	 = "0";
+				foodValue.text	 = "0";
+				goodsValue.text = "0";
+				//ResourceManager.Instance.Budget.OnIAmountChange += OnBudgetChanged;
+			}
+		}
+		public TMP_Text budgetValue;
+		public TMP_Text powerValue;
+		public TMP_Text trashValue;
+		public TMP_Text foodValue;
+		public TMP_Text goodsValue;
+	}
 }
