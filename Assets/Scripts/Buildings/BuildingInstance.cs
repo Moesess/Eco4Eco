@@ -12,6 +12,7 @@ namespace EcoGame
         [SerializeField] public GameObject AmountText;
         [SerializeField] public GameObject BuyButton;
         [SerializeField] public GameObject GenerateText;
+        [SerializeField] public AudioSource Click;
         public int iBuildCost;
         public int iBuildAmount;
 
@@ -54,6 +55,7 @@ namespace EcoGame
             {
                 BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount += 1;
                 ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
+                Click.Play();
             }
         }
 
@@ -63,6 +65,7 @@ namespace EcoGame
             {
                 BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount -= 1;
                 ResourceManager.Instance.Budget.Amount += this.iBuildCost;
+                Click.Play();
             }
         }
     }

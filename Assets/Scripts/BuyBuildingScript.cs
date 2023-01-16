@@ -31,8 +31,6 @@ namespace EcoGame
         {
 			int budget = ResourceManager.Instance.Budget.Amount;
 			int buildingCost = BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Cost;
-			Debug.LogWarning(budget);
-			Debug.LogWarning(buildingCost);
 			if (budget >= buildingCost)
 			{
 				buyButton.GetComponent<Button>().enabled = true;
