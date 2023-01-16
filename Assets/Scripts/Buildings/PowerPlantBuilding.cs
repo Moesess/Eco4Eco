@@ -7,7 +7,7 @@ namespace EcoGame
     {
         public class PowerPlantBuilding : _BaseBuilding
         {
-            PowerPlantBuilding()
+            public PowerPlantBuilding()
             {
                 this.Name = "Elektrownia";
                 this.Amount = 1;

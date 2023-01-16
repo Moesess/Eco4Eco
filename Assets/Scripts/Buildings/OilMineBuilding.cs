@@ -9,7 +9,6 @@ namespace EcoGame
     {
         public class OilMineBuilding : _BaseBuilding
         {
-            public Resource Oil = ResourceManager.Instance.Resources[ResourcesConsts.RESOURCE_OIL];
             public OilMineBuilding()
             {
                 this.Name = "Kopalnia ropy naftowej";
