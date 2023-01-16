@@ -17,7 +17,6 @@ namespace EcoGame
 
         private void Awake()
         {
-            Debug.Log("STARTUJE");
             //this.iBuildCost = BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Cost;
             //this.iBuildAmount = BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount;
             //this.iBudget = ResourceManager.Instance.Budget.iAmount;
