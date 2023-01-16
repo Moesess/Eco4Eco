@@ -9,7 +9,6 @@ namespace EcoGame
         private int iBaseCost; // Podstawowy koszt
         private int iTechLevel; // Poziom technologiczny budynku, budynki podzieli³bym na kategorie technologiczne, kolejne poziomy sa wydajniejsze ale jednoczesnie drozsze
         private int iCost; // Koszt budowy
-        private int iLevel; // Poziom budynku
         private int iAmount; // Iloœæ posiadanych budynkow - technicznie mnoznik
         private int iProduction; // Produkcja surowca Resource(odpowiedni surowiec)
         private int iPollution; // Produkcja surowca Pollution
@@ -21,11 +20,6 @@ namespace EcoGame
         {
             get { return this.iCost; }
             set { this.iCost = value; }
-        }
-        public int Level
-        {
-            get { return this.iLevel; }
-            set { this.iLevel = value; }
         }
         public int Amount
         {
@@ -65,8 +59,6 @@ namespace EcoGame
 
         public _BaseBuilding()
         {
-            this.Cost = 0;
-            this.Level = 0;
             this.Production = 0;
             this.TechLevel = 0;
             this.BaseCost = 0;
@@ -84,12 +76,6 @@ namespace EcoGame
         public abstract void RecalculateProduction(); 
 
         // Methods
-        public void IncreaseLevel()
-        {
-            this.iLevel++;
-            RecalculateCost();
-            RecalculateProduction();
-        }
 
         public void SetCost(int _iVal)
         {
