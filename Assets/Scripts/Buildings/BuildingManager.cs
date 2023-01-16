@@ -24,9 +24,14 @@ namespace EcoGame
                 this.Buildings.Add(BuildingConsts.BUILDING_MINE_OIL, gameObject.AddComponent<OilMineBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_MINE_COAL, gameObject.AddComponent<CoalMineBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_MINE_GAS, gameObject.AddComponent<GasMineBuilding>());
-                this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT, gameObject.AddComponent<PowerPlantBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_MINE_URANIUM, gameObject.AddComponent<UraniumMineBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_MINE_PEAT, gameObject.AddComponent<PeatMineBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_COAL, gameObject.AddComponent<CoalPowerPlantBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_SOLAR, gameObject.AddComponent<SolarPowerPlantBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_WIND, gameObject.AddComponent<WindPowerPlantBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_WATER, gameObject.AddComponent<WaterPowerPlantBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_NUCLEAR, gameObject.AddComponent<NuclearPowerPlantBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_BIOMASS, gameObject.AddComponent<BiomassPowerPlantBuilding>());
 				Instance = this;
                 InstantiateBuildings();
             }

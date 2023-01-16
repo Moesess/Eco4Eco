@@ -9,8 +9,13 @@ namespace EcoGame
             public static readonly string BUILDING_MINE_GAS     = "mineGas";
             public static readonly string BUILDING_MINE_URANIUM = "mineUranium";
             public static readonly string BUILDING_MINE_PEAT    = "minePeat";
-            public static readonly string BUILDING_POWERPLANT   = "powerPlant";
-        }
+            public static readonly string BUILDING_POWERPLANT_COAL    = "powerPlantCoal";
+            public static readonly string BUILDING_POWERPLANT_SOLAR   = "powerPlantSolar";
+            public static readonly string BUILDING_POWERPLANT_WIND    = "powerPlantWind";
+            public static readonly string BUILDING_POWERPLANT_WATER   = "powerPlantWater";
+            public static readonly string BUILDING_POWERPLANT_NUCLEAR = "powerPlantNuclear";
+            public static readonly string BUILDING_POWERPLANT_BIOMASS = "powerPlantBiomass";
+		}
     }
     namespace Resources
     {
