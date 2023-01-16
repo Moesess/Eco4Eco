@@ -42,7 +42,7 @@ namespace EcoGame
                 buildingInstance.iBuildCost = _Build.Cost;
 
                 GameObject _Building = PrefabUtility.InstantiatePrefab(BuildingPrefab) as GameObject;
-                _Building.transform.SetParent(GameObject.Find("UI/Canvas/Mine Panel").transform, false);
+                _Building.transform.SetParent(GameObject.Find("UI/Canvas/"+_Build.PanelName).transform, false);
                 this.BuildingInstances.Add(_Build.Name, _Building);
             }
         }

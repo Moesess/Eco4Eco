@@ -14,6 +14,7 @@ namespace EcoGame
         private int iProduction; // Produkcja surowca Resource(odpowiedni surowiec)
         private int iPollution; // Produkcja surowca Pollution
         private string sName; // Nazwa budynku
+        private string spanelName; // Nazwa panelu, w jakim budynek ma siê wyœwietlaæ
 
         // Gettery settery
         public int Cost
@@ -56,6 +57,11 @@ namespace EcoGame
             get { return this.iBaseCost; }
             set { this.iBaseCost = value; }
         }
+        public string PanelName
+        {
+			get { return this.spanelName; }
+			set { this.spanelName = value; }
+		}
 
         public _BaseBuilding()
         {
@@ -66,6 +72,7 @@ namespace EcoGame
             this.BaseCost = 0;
             this.Amount = 0;
             this.Name = "";
+            this.PanelName = "";
             this.Pollution = 0;
         }
 

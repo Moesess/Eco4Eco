@@ -10,6 +10,7 @@ namespace EcoGame
             public CoalMineBuilding()
             {
                 this.Name = "Kopalnia wêgla";
+                this.PanelName = "Mine Panel";
                 this.Amount = 1;
                 this.BaseCost = 50;
                 this.Level = 1;

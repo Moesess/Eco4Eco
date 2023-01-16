@@ -10,7 +10,8 @@ namespace EcoGame
             public GasMineBuilding()
             {
                 this.Name = "Kopalnia gazu ziemnego";
-                this.Amount = 1;
+				this.PanelName = "Mine Panel";
+				this.Amount = 1;
                 this.BaseCost = 300;
                 this.Level = 1;
                 this.TechLevel = 1;

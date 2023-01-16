@@ -12,7 +12,8 @@ namespace EcoGame
             public OilMineBuilding()
             {
                 this.Name = "Kopalnia ropy naftowej";
-                this.Amount = 1;
+				this.PanelName = "Mine Panel";
+				this.Amount = 1;
                 this.BaseCost = 100;
                 this.Level = 1;
                 this.TechLevel = 1;

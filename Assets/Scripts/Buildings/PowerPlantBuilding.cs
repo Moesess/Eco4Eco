@@ -10,6 +10,7 @@ namespace EcoGame
             public PowerPlantBuilding()
             {
                 this.Name = "Elektrownia";
+                this.PanelName = "Power Panel";
                 this.Amount = 1;
                 this.BaseCost = 100;
                 this.Level = 1;

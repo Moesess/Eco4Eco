@@ -10,8 +10,8 @@ namespace EcoGame
 		// Start is called before the first frame update
 		void Start()
 		{
-			panels[2].SetActive(true);
-			currentPanel = panels[2];
+			panels[0].SetActive(true);
+			currentPanel = panels[0];
 			OnClickButtonSwapPanel += SwapPanel;
 
 			foreach(var button in buttons.Select((value, i) => new { i, value }))
