@@ -7,6 +7,8 @@ namespace EcoGame
     {
         public string sName; // Nazwa surowca
         public int iAmount; // Ilosc surowca
+        public delegate void OnIAmountChangeDelegate(int newAmount);
+        public event OnIAmountChangeDelegate OnIAmountChange;
 
 // Konstruktory ============================================================
 
