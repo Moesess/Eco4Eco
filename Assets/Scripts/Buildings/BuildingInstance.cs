@@ -31,7 +31,7 @@ namespace EcoGame
         // Update is called once per frame
         void Update()
         {
-            if (ResourceManager.Instance.Budget.iAmount >= this.iBuildCost)
+            if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost)
             {
                 BuyButton.GetComponent<Button>().enabled = true;
             } else
@@ -50,10 +50,10 @@ namespace EcoGame
 
         public void BuyButtonClick()
         {
-            if (ResourceManager.Instance.Budget.iAmount >= this.iBuildCost)
+            if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost)
             {
                 BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount += 1;
-                ResourceManager.Instance.Budget.iAmount -= this.iBuildCost;
+                ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
             }
         }
 
@@ -62,7 +62,7 @@ namespace EcoGame
             if (iBuildAmount >= 1)
             {
                 BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount -= 1;
-                ResourceManager.Instance.Budget.iAmount += this.iBuildCost;
+                ResourceManager.Instance.Budget.Amount += this.iBuildCost;
             }
         }
     }

@@ -17,11 +17,11 @@ namespace EcoGame
 		
 		public void ClickTheButton()
 		{
-			int budget = ResourceManager.Instance.Budget.iAmount;
+			int budget = ResourceManager.Instance.Budget.Amount;
 			int buildingCost = BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Cost;
 			if (budget >= buildingCost){
 				BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount += 1;
-				ResourceManager.Instance.Budget.iAmount -= buildingCost;
+				ResourceManager.Instance.Budget.Amount -= buildingCost;
 				//string amount = BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Amount.ToString();
 				//buildingAmountText.GetComponent<TMP_Text>().text = amount; #TODO debebu
 			}
@@ -29,7 +29,7 @@ namespace EcoGame
 
         public void Update()
         {
-			int budget = ResourceManager.Instance.Budget.iAmount;
+			int budget = ResourceManager.Instance.Budget.Amount;
 			int buildingCost = BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Cost;
 			Debug.LogWarning(budget);
 			Debug.LogWarning(buildingCost);
