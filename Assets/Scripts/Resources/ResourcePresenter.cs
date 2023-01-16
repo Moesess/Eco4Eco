@@ -1,16 +1,25 @@
-using EcoGame;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
+using UnityEngine.UI;
+
 namespace EcoGame
 {
 	public class ResourcePresenter : MonoBehaviour
 	{
 		public static ResourcePresenter Instance;
+        
+		public TMP_Text budgetValue;
+        public TMP_Text powerValue;
+        public TMP_Text trashValue;
+        public TMP_Text foodValue;
+        public TMP_Text goodsValue;
+		public GameObject BudgetImage;
+		public GameObject PowerImage;
+		public GameObject TrashImage;
+		public GameObject FoodImage;
+		public GameObject GoodsImage;
 
-		public void OnPowerChanged(int value)
+        public void OnPowerChanged(int value)
 		{
 			powerValue.text = value.ToString();
 		}
@@ -39,7 +48,17 @@ namespace EcoGame
 			ResourceManager.Instance.Trash.OnIAmountChange += OnTrashChanged;
 			ResourceManager.Instance.Food.OnIAmountChange += OnFoodChanged;
 			ResourceManager.Instance.Goods.OnIAmountChange += OnGoodsChanged;
-		}
+
+
+			// Seting Resources sprites
+			float TexY = ResourceManager.Instance.BudgetImage.height;
+			float TexX = ResourceManager.Instance.BudgetImage.width;
+            this.BudgetImage.GetComponent<Image>().sprite = Sprite.Create(ResourceManager.Instance.BudgetImage, new Rect(0f, 0f, TexX, TexY), new Vector2(0.5f, 0.5f));
+            this.PowerImage.GetComponent<Image>().sprite = Sprite.Create(ResourceManager.Instance.PowerImage, new Rect(0f, 0f, TexX, TexY), new Vector2(0.5f, 0.5f));
+            this.TrashImage.GetComponent<Image>().sprite = Sprite.Create(ResourceManager.Instance.TrashImage, new Rect(0f, 0f, TexX, TexY), new Vector2(0.5f, 0.5f));
+            this.FoodImage.GetComponent<Image>().sprite = Sprite.Create(ResourceManager.Instance.FoodImage, new Rect(0f, 0f, TexX, TexY), new Vector2(0.5f, 0.5f));
+            this.GoodsImage.GetComponent<Image>().sprite = Sprite.Create(ResourceManager.Instance.GoodsImage, new Rect(0f, 0f, TexX, TexY), new Vector2(0.5f, 0.5f));
+        }
 
 		private void Awake()
 		{
@@ -59,10 +78,5 @@ namespace EcoGame
 				goodsValue.text = "0";
 			}
 		}
-		public TMP_Text budgetValue;
-		public TMP_Text powerValue;
-		public TMP_Text trashValue;
-		public TMP_Text foodValue;
-		public TMP_Text goodsValue;
 	}
 }
