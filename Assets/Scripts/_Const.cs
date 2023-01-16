@@ -7,6 +7,8 @@ namespace EcoGame
             public static readonly string BUILDING_MINE_OIL     = "mineOil";
             public static readonly string BUILDING_MINE_COAL    = "mineCoal";
             public static readonly string BUILDING_MINE_GAS     = "mineGas";
+            public static readonly string BUILDING_MINE_URANIUM = "mineUranium";
+            public static readonly string BUILDING_MINE_PEAT    = "minePeat";
             public static readonly string BUILDING_POWERPLANT   = "powerPlant";
         }
     }
@@ -18,6 +20,8 @@ namespace EcoGame
             public static readonly string RESOURCE_COAL         = "resCoal";
             public static readonly string RESOURCE_GAS          = "resGas";
             public static readonly string RESOURCE_OIL          = "resOil";
+            public static readonly string RESOURCE_URANIUM      = "resUranium";
+            public static readonly string RESOURCE_PEAT         = "resPeat";
             public static readonly string RESOURCE_POWER        = "resPower";
             public static readonly string RESOURCE_BUDGET       = "resBudget";
             public static readonly string RESOURCE_TRASH        = "resTrash";

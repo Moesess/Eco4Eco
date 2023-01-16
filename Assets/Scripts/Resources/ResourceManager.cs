@@ -57,6 +57,17 @@ namespace EcoGame
             set { this.Resources[ResourcesConsts.RESOURCE_POLLUTION] = value; }
         }
 
+        public Resource Uranium // Uran
+        {
+	        get { return Resources[ResourcesConsts.RESOURCE_URANIUM]; }
+	        set { this.Resources[ResourcesConsts.RESOURCE_URANIUM] = value; }
+        }
+        public Resource Peat // Torf
+        {
+	        get { return Resources[ResourcesConsts.RESOURCE_PEAT]; }
+	        set { this.Resources[ResourcesConsts.RESOURCE_PEAT] = value; }
+        }
+
 		private void Awake()
         {
             // Set instance on scene awake
@@ -72,6 +83,8 @@ namespace EcoGame
                 Resources.Add(ResourcesConsts.RESOURCE_COAL, new Resource("Wêgiel", 0));
                 Resources.Add(ResourcesConsts.RESOURCE_GAS, new Resource("Gaz ziemny", 0));
                 Resources.Add(ResourcesConsts.RESOURCE_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_URANIUM, new Resource("Uran", 0));
+                Resources.Add(ResourcesConsts.RESOURCE_PEAT, new Resource("Torf", 0));
 			}
         }
 	}

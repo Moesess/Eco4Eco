@@ -25,7 +25,9 @@ namespace EcoGame
                 this.Buildings.Add(BuildingConsts.BUILDING_MINE_COAL, gameObject.AddComponent<CoalMineBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_MINE_GAS, gameObject.AddComponent<GasMineBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT, gameObject.AddComponent<PowerPlantBuilding>());
-                Instance = this;
+                this.Buildings.Add(BuildingConsts.BUILDING_MINE_URANIUM, gameObject.AddComponent<UraniumMineBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_MINE_PEAT, gameObject.AddComponent<PeatMineBuilding>());
+				Instance = this;
                 InstantiateBuildings();
             }
         }
