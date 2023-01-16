@@ -12,7 +12,6 @@ namespace EcoGame
                 this.Name = "Kopalnia gazu ziemnego";
                 this.Amount = 1;
                 this.BaseCost = 300;
-                this.Level = 1;
                 this.TechLevel = 1;
                 this.Pollution = 1;
                 RecalculateProduction();
@@ -21,12 +20,12 @@ namespace EcoGame
 
             public override void RecalculateCost()
             {
-                this.Cost = (int)(this.BaseCost * Math.Pow(this.Level + 1, 4) * Math.Pow(this.TechLevel + 1, 2));
+                this.Cost = (int)(this.BaseCost * Math.Pow(this.TechLevel + 1, 2));
             }
 
             public override void RecalculateProduction()
             {
-                this.Production = (int)Math.Pow(this.Level * this.TechLevel, 4) * this.Amount;
+                this.Production = (int)Math.Pow( this.TechLevel, 4) * this.Amount;
             }
 
             public override void Tick()
