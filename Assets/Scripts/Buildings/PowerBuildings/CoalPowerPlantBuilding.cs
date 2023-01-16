@@ -5,11 +5,11 @@ namespace EcoGame
 {
     namespace Buildings
     {
-        public class PowerPlantBuilding : _BaseBuilding
+        public class CoalPowerPlantBuilding : _BaseBuilding
         {
-            public PowerPlantBuilding()
+            public CoalPowerPlantBuilding()
             {
-                this.Name = "Elektrownia";
+                this.Name = "Elektrownia wêglowa";
                 this.PanelName = "Power Panel";
                 this.Amount = 1;
                 this.BaseCost = 100;
@@ -31,7 +31,7 @@ namespace EcoGame
 
             public override void Tick()
             {
-                ResourceManager.Instance.Resources[ResourcesConsts.RESOURCE_OIL].Add(this.Production);
+                ResourceManager.Instance.Resources[ResourcesConsts.RESOURCE_POWER].Add(this.Production);
             }
         }
     }

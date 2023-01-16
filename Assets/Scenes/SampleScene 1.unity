@@ -742,8 +742,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   panels:
   - {fileID: 508862820}
-  - {fileID: 1212604681}
   - {fileID: 341692705}
+  - {fileID: 1212604681}
   - {fileID: 567486709}
   buttons:
   - {fileID: 1456705679}
