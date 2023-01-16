@@ -76,18 +76,23 @@ namespace EcoGame
             if (Instance == null)
             {
                 Instance = this;
-                Resources.Add(ResourcesConsts.RESOURCE_POWER, new Resource("Pr¹d", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_BUDGET, new Resource("Bud¿et", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_TRASH, new Resource("Œmieci", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_FOOD, new Resource("¯ywnoœæ", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_GOODS, new Resource("Towary konsumpcyjne", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_OIL, new Resource("Ropa naftowa", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_COAL, new Resource("Wêgiel", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_GAS, new Resource("Gaz ziemny", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_URANIUM, new Resource("Uran", 0));
-                Resources.Add(ResourcesConsts.RESOURCE_PEAT, new Resource("Torf", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_POWER, new Resource("Pr¹d", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_BUDGET, new Resource("Bud¿et", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_TRASH, new Resource("Œmieci", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_FOOD, new Resource("¯ywnoœæ", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_GOODS, new Resource("Towary konsumpcyjne", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_OIL, new Resource("Ropa naftowa", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_COAL, new Resource("Wêgiel", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_GAS, new Resource("Gaz ziemny", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_URANIUM, new Resource("Uran", 0));
+                this.Resources.Add(ResourcesConsts.RESOURCE_PEAT, new Resource("Torf", 0));
 			}
         }
-	}
+
+        private void Start()
+        {
+            this.Resources[ResourcesConsts.RESOURCE_BUDGET].SetValue(1000000);
+        }
+    }
 }
