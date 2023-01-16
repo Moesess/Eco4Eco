@@ -11,12 +11,6 @@ namespace EcoGame
     {
         public static ResourceManager Instance;
 
-        [SerializeField] public Texture2D PowerImage;
-        [SerializeField] public Texture2D BudgetImage;
-        [SerializeField] public Texture2D TrashImage;
-        [SerializeField] public Texture2D FoodImage;
-        [SerializeField] public Texture2D GoodsImage;
-
         public Dictionary<string, Resource> Resources = new();
 
 		public Resource Power // Energia
