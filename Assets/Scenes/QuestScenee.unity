@@ -2860,7 +2860,6 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   - {fileID: 1955403348}
-  - {fileID: 1863499008}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3368,60 +3367,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1175587417355436431, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
   m_PrefabInstance: {fileID: 536697280}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1863499007
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1863499008}
-  - component: {fileID: 1863499009}
-  m_Layer: 0
-  m_Name: Pictures
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1863499008
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863499007}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1528702430}
-  m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1863499009
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863499007}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd6a165666c396146b5a48c5263ceef1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BudgetPicture: {fileID: 2800000, guid: 93811637c77a71e4997586d3cdea4e1f, type: 3}
-  TrashPicture: {fileID: 2800000, guid: bb129ece4f76ab2468eab02f5b435d28, type: 3}
-  EnergyPicture: {fileID: 2800000, guid: 8c5b79707e8ddf9449a3f42ede0a06f3, type: 3}
-  FoodPicture: {fileID: 2800000, guid: b6c7d27f0d59fc044b552da7076847a6, type: 3}
-  GoodsPicture: {fileID: 2800000, guid: 303a9cecb0a7d1a4e9e1cb436ed64137, type: 3}
-  OilPicture: {fileID: 2800000, guid: a2b4febae57094c40a7709a3c2d99779, type: 3}
-  CoalPicture: {fileID: 2800000, guid: 2774e5bbe63be204988f1c5f7f2ae979, type: 3}
-  GasPicture: {fileID: 2800000, guid: 0032519810930c94598ca9e2a3298215, type: 3}
-  UraniumPicture: {fileID: 2800000, guid: f708c6d87fdd3844ba9bdf50989c1c62, type: 3}
-  PeatPicture: {fileID: 2800000, guid: c11fa297dd331de418654209c490f7e6, type: 3}
 --- !u!1 &1955403345
 GameObject:
   m_ObjectHideFlags: 0
