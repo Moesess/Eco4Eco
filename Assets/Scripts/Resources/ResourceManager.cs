@@ -91,6 +91,7 @@ namespace EcoGame
         private void Start()
         {
             this.Resources[(int)RESOURCE_BUDGET].SetValue(1000000);
+            this.Resources[(int)RESOURCE_POLLUTION].SetValue(1000);
         }
     }
 }
