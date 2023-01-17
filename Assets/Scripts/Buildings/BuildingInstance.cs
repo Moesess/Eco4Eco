@@ -14,7 +14,7 @@ namespace EcoGame
         [SerializeField] public AudioSource Click;
         public int iBuildCost;
         public int iBuildAmount;
-        public string sBuildName;
+        public int iBuildKey;
 
         private void Awake()
         {
@@ -26,7 +26,7 @@ namespace EcoGame
         // Start is called before the first frame update
         void Start()
         {
-            BuildingManager.Instance.Buildings[sBuildName].OnIAmountChange += OnAmountChange;
+            BuildingManager.Instance.Buildings[iBuildKey].OnIAmountChange += OnAmountChange;
         }
 
         // Update is called once per frame
@@ -53,7 +53,7 @@ namespace EcoGame
         {
             if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost)
             {
-                BuildingManager.Instance.Buildings[sBuildName].Amount += 1;
+                BuildingManager.Instance.Buildings[iBuildKey].Amount += 1;
                 ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
                 Click.Play();
             }
@@ -63,7 +63,7 @@ namespace EcoGame
         {
             if (iBuildAmount >= 1)
             {
-                BuildingManager.Instance.Buildings[sBuildName].Amount -= 1;
+                BuildingManager.Instance.Buildings[iBuildKey].Amount -= 1;
                 ResourceManager.Instance.Budget.Amount += this.iBuildCost;
                 Click.Play();
             }
@@ -72,9 +72,9 @@ namespace EcoGame
         void OnAmountChange(int _iVal)
         {
             this.AmountText.GetComponent<TMP_Text>().text = _iVal.ToString();
-            BuildingManager.Instance.Buildings[sBuildName].RecalculateCost();
-            BuildingManager.Instance.Buildings[sBuildName].RecalculateProduction();
-            this.GenerateText.GetComponent<TMP_Text>().text = BuildingManager.Instance.Buildings[sBuildName].Production.ToString() + "/s";
+            BuildingManager.Instance.Buildings[iBuildKey].RecalculateCost();
+            BuildingManager.Instance.Buildings[iBuildKey].RecalculateProduction();
+            this.GenerateText.GetComponent<TMP_Text>().text = BuildingManager.Instance.Buildings[iBuildKey].Production.ToString() + "/s";
         }
     }
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace EcoGame
 {
-    using Buildings;
+    using static Buildings.BUILDINGS;
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
@@ -28,10 +28,10 @@ namespace EcoGame
         // Metoda wywoluje tick we wszystkich budynkach
         void Tick()
         {
-            BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_OIL].Tick();
-            BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_COAL].Tick();
-            BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_MINE_GAS].Tick();
-            BuildingManager.Instance.Buildings[BuildingConsts.BUILDING_POWERPLANT_COAL].Tick();
+            BuildingManager.Instance.Buildings[(int)BUILDING_MINE_OIL].Tick();
+            BuildingManager.Instance.Buildings[(int)BUILDING_MINE_COAL].Tick();
+            BuildingManager.Instance.Buildings[(int)BUILDING_MINE_GAS].Tick();
+            BuildingManager.Instance.Buildings[(int)BUILDING_POWERPLANT_COAL].Tick();
         }
     }
 }
