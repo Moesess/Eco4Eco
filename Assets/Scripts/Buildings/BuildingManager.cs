@@ -33,6 +33,17 @@ namespace EcoGame
                 this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_WATER, gameObject.AddComponent<WaterPowerPlantBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_NUCLEAR, gameObject.AddComponent<NuclearPowerPlantBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_POWERPLANT_BIOMASS, gameObject.AddComponent<BiomassPowerPlantBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_FOOD_PROCESSEDFOOD, gameObject.AddComponent<ProcessedFoodBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_FOOD_FISHING, gameObject.AddComponent<FishingBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_FOOD_ANIMALFARM, gameObject.AddComponent<AnimalFarmBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_FOOD_DRINKINGWATER, gameObject.AddComponent<DrinkingWaterBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_FOOD_EXPERIMENTALMEAT, gameObject.AddComponent<ExperimentalMeatBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_FOOD_FARMLAND, gameObject.AddComponent<FarmlandBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_TRASH_RECYCLING, gameObject.AddComponent<RecyclingBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_TRASH_GARBAGEINCINERATOR, gameObject.AddComponent<GarbageIncineratorBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_TRASH_GARBAGEDUMP, gameObject.AddComponent<GarbageDumpBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_TRASH_COMPOSTINGPLANT, gameObject.AddComponent<CompostingPlantBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_TRASH_GARBAGESHIP, gameObject.AddComponent<GarbageShipBuilding>());
 				Instance = this;
                 InstantiateBuildings();
             }
