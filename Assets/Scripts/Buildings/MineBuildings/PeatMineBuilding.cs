@@ -1,9 +1,8 @@
 using System;
-using UnityEngine;
 
 namespace EcoGame
 {
-    using Resources;
+    using static Resources.RESOURCES;
 
     namespace Buildings
     {
@@ -33,7 +32,7 @@ namespace EcoGame
 
             public override void Tick()
             {
-                ResourceManager.Instance.Resources[ResourcesConsts.RESOURCE_PEAT].Add(this.Production);
+                ResourceManager.Instance.Resources[(int)RESOURCE_PEAT].Add(this.Production);
             }
         }
     }

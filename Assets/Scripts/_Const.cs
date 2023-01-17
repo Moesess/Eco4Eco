@@ -3,50 +3,51 @@ namespace EcoGame
     namespace Buildings
     {
         // Klucze do BuildingManager.Buildings
-        public static class BuildingConsts{
-            public static readonly string BUILDING_MINE_OIL                 = "mineOil";
-            public static readonly string BUILDING_MINE_COAL                = "mineCoal";
-            public static readonly string BUILDING_MINE_GAS                 = "mineGas";
-            public static readonly string BUILDING_MINE_URANIUM             = "mineUranium";
-            public static readonly string BUILDING_MINE_PEAT                = "minePeat";
-            public static readonly string BUILDING_POWERPLANT_COAL          = "powerPlantCoal";
-            public static readonly string BUILDING_POWERPLANT_SOLAR         = "powerPlantSolar";
-            public static readonly string BUILDING_POWERPLANT_WIND          = "powerPlantWind";
-            public static readonly string BUILDING_POWERPLANT_WATER         = "powerPlantWater";
-            public static readonly string BUILDING_POWERPLANT_NUCLEAR       = "powerPlantNuclear";
-            public static readonly string BUILDING_POWERPLANT_BIOMASS       = "powerPlantBiomass";
-            public static readonly string BUILDING_FOOD_PROCESSEDFOOD       = "foodProcessedFood";
-            public static readonly string BUILDING_FOOD_FISHING             = "foodFishing";
-            public static readonly string BUILDING_FOOD_ANIMALFARM          = "foodAnimalFarm";
-            public static readonly string BUILDING_FOOD_DRINKINGWATER       = "foodDrinkingWater";
-            public static readonly string BUILDING_FOOD_EXPERIMENTALMEAT    = "foodExperimentalMeat";
-            public static readonly string BUILDING_FOOD_FARMLAND            = "foodFarmland";
-            public static readonly string BUILDING_TRASH_RECYCLING          = "trashRecycling";
-            public static readonly string BUILDING_TRASH_GARBAGEINCINERATOR = "trashGarbageIncinerator";
-            public static readonly string BUILDING_TRASH_GARBAGEDUMP        = "trashGarbageDump";
-            public static readonly string BUILDING_TRASH_COMPOSTINGPLANT    = "trashCompostingPlant";
-            public static readonly string BUILDING_TRASH_GARBAGESHIP        = "trashGarbageShip";
-            public static readonly string BUILDING_GOODS_ELECTRONICSFACTORY = "goodsElectronicsFactory";
-            public static readonly string BUILDING_GOODS_CLOTHESSEWING      = "goodsClothesSewing";
-            public static readonly string BUILDING_GOODS_CARFACTORY         = "goodsCarFactory";
+        public enum BUILDINGS
+        {
+            BUILDING_MINE_OIL = 0,
+            BUILDING_MINE_COAL = 1,
+            BUILDING_MINE_GAS = 2,
+            BUILDING_MINE_URANIUM = 3, 
+            BUILDING_MINE_PEAT = 4,
+            BUILDING_POWERPLANT_COAL = 5,
+            BUILDING_POWERPLANT_SOLAR = 6,
+            BUILDING_POWERPLANT_WIND = 7,
+            BUILDING_POWERPLANT_WATER = 8,
+            BUILDING_POWERPLANT_NUCLEAR = 9,
+            BUILDING_POWERPLANT_BIOMASS = 10,
+            BUILDING_FOOD_PROCESSEDFOOD = 11,
+            BUILDING_FOOD_FISHING = 12,
+            BUILDING_FOOD_ANIMALFARM = 13,
+            BUILDING_FOOD_DRINKINGWATER = 14,
+            BUILDING_FOOD_EXPERIMENTALMEAT = 15,
+            BUILDING_FOOD_FARMLAND = 16,
+            BUILDING_TRASH_RECYCLING = 17,
+            BUILDING_TRASH_GARBAGEINCINERATOR = 18,
+            BUILDING_TRASH_GARBAGEDUMP = 19,
+            BUILDING_TRASH_COMPOSTINGPLANT = 20,
+            BUILDING_TRASH_GARBAGESHIP = 21,
+            BUILDING_GOODS_ELECTRONICSFACTORY = 22,
+            BUILDING_GOODS_CLOTHESSEWING = 23,
+            BUILDING_GOODS_CARFACTORY = 24
         }
     }
     namespace Resources
     {
         // Klucze do ResourceManager.Resources
-        public static class ResourcesConsts
+        public enum RESOURCES
         {
-            public static readonly string RESOURCE_COAL         = "resCoal";
-            public static readonly string RESOURCE_GAS          = "resGas";
-            public static readonly string RESOURCE_OIL          = "resOil";
-            public static readonly string RESOURCE_URANIUM      = "resUranium";
-            public static readonly string RESOURCE_PEAT         = "resPeat";
-            public static readonly string RESOURCE_POWER        = "resPower";
-            public static readonly string RESOURCE_BUDGET       = "resBudget";
-            public static readonly string RESOURCE_TRASH        = "resTrash";
-            public static readonly string RESOURCE_FOOD         = "resFood";
-            public static readonly string RESOURCE_GOODS        = "resGoods";
-            public static readonly string RESOURCE_POLLUTION    = "resPollution";
+            RESOURCE_COAL = 0,
+            RESOURCE_GAS = 1,
+            RESOURCE_OIL = 2,
+            RESOURCE_URANIUM = 3,
+            RESOURCE_PEAT = 4,
+            RESOURCE_POWER = 5,
+            RESOURCE_BUDGET = 6,
+            RESOURCE_TRASH = 7,
+            RESOURCE_FOOD = 8,
+            RESOURCE_GOODS = 9,
+            RESOURCE_POLLUTION = 10
         }
     }
     namespace Json

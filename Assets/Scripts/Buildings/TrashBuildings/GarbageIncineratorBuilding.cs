@@ -1,13 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-using EcoGame.Resources;
 using System;
 
 namespace EcoGame
 {
-	namespace Buildings
+    using static Resources.RESOURCES;
+    namespace Buildings
 	{
 		public class GarbageIncineratorBuilding : _BaseBuilding
 		{
@@ -35,7 +31,7 @@ namespace EcoGame
 
 			public override void Tick()
 			{
-				ResourceManager.Instance.Resources[ResourcesConsts.RESOURCE_TRASH].Add(this.Production);
+				ResourceManager.Instance.Resources[(int)RESOURCE_TRASH].Add(this.Production);
 			}
 		}
 	}

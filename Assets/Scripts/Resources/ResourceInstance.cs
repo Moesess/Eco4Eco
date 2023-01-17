@@ -11,11 +11,11 @@ namespace EcoGame
         [SerializeField] public TMP_Text Value;
         [SerializeField] public GameObject Image;
         [SerializeField] public Texture2D ImageTex;
-        public string sResourceName;
+        public int iResourceName;
 
         void Start()
         {
-            ResourceManager.Instance.Resources[sResourceName].OnIAmountChange += OnValueChange;
+            ResourceManager.Instance.Resources[iResourceName].OnIAmountChange += OnValueChange;
             this.Image.GetComponent<Image>().sprite = Sprite.Create(this.ImageTex, new Rect(0f, 0f, ImageTex.width, ImageTex.height), new Vector2(0.5f, 0.5f));
         }
 

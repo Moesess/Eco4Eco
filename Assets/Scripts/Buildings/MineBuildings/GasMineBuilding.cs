@@ -1,8 +1,8 @@
-using EcoGame.Resources;
 using System;
 
 namespace EcoGame
 {
+    using static Resources.RESOURCES;
     namespace Buildings
     {
         public class GasMineBuilding : _BaseBuilding
@@ -31,7 +31,7 @@ namespace EcoGame
 
             public override void Tick()
             {
-                ResourceManager.Instance.Resources[ResourcesConsts.RESOURCE_GAS].Add(this.Production);
+                ResourceManager.Instance.Resources[(int)RESOURCE_GAS].Add(this.Production);
             }
         }
     }

@@ -1,9 +1,9 @@
-using EcoGame.Resources;
 using System;
 
 namespace EcoGame
 {
-	namespace Buildings
+    using static Resources.RESOURCES;
+    namespace Buildings
 	{
 		public class SolarPowerPlantBuilding : _BaseBuilding
 		{
@@ -31,7 +31,7 @@ namespace EcoGame
 
 			public override void Tick()
 			{
-				ResourceManager.Instance.Resources[ResourcesConsts.RESOURCE_POWER].Add(this.Production);
+				ResourceManager.Instance.Resources[(int)RESOURCE_POWER].Add(this.Production);
 			}
 		}
 	}
