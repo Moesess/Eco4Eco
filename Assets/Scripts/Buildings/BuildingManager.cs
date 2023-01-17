@@ -44,6 +44,9 @@ namespace EcoGame
                 this.Buildings.Add(BuildingConsts.BUILDING_TRASH_GARBAGEDUMP, gameObject.AddComponent<GarbageDumpBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_TRASH_COMPOSTINGPLANT, gameObject.AddComponent<CompostingPlantBuilding>());
                 this.Buildings.Add(BuildingConsts.BUILDING_TRASH_GARBAGESHIP, gameObject.AddComponent<GarbageShipBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_GOODS_CARFACTORY, gameObject.AddComponent<CarFactoryBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_GOODS_ELECTRONICSFACTORY, gameObject.AddComponent<ElectronicsFactoryBuilding>());
+                this.Buildings.Add(BuildingConsts.BUILDING_GOODS_CLOTHESSEWING, gameObject.AddComponent<ClothesSewingBuilding>());
 				Instance = this;
                 InstantiateBuildings();
             }
