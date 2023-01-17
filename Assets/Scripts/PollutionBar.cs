@@ -1,23 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
+using EcoGame.Resources;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PollutionBar : MonoBehaviour
+namespace EcoGame
 {
-    [SerializeField] public int maximum;
-    [SerializeField] public int current;
-    [SerializeField] public Image mask;
-
-    // Update is called once per frame
-    void Update()
+    public class PollutionBar : MonoBehaviour
     {
-        GetCurrentFill();
-    }
+        private float maximum;
+        [SerializeField] public Image mask;
 
-    void GetCurrentFill()
-    {
-        float fillAmount = (float)current / (float)maximum;
-        mask.fillAmount = fillAmount;
+        private void Start()
+        {
+            ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_POLLUTION].OnIAmountChange += GetCurrentFill;
+            this.maximum = (float)RESOURCES.RESOURCE_POLLUTION_MAXIMUM;
+        }
+
+        void GetCurrentFill(int _iVal)
+        {
+            float fCurrent = _iVal - 0f;
+            mask.fillAmount = (fCurrent / maximum);
+        }
     }
 }
