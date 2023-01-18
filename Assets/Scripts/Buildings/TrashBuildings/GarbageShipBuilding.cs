@@ -31,7 +31,7 @@ namespace EcoGame
 
 			public override void Tick()
 			{
-				ResourceManager.Instance.Resources[(int)RESOURCE_TRASH].Add(this.Production);
+				ResourceManager.Instance.Resources[(int)R_TRASH].Add(this.Production);
 			}
 		}
 	}

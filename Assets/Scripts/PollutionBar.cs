@@ -11,8 +11,8 @@ namespace EcoGame
 
         private void Start()
         {
-            ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_POLLUTION].OnIAmountChange += GetCurrentFill;
-            this.maximum = (float)RESOURCES.RESOURCE_POLLUTION_MAXIMUM;
+            ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].OnIAmountChange += GetCurrentFill;
+            this.maximum = (float)RESOURCES.R_POLLUTION_MAXIMUM;
         }
 
         void GetCurrentFill(int _iVal)
