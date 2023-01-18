@@ -1,11 +1,8 @@
 /// Klasa podstawowa budynku, kazdy budynek musi dziedziczyc po niej
-
-using UnityEngine;
-
 namespace EcoGame
 {
     using static Resources.RESOURCES;
-    public class _BaseBuilding : MonoBehaviour, IBuilding
+    public class _BaseBuilding : IBuilding
     {
         private int iBaseCost; // Podstawowy koszt
         private int iTechLevel; // Poziom technologiczny budynku, budynki podzieli³bym na kategorie technologiczne, kolejne poziomy sa wydajniejsze ale jednoczesnie drozsze
