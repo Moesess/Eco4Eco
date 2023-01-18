@@ -47,7 +47,8 @@ namespace EcoGame
             RESOURCE_TRASH = 7,
             RESOURCE_FOOD = 8,
             RESOURCE_GOODS = 9,
-            RESOURCE_POLLUTION = 10
+            RESOURCE_POLLUTION = 10,
+            RESOURCE_LEAF = 11
         }
     }
     namespace Json

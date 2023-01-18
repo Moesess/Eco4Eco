@@ -17,8 +17,8 @@ namespace EcoGame
 
         // NOT USED RN
         public Dictionary<string, GameObject> BuildingInstances = new();
-
-        private void Awake()
+        
+		private void Awake()
         {
             if (Instance == null)
             {
