@@ -200,7 +200,7 @@ MonoBehaviour:
   Value: {fileID: 1890063569282133319}
   Image: {fileID: 3525109910196948759}
   ImageTex: {fileID: 0}
-  sResourceName: 
+  iResourceName: 0
 --- !u!114 &5219496241599868284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -214,7 +214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
+  m_Color: {r: 0.7411765, g: 0.7647059, b: 0.78039217, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
