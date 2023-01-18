@@ -44,11 +44,6 @@ namespace MyNamespace
 				resetButton.onClick.AddListener(delegate { onClickReset(); });
 
 		}
-		private void Update()
-		{
-			if(Input.GetKeyDown(KeyCode.A))
-				CallReset();
-		}
 
 		[SerializeField] private Button resetButton;
 	}

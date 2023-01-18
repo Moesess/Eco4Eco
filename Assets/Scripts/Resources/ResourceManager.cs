@@ -93,6 +93,7 @@ namespace EcoGame
                 this.Resources.Add((int)R_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
                 this.Resources.Add((int)R_URANIUM, new Resource("Uran", 0));
                 this.Resources.Add((int)R_PEAT, new Resource("Torf", 0));
+                this.Resources.Add((int)R_LEAF, new Resource("Listek", 0));
             }
         }
 
