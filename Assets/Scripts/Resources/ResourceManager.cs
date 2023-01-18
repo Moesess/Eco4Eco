@@ -72,8 +72,8 @@ namespace EcoGame
         }
         public Resource Leaf // Listki
         {
-	        get { return Resources[(int)RESOURCE_LEAF]; }
-	        set { this.Resources[(int)RESOURCE_LEAF] = value; }
+	        get { return Resources[(int)R_LEAF]; }
+	        set { this.Resources[(int)R_LEAF] = value; }
         }
 
 		private void Awake()
@@ -81,22 +81,7 @@ namespace EcoGame
             // Set instance on scene awake
             if (Instance == null)
             {
-<<<<<<< HEAD
 	            Instance = this;
-				this.Resources.Add((int)RESOURCE_POWER, new Resource("Pr¹d", 0));
-				this.Resources.Add((int)RESOURCE_BUDGET, new Resource("Bud¿et", 1000000));
-				this.Resources.Add((int)RESOURCE_TRASH, new Resource("Œmieci", 0));
-				this.Resources.Add((int)RESOURCE_FOOD, new Resource("¯ywnoœæ", 0));
-				this.Resources.Add((int)RESOURCE_GOODS, new Resource("Towary konsumpcyjne", 0));
-				this.Resources.Add((int)RESOURCE_OIL, new Resource("Ropa naftowa", 0));
-				this.Resources.Add((int)RESOURCE_COAL, new Resource("Wêgiel", 0));
-				this.Resources.Add((int)RESOURCE_GAS, new Resource("Gaz ziemny", 0));
-				this.Resources.Add((int)RESOURCE_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 1000));
-				this.Resources.Add((int)RESOURCE_URANIUM, new Resource("Uran", 0));
-				this.Resources.Add((int)RESOURCE_PEAT, new Resource("Torf", 0));
-                this.Resources.Add((int)RESOURCE_LEAF, new Resource("Listek",0));
-=======
-                Instance = this;
                 this.Resources.Add((int)R_POWER, new Resource("Pr¹d", 0));
                 this.Resources.Add((int)R_BUDGET, new Resource("Bud¿et", 0));
                 this.Resources.Add((int)R_TRASH, new Resource("Œmieci", 0));
@@ -108,8 +93,7 @@ namespace EcoGame
                 this.Resources.Add((int)R_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
                 this.Resources.Add((int)R_URANIUM, new Resource("Uran", 0));
                 this.Resources.Add((int)R_PEAT, new Resource("Torf", 0));
->>>>>>> e2aa8187faa4f2f97839e06322a73210bb4d6c9f
-			}
+            }
         }
 
         private void Start()

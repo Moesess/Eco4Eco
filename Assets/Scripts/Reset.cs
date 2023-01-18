@@ -18,18 +18,18 @@ namespace MyNamespace
 			//if (ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_POLLUTION].Amount == 0
 			//&& ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_TRASH].Amount <= 25)
 			//{
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_COAL].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_GAS].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_OIL].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_URANIUM].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_PEAT].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_POWER].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_TRASH].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_FOOD].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_GOODS].SetValue(0);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_POLLUTION].SetValue(1000);
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_BUDGET].SetValue(1000000); ;
-			ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_LEAF].Amount += 1;
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_COAL].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_GAS].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_OIL].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_URANIUM].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_PEAT].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_POWER].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_TRASH].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_FOOD].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_GOODS].SetValue(0);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].SetValue(1000);
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_BUDGET].SetValue(1000000); ;
+			ResourceManager.Instance.Resources[(int)RESOURCES.R_LEAF].Amount += 1;
 			foreach (var VARIABLE in BuildingManager.Instance.Buildings)
 			{
 				VARIABLE.Value.Amount = 0;
