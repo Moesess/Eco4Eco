@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 namespace EcoGame
 {
     public class Quest : MonoBehaviour
@@ -15,25 +16,31 @@ namespace EcoGame
             public Texture2D picture;
             public string description;
             public int requiredAmount;
+            public int targetKey;
         }
 
         [Header("Data")] public Data data; //pole do informacji 
 
         public bool completed { get; protected set; } //czy wykonano zadanie
-        private string targetKey;
 
         public virtual void Initialize() // inizjalizacja
         {
             completed = false;
             if (Random.Range(0, 1) == 0)
             {
-                //targetKey = ResourceManager.Instance.Resources[Random.Range(0, 1)];
+                data.targetKey = Random.Range(0, System.Enum.GetNames(typeof(Resources.RESOURCES)).Length);
+                data.requiredAmount = ResourceManager.Instance.Resources[data.targetKey].Amount;
+                data.description = "Zdobadz " + data.requiredAmount + ResourceManager.Instance.Resources[data.targetKey].sName;
+                ResourceManager.Instance.Resources[data.targetKey].OnIAmountChange += CheckComplete;
             }
             else
             {
-                //targetKey = BuildingManager.Instance.Buildings[Random.Range(0, 1)];
+                data.targetKey = Random.Range(0, System.Enum.GetNames(typeof(Buildings.BUILDINGS)).Length);
+                data.requiredAmount = BuildingManager.Instance.Buildings[data.targetKey].Amount;
+                data.description = "Wybuduj " + data.requiredAmount + BuildingManager.Instance.Buildings[data.targetKey].Name;
+                BuildingManager.Instance.Buildings[data.targetKey].OnIAmountChange += CheckComplete;
             }
-            //data.requiredAmount = CURRENTAMOUNT * Random.Range(2, 20);
+            data.requiredAmount *= Random.Range(2, 4);
         }
 
         public void CheckComplete(int currentAmount)
