@@ -533,7 +533,7 @@ namespace EcoGame
                 buildingInstance.iBuildKey= this.Buildings.FirstOrDefault(x => x.Value.Equals(_Build)).Key;
 
                 GameObject _Building = PrefabUtility.InstantiatePrefab(BuildingPrefab) as GameObject;
-                _Building.transform.SetParent(GameObject.Find("UI/Canvas/"+_Build.PanelName).transform, false);
+                _Building.transform.SetParent(GameObject.Find("UI/Canvas/Center Panel/Right Panel/Main Panel/"+_Build.PanelName).transform, false);
                 this.BuildingInstances.Add(_Build.Name, _Building);
             }
         }

@@ -1392,16 +1392,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: -7965072538430801676, guid: 8a498846b4c2b474392ddb484993199b, type: 2}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.2784314}
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.20392157, g: 0.59607846, b: 0.85882354, a: 0.19607843}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 522dffbe9bf5a33429bc019847b50f06, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -1456,6 +1456,7 @@ MonoBehaviour:
   Click: {fileID: -3486202559733672719}
   iBuildCost: 800
   iBuildAmount: 1
+  iBuildKey: 0
 --- !u!82 &-3486202559733672719
 AudioSource:
   m_ObjectHideFlags: 0
