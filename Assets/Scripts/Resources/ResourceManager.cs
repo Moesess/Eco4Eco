@@ -90,10 +90,11 @@ namespace EcoGame
                 this.Resources.Add((int)R_OIL, new Resource("Ropa naftowa", 0));
                 this.Resources.Add((int)R_COAL, new Resource("Wêgiel", 0));
                 this.Resources.Add((int)R_GAS, new Resource("Gaz ziemny", 0));
-                this.Resources.Add((int)R_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0));
+                this.Resources.Add((int)R_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0, (int)R_POLLUTION_MAXIMUM, 0));
                 this.Resources.Add((int)R_URANIUM, new Resource("Uran", 0));
                 this.Resources.Add((int)R_PEAT, new Resource("Torf", 0));
                 this.Resources.Add((int)R_LEAF, new Resource("Listek", 0));
+                this.Resources.Add((int)R_HAPPY, new Resource("Zadowolenie", 0, 100, 0));
             }
         }
 
@@ -101,6 +102,7 @@ namespace EcoGame
         {
             this.Resources[(int)R_BUDGET].SetValue(1000000);
             this.Resources[(int)R_POLLUTION].SetValue(500);
+            this.Resources[(int)R_HAPPY].SetValue(50);
         }
     }
 }

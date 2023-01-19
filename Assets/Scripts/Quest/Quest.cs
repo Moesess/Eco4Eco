@@ -30,8 +30,8 @@ namespace EcoGame
             {
                 data.targetKey = Random.Range(0, System.Enum.GetNames(typeof(Resources.RESOURCES)).Length);
                 data.requiredAmount = ResourceManager.Instance.Resources[data.targetKey].Amount;
-                data.description = "Zdobadz " + data.requiredAmount + ResourceManager.Instance.Resources[data.targetKey].sName;
-                ResourceManager.Instance.Resources[data.targetKey].OnIAmountChange += CheckComplete;
+                data.description = "Zdobadz " + data.requiredAmount + ResourceManager.Instance.Resources[data.targetKey].Name;
+                ResourceManager.Instance.Resources[data.targetKey].OnAmountChange += CheckComplete;
             }
             else
             {

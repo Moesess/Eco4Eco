@@ -53,7 +53,7 @@ namespace EcoGame
         {
             if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost)
             {
-                BuildingManager.Instance.Buildings[iBuildKey].Amount += 1;
+                BuildingManager.Instance.Buildings[iBuildKey].IncreaseAmount(1);
                 ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
                 Click.Play();
             }
@@ -61,12 +61,9 @@ namespace EcoGame
 
         public void SellButtonClick()
         {
-            if (iBuildAmount >= 1)
-            {
-                BuildingManager.Instance.Buildings[iBuildKey].Amount -= 1;
-                ResourceManager.Instance.Budget.Amount += this.iBuildCost;
-                Click.Play();
-            }
+            BuildingManager.Instance.Buildings[iBuildKey].DecreaseAmount();
+            ResourceManager.Instance.Budget.Amount += this.iBuildCost;
+            Click.Play();   
         }
 
         void OnAmountChange(int _iVal)

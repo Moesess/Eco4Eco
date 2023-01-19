@@ -243,7 +243,7 @@ namespace EcoGame
         // Klucze do ResourceManager.Resources
         public enum RESOURCES
         {
-	        R_NULL              = -1,
+	        R_NULL              = 99,
             R_COAL              = 0,
             R_GAS               = 1,
             R_OIL               = 2,
@@ -256,9 +256,21 @@ namespace EcoGame
             R_GOODS             = 9,
             R_POLLUTION         = 10,
             R_LEAF              = 11,
-            R_POLLUTION_MAXIMUM = 1000,
+            R_HAPPY             = 12,
+            R_POLLUTION_MAXIMUM = 10000,
         }
     }
+
+    namespace Colors
+    {
+        public static class Colors
+        {
+            public static Color Good = new(0.1529412f, 0.682353f, 0.3764706f);
+            public static Color Bad = new(0.9058824f, 0.2980392f, 0.2352941f);
+            public static Color Medium = new(0.9529412f, 0.6117647f, 0.07058824f);
+        }
+    }
+
     namespace Json
     {
         public static class JsonConsts 

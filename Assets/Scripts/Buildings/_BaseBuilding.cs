@@ -38,6 +38,7 @@ namespace EcoGame
                 OnIAmountChange?.Invoke(iAmount);
             }
         }
+
         public int Production
         {
             get { return this.iProduction; }
@@ -161,6 +162,18 @@ namespace EcoGame
             this.iAmount++;
             RecalculateCost();
             RecalculateProduction();
+        }
+
+        public void DecreaseAmount()
+        {
+            if (this.Amount - 1 < 0)
+                return;
+            else
+            {
+                this.iAmount--;
+                RecalculateCost();
+                RecalculateProduction();
+            }
         }
     }
 }

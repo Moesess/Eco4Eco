@@ -5,20 +5,57 @@ namespace EcoGame
 {
     public class Resource
     {
-        public string sName; // Nazwa surowca
+        /// 
+        /// Klasa Surowca, posiada pola:
+        /// - WYMAGANE: Name, nazwa surowca glownie do wyswietlania czy ewentualnego kluczowania
+        /// - WYMAGANE: Amount, AKTUALNA ilosc produkcji danego surowca, np 10 oznacza ze mamy do dyspozycji 10 jednostek np. wegla.
+        /// - OPCJONALNE: MaxAmount, maksymalna ilosc danego surowca, wykorzystywane do niektorych surowcow typu zanieczyszczenie czy zadowolenie spoleczne. Do przeliczania procentow
+        /// - OPCJONALNE: UsedAmount, AKTUALNE ZUZYCIE danego surowca. Wykorzystywane do zdefiniowania czy mozemy miec aktywowana np elektrownie weglowa
+        /// 
+        /// EVENTY:
+        /// - OnIAmountChange, wywolywany gdy zmieni sie AKTUALNA wartosc danego surowca
+        /// - OnIUsedAmountChange, wywolywany gdy zmieni sie UZYCIE danego surowca
+        /// 
+
+        private string sName; // Nazwa surowca
 		private int iAmount; // Ilosc surowca
+		private int iMaxAmount; // Maksymalna ilosc surowca
+		private int iUsedAmount; // Uzywana ilosc surowca
 		public int Amount
         {
             get { return iAmount; }
             set 
             {
                 iAmount = value;
-                if(OnIAmountChange != null) OnIAmountChange(iAmount);
+                if(OnAmountChange != null) OnAmountChange(iAmount);
             }
         }
 
-		public delegate void OnIAmountChangeDelegate(int newAmount);
-        public event OnIAmountChangeDelegate OnIAmountChange;
+        public int UsedAmount
+        {
+            get { return iUsedAmount; }
+            set
+            {
+                iUsedAmount = value;
+                if (OnAmountChange != null) OnUsedAmountChange(iUsedAmount);
+            }
+        }
+
+        public int MaxAmount
+        {
+            get { return iMaxAmount; }
+            set { iMaxAmount = value; }
+        }
+
+        public string Name { 
+            get { return sName; } 
+            set { sName = value; }
+        }
+
+
+		public delegate void OnIChangeDelegate(int newAmount);
+        public event OnIChangeDelegate OnAmountChange;
+        public event OnIChangeDelegate OnUsedAmountChange;
 
 // Konstruktory ============================================================
 
@@ -26,26 +63,44 @@ namespace EcoGame
         {
             this.sName = "";
             this.Amount = 0;
+            this.MaxAmount = 0;
+            this.UsedAmount = 0;
         }
         public Resource(int _iVal)
         {
             this.sName = "";
             this.Amount = _iVal;
+            this.MaxAmount = 0;
+            this.UsedAmount = 0;
         }
         public Resource(string _sName)
         {
             this.sName = _sName;
             this.Amount = 0;
+            this.MaxAmount = 0;
+            this.UsedAmount = 0;
         }
         public Resource(string _sName, int _iVal)
         {
             this.sName = _sName;
             this.Amount = _iVal;
+            this.MaxAmount = 0;
+            this.UsedAmount = 0;
         }
+
         public Resource(Resource _Res)
         {
-            this.sName = _Res.sName;
-            this.Amount = _Res.iAmount;
+            this.sName = _Res.Name;
+            this.Amount = _Res.Amount;
+            this.MaxAmount = _Res.MaxAmount;
+            this.UsedAmount = _Res.UsedAmount;
+        }
+        public Resource(string _sName, int _iAmount, int _iMax, int _iUsed)
+        {
+            this.sName = _sName;
+            this.Amount = _iAmount;
+            this.MaxAmount = _iMax;
+            this.UsedAmount = _iUsed;
         }
 
         // Operatory ===============================================================
@@ -65,13 +120,20 @@ namespace EcoGame
         public static Resource operator -(Resource _Res1, Resource _Res2)
         {
             if (_Res1.sName == _Res2.sName)
+            {
+                if(_Res1.Amount - _Res2.Amount < 0)
+                    return new Resource(_Res1.sName, 0);
                 return new Resource(_Res1.sName, _Res1.Amount - _Res2.Amount);
+            }
             else
                 throw new Exception("Invalid resource type exception");
         }
 
         public static Resource operator -(Resource _Res1, int _iRes2)
         {
+            if(_Res1.Amount - _iRes2 < 0)
+                return new Resource(_Res1.sName, 0);
+
             return new Resource(_Res1.sName, _Res1.Amount - _iRes2);
         }
 
@@ -150,6 +212,14 @@ namespace EcoGame
                 this.Amount = 0;
             else
                 this.Amount = _iVal;
+        }
+
+        public void SetUsedValue(int _iVal)
+        {
+            if(_iVal < 0)
+                this.UsedAmount = 0;
+            else
+                this.UsedAmount = _iVal;
         }
     }
 }
