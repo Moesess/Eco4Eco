@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace EcoGame
@@ -198,12 +199,30 @@ namespace EcoGame
         // Metody
         public void Add(int _iVal)
         {
-            this.Amount += _iVal; 
+            if(this.Amount + _iVal <= 0)
+            {
+                this.Amount = 0;
+            } 
+            else if(this.Amount + _iVal > MaxAmount)
+            {
+                this.Amount = MaxAmount;
+            }
+            else
+                this.Amount += _iVal;
+        }
 
-            if(this.Amount < 0)
+        public void Subtract(int _iVal)
+        {
+            if (this.Amount - _iVal <= 0)
             {
                 this.Amount = 0;
             }
+            else if (this.Amount - _iVal > MaxAmount)
+            {
+                this.Amount = MaxAmount;
+            }
+            else
+                this.Amount -= _iVal;
         }
 
         public void SetValue(int _iVal)

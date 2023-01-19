@@ -35,8 +35,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Kopalnia ropy naftowej",   // Nazwa Budynku
                         "Mine Panel",               // Panel na ktorym budynek sie pojawia
-                        (int)R_OIL,                 // Surowiec jaki produkuje
-                        (int)R_POWER,               // Surowiec jaki wykorzystuje
+                        R_OIL,                 // Surowiec jaki produkuje
+                        R_POWER,               // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_MINE_OIL, // Ile Surowca wykorzystuje
                         (int)B_COST_MINE_OIL,       // Koszt podstawowy
                         (int)B_COST_MINE_OIL,       // Koszt aktualny
@@ -53,8 +53,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Kopalnia wêgla",           // Nazwa Budynku
                         "Mine Panel",               // Panel na ktorym budynek sie pojawia
-                        (int)R_COAL,                // Surowiec jaki produkuje
-                        (int)R_POWER,               // Surowiec jaki wykorzystuje
+                        R_COAL,                // Surowiec jaki produkuje
+                        R_POWER,               // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_MINE_COAL, // Ile Surowca wykorzystuje
                         (int)B_COST_MINE_COAL,      // Koszt podstawowy
                         (int)B_COST_MINE_COAL,      // Koszt aktualny
@@ -71,8 +71,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Kopalnia gazu",            // Nazwa Budynku
                         "Mine Panel",               // Panel na ktorym budynek sie pojawia
-                        (int)R_GAS,                 // Surowiec jaki produkuje
-                        (int)R_POWER,               // Surowiec jaki wykorzystuje
+                        R_GAS,                 // Surowiec jaki produkuje
+                        R_POWER,               // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_MINE_GAS, // Ile Surowca wykorzystuje
                         (int)B_COST_MINE_GAS,       // Koszt podstawowy
                         (int)B_COST_MINE_GAS,       // Koszt aktualny
@@ -89,8 +89,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Kopalnia torfu",           // Nazwa Budynku
                         "Mine Panel",               // Panel na ktorym budynek sie pojawia
-                        (int)R_PEAT,                // Surowiec jaki produkuje
-                        (int)R_POWER,               // Surowiec jaki wykorzystuje
+                        R_PEAT,                // Surowiec jaki produkuje
+                        R_POWER,               // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_MINE_PEAT, // Ile Surowca wykorzystuje
                         (int)B_COST_MINE_PEAT,      // Koszt podstawowy
                         (int)B_COST_MINE_PEAT,      // Koszt aktualny
@@ -107,8 +107,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Kopalnia uranu",               // Nazwa Budynku
                         "Mine Panel",                   // Panel na ktorym budynek sie pojawia
-                        (int)R_URANIUM,                 // Surowiec jaki produkuje
-                        (int)R_POWER,                   // Surowiec jaki wykorzystuje
+                        R_URANIUM,                 // Surowiec jaki produkuje
+                        R_POWER,                   // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_MINE_URANIUM, // Ile Surowca wykorzystuje
                         (int)B_COST_MINE_URANIUM,       // Koszt podstawowy
                         (int)B_COST_MINE_URANIUM,       // Koszt aktualny
@@ -127,8 +127,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Fabryka samochodów",               // Nazwa Budynku
                         "Goods Panel",                      // Panel na ktorym budynek sie pojawia
-                        (int)R_GOODS,                       // Surowiec jaki produkuje
-                        (int)R_POWER,                       // Surowiec jaki wykorzystuje
+                        R_GOODS,                       // Surowiec jaki produkuje
+                        R_POWER,                       // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_GOODS_CARFACTORY,    // Ile Surowca wykorzystuje
                         (int)B_COST_GOODS_CARFACTORY,       // Koszt podstawowy
                         (int)B_COST_GOODS_CARFACTORY,       // Koszt aktualny
@@ -145,8 +145,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Szwalnia ubrañ",                       // Nazwa Budynku
                         "Goods Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_GOODS,                           // Surowiec jaki produkuje
-                        (int)R_POWER,                           // Surowiec jaki wykorzystuje
+                        R_GOODS,                           // Surowiec jaki produkuje
+                        R_POWER,                           // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_GOODS_CLOTHESSEWING,        // Ile Surowca wykorzystuje
                         (int)B_COST_GOODS_CLOTHESSEWING,        // Koszt podstawowy
                         (int)B_COST_GOODS_CLOTHESSEWING,        // Koszt aktualny
@@ -163,8 +163,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Fabryka elektroniki",                      // Nazwa Budynku
                         "Goods Panel",                              // Panel na ktorym budynek sie pojawia
-                        (int)R_GOODS,                               // Surowiec jaki produkuje
-                        (int)R_POWER,                               // Surowiec jaki wykorzystuje
+                        R_GOODS,                               // Surowiec jaki produkuje
+                        R_POWER,                               // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_GOODS_ELECTRONICSFACTORY,            // Ile Surowca wykorzystuje
                         (int)B_COST_GOODS_ELECTRONICSFACTORY,       // Koszt podstawowy
                         (int)B_COST_GOODS_ELECTRONICSFACTORY,       // Koszt aktualny
@@ -183,8 +183,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Hodowla zwierz¹t",                 // Nazwa Budynku
                         "Food Panel",                       // Panel na ktorym budynek sie pojawia
-                        (int)R_FOOD,                       // Surowiec jaki produkuje
-                        (int)R_POWER,                       // Surowiec jaki wykorzystuje
+                        R_FOOD,                       // Surowiec jaki produkuje
+                        R_POWER,                       // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_FOOD_ANIMALFARM,    // Ile Surowca wykorzystuje
                         (int)B_COST_FOOD_ANIMALFARM,        // Koszt podstawowy
                         (int)B_COST_FOOD_ANIMALFARM,        // Koszt aktualny
@@ -201,8 +201,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Punkt uzdatniania wody",                 // Nazwa Budynku
                         "Food Panel",                       // Panel na ktorym budynek sie pojawia
-                        (int)R_FOOD,                       // Surowiec jaki produkuje
-                        (int)R_POWER,                       // Surowiec jaki wykorzystuje
+                        R_FOOD,                       // Surowiec jaki produkuje
+                        R_POWER,                       // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_FOOD_DRINKINGWATER,    // Ile Surowca wykorzystuje
                         (int)B_COST_FOOD_DRINKINGWATER,        // Koszt podstawowy
                         (int)B_COST_FOOD_DRINKINGWATER,        // Koszt aktualny
@@ -220,8 +220,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Laboratorium miêsa z probówki",                 // Nazwa Budynku
                         "Food Panel",                       // Panel na ktorym budynek sie pojawia
-                        (int)R_FOOD,                       // Surowiec jaki produkuje
-                        (int)R_POWER,                       // Surowiec jaki wykorzystuje
+                        R_FOOD,                       // Surowiec jaki produkuje
+                        R_POWER,                       // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_FOOD_EXPERIMENTALMEAT,    // Ile Surowca wykorzystuje
                         (int)B_COST_FOOD_ANIMALFARM,        // Koszt podstawowy
                         (int)B_COST_FOOD_ANIMALFARM,        // Koszt aktualny
@@ -238,8 +238,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Pole uprawne",                 // Nazwa Budynku
                         "Food Panel",                       // Panel na ktorym budynek sie pojawia
-                        (int)R_FOOD,                       // Surowiec jaki produkuje
-                        (int)R_POWER,                       // Surowiec jaki wykorzystuje
+                        R_FOOD,                       // Surowiec jaki produkuje
+                        R_POWER,                       // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_FOOD_FARMLAND,    // Ile Surowca wykorzystuje
                         (int)B_COST_FOOD_ANIMALFARM,        // Koszt podstawowy
                         (int)B_COST_FOOD_ANIMALFARM,        // Koszt aktualny
@@ -256,8 +256,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Miejsca po³owu ryb",                 // Nazwa Budynku
                         "Food Panel",                       // Panel na ktorym budynek sie pojawia
-                        (int)R_FOOD,                       // Surowiec jaki produkuje
-                        (int)R_POWER,                       // Surowiec jaki wykorzystuje
+                        R_FOOD,                       // Surowiec jaki produkuje
+                        R_POWER,                       // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_FOOD_FISHING,    // Ile Surowca wykorzystuje
                         (int)B_COST_FOOD_FISHING,        // Koszt podstawowy
                         (int)B_COST_FOOD_FISHING,        // Koszt aktualny
@@ -274,8 +274,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "¯ywnoœæ przetworzona",                 // Nazwa Budynku
                         "Food Panel",                           // Panel na ktorym budynek sie pojawia
-                        (int)R_FOOD,                            // Surowiec jaki produkuje
-                        (int)R_POWER,                           // Surowiec jaki wykorzystuje
+                        R_FOOD,                            // Surowiec jaki produkuje
+                        R_POWER,                           // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_FOOD_PROCESSEDFOOD, // Ile Surowca wykorzystuje
                         (int)B_COST_FOOD_PROCESSEDFOOD,        // Koszt podstawowy
                         (int)B_COST_FOOD_PROCESSEDFOOD,        // Koszt aktualny
@@ -294,8 +294,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Elektrownia na biomasê",               // Nazwa Budynku
                         "Power Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_POWER,                           // Surowiec jaki produkuje
-                        (int)R_PEAT,                            // Surowiec jaki wykorzystuje
+                        R_POWER,                           // Surowiec jaki produkuje
+                        R_PEAT,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_POWERPLANT_BIOMASS, // Ile Surowca wykorzystuje
                         (int)B_COST_POWERPLANT_BIOMASS,         // Koszt podstawowy
                         (int)B_COST_POWERPLANT_BIOMASS,         // Koszt aktualny
@@ -312,8 +312,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Elektrownia wêglowa",               // Nazwa Budynku
                         "Power Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_POWER,                           // Surowiec jaki produkuje
-                        (int)R_COAL,                            // Surowiec jaki wykorzystuje
+                        R_POWER,                           // Surowiec jaki produkuje
+                        R_COAL,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_POWERPLANT_COAL, // Ile Surowca wykorzystuje
                         (int)B_COST_POWERPLANT_COAL,         // Koszt podstawowy
                         (int)B_COST_POWERPLANT_COAL,         // Koszt aktualny
@@ -330,8 +330,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Elektrownia atomowa",               // Nazwa Budynku
                         "Power Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_POWER,                           // Surowiec jaki produkuje
-                        (int)R_URANIUM,                            // Surowiec jaki wykorzystuje
+                        R_POWER,                           // Surowiec jaki produkuje
+                        R_URANIUM,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_POWERPLANT_NUCLEAR, // Ile Surowca wykorzystuje
                         (int)B_COST_POWERPLANT_NUCLEAR,         // Koszt podstawowy
                         (int)B_COST_POWERPLANT_NUCLEAR,         // Koszt aktualny
@@ -348,8 +348,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Elektrownia solarna",               // Nazwa Budynku
                         "Power Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_POWER,                           // Surowiec jaki produkuje
-                        (int)R_URANIUM,                            // Surowiec jaki wykorzystuje
+                        R_POWER,                           // Surowiec jaki produkuje
+                        R_URANIUM,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_POWERPLANT_SOLAR, // Ile Surowca wykorzystuje
                         (int)B_COST_POWERPLANT_SOLAR,         // Koszt podstawowy
                         (int)B_COST_POWERPLANT_SOLAR,         // Koszt aktualny
@@ -366,8 +366,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Elektrownia wodna",               // Nazwa Budynku
                         "Power Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_POWER,                           // Surowiec jaki produkuje
-                        (int)R_NULL,                            // Surowiec jaki wykorzystuje
+                        R_POWER,                           // Surowiec jaki produkuje
+                        R_NULL,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_POWERPLANT_WATER, // Ile Surowca wykorzystuje
                         (int)B_COST_POWERPLANT_WATER,         // Koszt podstawowy
                         (int)B_COST_POWERPLANT_WATER,         // Koszt aktualny
@@ -384,8 +384,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Elektrownia wiatrowa",               // Nazwa Budynku
                         "Power Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_POWER,                           // Surowiec jaki produkuje
-                        (int)R_NULL,                            // Surowiec jaki wykorzystuje
+                        R_POWER,                           // Surowiec jaki produkuje
+                        R_NULL,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_POWERPLANT_WIND, // Ile Surowca wykorzystuje
                         (int)B_COST_POWERPLANT_WIND,         // Koszt podstawowy
                         (int)B_COST_POWERPLANT_WIND,         // Koszt aktualny
@@ -404,8 +404,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Kompostownia odpadów",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_NULL,                           // Surowiec jaki produkuje
-                        (int)R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
+                        R_TRASH,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_TRASH_COMPOSTINGPLANT, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_COMPOSTINGPLANT,         // Koszt podstawowy
                         (int)B_COST_TRASH_COMPOSTINGPLANT,         // Koszt aktualny
@@ -422,8 +422,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Wysypisko œmieci",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_NULL,                           // Surowiec jaki produkuje
-                        (int)R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
+                        R_TRASH,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_TRASH_GARBAGEDUMP, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_GARBAGEDUMP,         // Koszt podstawowy
                         (int)B_COST_TRASH_GARBAGEDUMP,         // Koszt aktualny
@@ -440,8 +440,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Spalarnia œmieci",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_NULL,                           // Surowiec jaki produkuje
-                        (int)R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
+                        R_TRASH,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_TRASH_GARBAGEINCINERATOR, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_GARBAGEINCINERATOR,         // Koszt podstawowy
                         (int)B_COST_TRASH_GARBAGEINCINERATOR,         // Koszt aktualny
@@ -458,8 +458,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Statek ³owi¹cy œmieci",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_NULL,                           // Surowiec jaki produkuje
-                        (int)R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
+                        R_TRASH,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_TRASH_GARBAGESHIP, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_GARBAGESHIP,         // Koszt podstawowy
                         (int)B_COST_TRASH_GARBAGESHIP,         // Koszt aktualny
@@ -476,8 +476,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Miejsce Recyklingu",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        (int)R_NULL,                           // Surowiec jaki produkuje
-                        (int)R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
+                        R_TRASH,                            // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_TRASH_RECYCLING, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_RECYCLING,         // Koszt podstawowy
                         (int)B_COST_TRASH_RECYCLING,         // Koszt aktualny
@@ -489,32 +489,6 @@ namespace EcoGame
                         (int)B_MULT_PROD_TRASH_RECYCLING     // Mnoznik produkcji
                     )
                 );
-
-                //this.Buildings.Add((int)B_MINE_OIL, gameObject.AddComponent<OilMineBuilding>());
-                //this.Buildings.Add((int)B_MINE_COAL, gameObject.AddComponent<CoalMineBuilding>());
-                //this.Buildings.Add((int)B_MINE_GAS, gameObject.AddComponent<GasMineBuilding>());
-                //this.Buildings.Add((int)B_MINE_URANIUM, gameObject.AddComponent<UraniumMineBuilding>());
-                //this.Buildings.Add((int)B_MINE_PEAT, gameObject.AddComponent<PeatMineBuilding>());
-                //this.Buildings.Add((int)B_POWERPLANT_COAL, gameObject.AddComponent<CoalPowerPlantBuilding>());
-                //this.Buildings.Add((int)B_POWERPLANT_SOLAR, gameObject.AddComponent<SolarPowerPlantBuilding>());
-                //this.Buildings.Add((int)B_POWERPLANT_WIND, gameObject.AddComponent<WindPowerPlantBuilding>());
-                //this.Buildings.Add((int)B_POWERPLANT_WATER, gameObject.AddComponent<WaterPowerPlantBuilding>());
-                //this.Buildings.Add((int)B_POWERPLANT_NUCLEAR, gameObject.AddComponent<NuclearPowerPlantBuilding>());
-                //this.Buildings.Add((int)B_POWERPLANT_BIOMASS, gameObject.AddComponent<BiomassPowerPlantBuilding>());
-                //this.Buildings.Add((int)B_FOOD_PROCESSEDFOOD, gameObject.AddComponent<ProcessedFoodBuilding>());
-                //this.Buildings.Add((int)B_FOOD_FISHING, gameObject.AddComponent<FishingBuilding>());
-                //this.Buildings.Add((int)B_FOOD_ANIMALFARM, gameObject.AddComponent<AnimalFarmBuilding>());
-                //this.Buildings.Add((int)B_FOOD_DRINKINGWATER, gameObject.AddComponent<DrinkingWaterBuilding>());
-                //this.Buildings.Add((int)B_FOOD_EXPERIMENTALMEAT, gameObject.AddComponent<ExperimentalMeatBuilding>());
-                //this.Buildings.Add((int)B_FOOD_FARMLAND, gameObject.AddComponent<FarmlandBuilding>());
-                //this.Buildings.Add((int)B_TRASH_RECYCLING, gameObject.AddComponent<RecyclingBuilding>());
-                //this.Buildings.Add((int)B_TRASH_GARBAGEINCINERATOR, gameObject.AddComponent<GarbageIncineratorBuilding>());
-                //this.Buildings.Add((int)B_TRASH_GARBAGEDUMP, gameObject.AddComponent<GarbageDumpBuilding>());
-                //this.Buildings.Add((int)B_TRASH_COMPOSTINGPLANT, gameObject.AddComponent<CompostingPlantBuilding>());
-                //this.Buildings.Add((int)B_TRASH_GARBAGESHIP, gameObject.AddComponent<GarbageShipBuilding>());
-                //this.Buildings.Add((int)B_GOODS_CARFACTORY, gameObject.AddComponent<CarFactoryBuilding>());
-                //this.Buildings.Add((int)B_GOODS_ELECTRONICSFACTORY, gameObject.AddComponent<ElectronicsFactoryBuilding>());
-                //this.Buildings.Add((int)B_GOODS_CLOTHESSEWING, gameObject.AddComponent<ClothesSewingBuilding>());
                 Instance = this;
                 InstantiateBuildings();
             }

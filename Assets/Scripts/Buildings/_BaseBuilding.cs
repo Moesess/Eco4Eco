@@ -2,6 +2,8 @@
 namespace EcoGame
 {
     using static Resources.RESOURCES;
+    using Resources;
+
     public class _BaseBuilding : IBuilding
     {
         private int iBaseCost; // Podstawowy koszt
@@ -9,10 +11,10 @@ namespace EcoGame
         private int iCost; // Koszt budowy
         private int iAmount; // Iloœæ posiadanych budynkow - technicznie mnoznik
         private int iProduction; // Produkcja surowca
-        private int iUsedResource; // Uzycie surowca
-        private int iUsedResourceAmount; // Uzycie surowca
+        private RESOURCES eUsedResource; // Uzycie surowca
+        private int iUsedResourceAmount; // Uzycie surowca wartosc
         private int iPollution; // Produkcja surowca Pollution
-        private int iResource; // Surowiec produkowany
+        private RESOURCES eResource; // Surowiec produkowany
         private int iCostMultiplier; // Mno¿nik kosztów budowy
         private int iProductionMultiplier; // Mno¿nik produkcji
         private string sName; // Nazwa budynku
@@ -49,16 +51,16 @@ namespace EcoGame
             }
         }
 
-        public int Resource
+        public RESOURCES Resource
         {
-            get { return this.iResource; }
-            set { this.iResource = value; }
+            get { return this.eResource; }
+            set { this.eResource = value; }
         }
 
-        public int UsedResource
+        public RESOURCES UsedResource
         {
-            get { return this.iUsedResource; }
-            set { this.iUsedResource = value; }
+            get { return this.eUsedResource; }
+            set { this.eUsedResource = value; }
         }
 
         public int UsedResourceAmount
@@ -108,7 +110,7 @@ namespace EcoGame
 		}
 
         public _BaseBuilding(
-            string sName = "", string spanelName = "", int iResource = 0, int iUsedResource = 0, int iUsedResourceAmount = 0,
+            string sName = "", string sPanelName = "", RESOURCES eResource = 0, RESOURCES eUsedResource = 0, int iUsedResourceAmount = 0,
             int iBaseCost = 0, int iCost = 0, int iTechLevel = 0, 
             int iAmount = 0, int iProduction = 0, int iPollution = 0,
             int iCostMultiplier = 0, int iProductionMultiplier = 0)
@@ -116,8 +118,8 @@ namespace EcoGame
             this.Cost = iCost;
             this.Amount = iAmount;
             this.Production = iProduction;
-            this.Resource = iResource;
-            this.UsedResource = iUsedResource;
+            this.Resource = eResource;
+            this.UsedResource = eUsedResource;
             this.UsedResourceAmount = iUsedResourceAmount;
             this.CostMultiplier = iCostMultiplier;
             this.ProductionMultiplier = iProductionMultiplier;
@@ -125,15 +127,14 @@ namespace EcoGame
             this.Pollution = iPollution;
             this.TechLevel = iTechLevel;
             this.BaseCost = iBaseCost;
-            this.PanelName = spanelName;
+            this.PanelName = sPanelName;
         }
 
         public virtual void Tick()
         {
-            ResourceManager.Instance.Resources[this.Resource].Add(this.Production);
-            ResourceManager.Instance.Resources[(int)R_POLLUTION].Add(this.Pollution);
+            ResourceManager.Instance.Resources[(int)R_POLLUTION].Add(this.Pollution * this.Amount);
         }
-        
+
         public virtual void RecalculateCost() 
         {
             this.Cost = (int)(this.BaseCost * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
@@ -142,7 +143,8 @@ namespace EcoGame
         public virtual void RecalculateProduction() 
         {
             this.Production = (int)System.Math.Pow(this.TechLevel + 1, this.ProductionMultiplier) * this.Amount;
-        } 
+            ResourceManager.Instance.Resources[(int)eResource].SetValue(this.Production);
+        }
 
         // Methods
         public void SetCost(int _iVal)
@@ -150,16 +152,9 @@ namespace EcoGame
             this.iCost = _iVal;
         }
 
-        public void IncreaseAmount(int _iVal)
-        {
-            this.iAmount += _iVal;
-            RecalculateCost();
-            RecalculateProduction();
-        }
-
         public void IncreaseAmount()
         {
-            this.iAmount++;
+            this.Amount++;
             RecalculateCost();
             RecalculateProduction();
         }
@@ -170,7 +165,7 @@ namespace EcoGame
                 return;
             else
             {
-                this.iAmount--;
+                this.Amount--;
                 RecalculateCost();
                 RecalculateProduction();
             }

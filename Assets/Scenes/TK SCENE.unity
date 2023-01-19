@@ -140,6 +140,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: ef9b144f4b7d611489541bd5174e37ce, type: 3}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 11
       objectReference: {fileID: 0}
@@ -501,6 +505,10 @@ PrefabInstance:
       propertyPath: ImageTex
       value: 
       objectReference: {fileID: 2800000, guid: 8c5b79707e8ddf9449a3f42ede0a06f3, type: 3}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 5
@@ -1568,6 +1576,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: bb129ece4f76ab2468eab02f5b435d28, type: 3}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 7
       objectReference: {fileID: 0}
@@ -2433,6 +2445,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: 0032519810930c94598ca9e2a3298215, type: 3}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 1
       objectReference: {fileID: 0}
@@ -2552,6 +2568,10 @@ PrefabInstance:
       propertyPath: ImageTex
       value: 
       objectReference: {fileID: 2800000, guid: 93811637c77a71e4997586d3cdea4e1f, type: 3}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 6
@@ -3198,6 +3218,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: b6c7d27f0d59fc044b552da7076847a6, type: 3}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 8
       objectReference: {fileID: 0}
@@ -3321,6 +3345,10 @@ PrefabInstance:
       propertyPath: ImageTex
       value: 
       objectReference: {fileID: 2800000, guid: f708c6d87fdd3844ba9bdf50989c1c62, type: 3}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 3
@@ -3923,6 +3951,10 @@ PrefabInstance:
       propertyPath: ImageTex
       value: 
       objectReference: {fileID: 2800000, guid: 303a9cecb0a7d1a4e9e1cb436ed64137, type: 3}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 9
@@ -4635,6 +4667,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2800000, guid: a2b4febae57094c40a7709a3c2d99779, type: 3}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 2
       objectReference: {fileID: 0}
@@ -5023,6 +5059,10 @@ PrefabInstance:
       propertyPath: ImageTex
       value: 
       objectReference: {fileID: 2800000, guid: e895083aa621eaf46ab1d47e915d10bc, type: 3}
+    - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
+      propertyPath: eResource
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 1042052053354455151, guid: 1f92443bb3b1bfc4d85acc0a03e7b716, type: 3}
       propertyPath: ResourceName
       value: 12

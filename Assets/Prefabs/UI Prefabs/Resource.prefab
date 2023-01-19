@@ -200,7 +200,7 @@ MonoBehaviour:
   Value: {fileID: 1890063569282133319}
   Image: {fileID: 3525109910196948759}
   ImageTex: {fileID: 0}
-  iResourceName: 0
+  eResource: 0
 --- !u!114 &5219496241599868284
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,8 +400,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

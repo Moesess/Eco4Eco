@@ -53,7 +53,7 @@ namespace EcoGame
         {
             if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost)
             {
-                BuildingManager.Instance.Buildings[iBuildKey].IncreaseAmount(1);
+                BuildingManager.Instance.Buildings[iBuildKey].IncreaseAmount();
                 ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
                 Click.Play();
             }

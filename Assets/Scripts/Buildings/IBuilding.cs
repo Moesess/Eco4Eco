@@ -9,9 +9,9 @@ namespace EcoGame
         int Pollution { get; set; }
         string Name { get; set; }
         string PanelName { get; set; }
-        void Tick();
+        //void Tick();
         void SetCost(int _iVal);
-        void IncreaseAmount(int _iVal);
         void IncreaseAmount();
+        void DecreaseAmount();
     }
 }
