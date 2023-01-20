@@ -13,7 +13,6 @@ namespace EcoGame
         [SerializeField] public GameObject AmountText;
         [SerializeField] public GameObject BuyButton;
         [SerializeField] public GameObject GenerateText;
-        [SerializeField] public AudioSource Click;
         public int iBuildCost;
         public int iBuildAmount;
         public int iBuildKey;
@@ -47,7 +46,8 @@ namespace EcoGame
                     ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
                 }
             }
-            Click.Play();
+
+            SfxManager.Instance.PlayClick();
         }
 
         public void SellButtonClick()
@@ -70,10 +70,10 @@ namespace EcoGame
                 {
                     Building.DecreaseAmount();
                     ResourceManager.Instance.Budget.Amount += this.iBuildCost;
-                   
+
                 }
             }
-            Click.Play();
+            SfxManager.Instance.PlayClick();
         }
 
         public void OnAmountChange()
@@ -86,10 +86,11 @@ namespace EcoGame
             CheckButtonInteractable();
         }
 
-        public void CheckButtonInteractable() 
+        public void CheckButtonInteractable()
         {
             _BaseBuilding Building = BuildingManager.Instance.Buildings[iBuildKey];
-            if (Building.Resource == RESOURCES.R_NULL)
+
+            if (Building.UsedResource == RESOURCES.R_NULL)
             {
                 if (Building.Amount > 0)
                 {
@@ -107,9 +108,9 @@ namespace EcoGame
             }
             else
             {
-                Resource UsedRes = ResourceManager.Instance.Resources[(int)Building.Resource];
+                Resource UsedRes = ResourceManager.Instance.Resources[(int)Building.UsedResource];
 
-                if (Building.Amount > 0 && UsedRes.Amount - UsedRes.UsedAmount > 0)
+                if (Building.Amount > 0 && UsedRes.Amount - UsedRes.UsedAmount >= 0)
                 {
                     SellButton.GetComponent<Button>().interactable = true;
 
@@ -117,13 +118,15 @@ namespace EcoGame
                 else
                     SellButton.GetComponent<Button>().interactable = false;
 
-                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
+                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost && (UsedRes.Amount - UsedRes.UsedAmount) >= 0)
                 {
                     BuyButton.GetComponent<Button>().interactable = true;
                 }
                 else
                     BuyButton.GetComponent<Button>().interactable = false;
 
+                if (UsedRes.Amount - UsedRes.UsedAmount == 0)
+                    BuyButton.GetComponent<Button>().interactable = false;
             }
         }
     }

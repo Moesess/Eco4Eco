@@ -8,16 +8,16 @@ public class SfxManager : MonoBehaviour
 
     public AudioSource Click;
 
-    public static SfxManager sfxInstance;
+    public static SfxManager Instance;
 
     private void Awake() {
-        if(sfxInstance != null && sfxInstance != this)
+        if(Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
             return;
         }
 
-        sfxInstance = this;
+        Instance = this;
         // DontDestoyOnLoad(this);
     }
 

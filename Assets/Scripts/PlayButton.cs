@@ -8,7 +8,7 @@ namespace EcoGame {
     {
         public void OnClick()
         {
-            SfxManager.sfxInstance.PlayClick();
+            SfxManager.Instance.PlayClick();
         }
     }
 }
