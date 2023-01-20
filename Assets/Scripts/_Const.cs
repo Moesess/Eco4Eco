@@ -259,6 +259,18 @@ namespace EcoGame
             R_HAPPY             = 12,
             R_POLLUTION_MAXIMUM = 10000,
         }
+
+        public enum RESOURCE_PRICES
+        {
+            R_PRICE_COAL = 3,
+            R_PRICE_GAS = 4,
+            R_PRICE_OIL = 6,
+            R_PRICE_URANIUM = 20,
+            R_PRICE_PEAT = 1,
+            R_PRICE_POWER = 2,
+            R_PRICE_FOOD = 1,
+            R_PRICE_GOODS = 2,
+        }
     }
     
     // Kolory dla wyswietlania zadowolenia

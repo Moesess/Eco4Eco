@@ -1,7 +1,10 @@
+using EcoGame.Resources;
 using System;
 
 namespace EcoGame
 {
+    using static EcoGame.Resources.RESOURCE_PRICES;
+
     public class Resource
     {
         /// 
@@ -20,6 +23,8 @@ namespace EcoGame
 		private int iAmount; // Ilosc surowca
 		private int iMaxAmount; // Maksymalna ilosc surowca
 		private int iUsedAmount; // Uzywana ilosc surowca
+		private int iPrice;      // Cena surowca
+
 		public int Amount
         {
             get { return iAmount; }
@@ -51,8 +56,14 @@ namespace EcoGame
             set { sName = value; }
         }
 
+        public int Price
+        {
+            get { return iPrice; }
+            set { iPrice = value; }
+        }
 
-		public delegate void OnIChangeDelegate();
+
+        public delegate void OnIChangeDelegate();
         public event OnIChangeDelegate OnAmountChange;
         public event OnIChangeDelegate OnUsedAmountChange;
 
@@ -79,12 +90,22 @@ namespace EcoGame
             this.MaxAmount = 0;
             this.UsedAmount = 0;
         }
+
         public Resource(string _sName, int _iVal)
         {
             this.sName = _sName;
             this.Amount = _iVal;
             this.MaxAmount = 0;
             this.UsedAmount = 0;
+        }
+
+        public Resource(string _sName, int _iVal, RESOURCE_PRICES _iPrice)
+        {
+            this.sName = _sName;
+            this.Amount = _iVal;
+            this.MaxAmount = 0;
+            this.UsedAmount = 0;
+            this.Price = (int)_iPrice;
         }
 
         public Resource(Resource _Res)
@@ -94,12 +115,14 @@ namespace EcoGame
             this.MaxAmount = _Res.MaxAmount;
             this.UsedAmount = _Res.UsedAmount;
         }
-        public Resource(string _sName, int _iAmount, int _iMax, int _iUsed)
+
+        public Resource(string _sName, int _iAmount, int _iMax, int _iUsed, int _iPrice)
         {
             this.sName = _sName;
             this.Amount = _iAmount;
             this.MaxAmount = _iMax;
             this.UsedAmount = _iUsed;
+            this.Price = _iPrice;
         }
 
         // Operatory ===============================================================

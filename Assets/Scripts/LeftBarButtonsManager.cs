@@ -21,10 +21,10 @@ namespace EcoGame
 		// Start is called before the first frame update
 		void Start()
 		{
-            panels[1].GetComponent<CanvasGroup>().interactable = true;
-            panels[1].GetComponent<CanvasGroup>().alpha = 1;
-            panels[1].GetComponent<CanvasGroup>().blocksRaycasts = true;
-            currentPanel = panels[1];
+            panels[0].GetComponent<CanvasGroup>().interactable = true;
+            panels[0].GetComponent<CanvasGroup>().alpha = 1;
+            panels[0].GetComponent<CanvasGroup>().blocksRaycasts = true;
+            currentPanel = panels[0];
 			OnClickButtonSwapPanel += SwapPanel;
 
 			foreach(var button in buttons.Select((value, i) => new { i, value }))
