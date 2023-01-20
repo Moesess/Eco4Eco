@@ -45,7 +45,6 @@ namespace EcoGame
                 {
                     Building.IncreaseAmount();
                     ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
-                    ResourceManager.Instance.Resources[(int)Building.UsedResource].UsedAmount += Building.UsedResourceAmount;
                     Click.Play();
                 }
             }
@@ -59,9 +58,6 @@ namespace EcoGame
             {
                 Building.DecreaseAmount();
                 ResourceManager.Instance.Budget.Amount += this.iBuildCost;
-
-                if (Building.UsedResource != RESOURCES.R_NULL)
-                    ResourceManager.Instance.Resources[(int)Building.UsedResource].UsedAmount -= Building.UsedResourceAmount;
             }
 
             Click.Play();
@@ -91,14 +87,14 @@ namespace EcoGame
                 BuyButton.GetComponent<Button>().interactable = false;
             }
 
-            if (iBuildAmount > 0)
-            {
-                SellButton.GetComponent<Button>().interactable = true;
-            }
-            else
-            {
-                SellButton.GetComponent<Button>().interactable = false;
-            }
+            //if (iBuildAmount > 0)
+            //{
+            //    SellButton.GetComponent<Button>().interactable = true;
+            //}
+            //else
+            //{
+            //    SellButton.GetComponent<Button>().interactable = false;
+            //}
         }
     }
 
