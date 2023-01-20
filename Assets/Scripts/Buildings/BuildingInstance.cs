@@ -74,14 +74,17 @@ namespace EcoGame
             this.AmountText.GetComponent<TMP_Text>().text = Building.Amount.ToString();
             this.GenerateText.GetComponent<TMP_Text>().text = Building.Production.ToString() + " j.";
 
-            if ((ResourceManager.Instance.Budget.Amount >= this.iBuildCost && Building.UsedResource != RESOURCES.R_NULL) && (
-                    (ResourceManager.Instance.Resources[(int)Building.UsedResource].Amount - (Building.UsedResourceAmount * Building.Amount) > 0) ||
-                    Building.UsedResource == RESOURCES.R_BUDGET
-                )
-            )
-
+            if ((ResourceManager.Instance.Budget.Amount >= this.iBuildCost))
             {
-                BuyButton.GetComponent<Button>().interactable = true;
+                if(Building.UsedResource != RESOURCES.R_NULL)
+                {
+                    if((ResourceManager.Instance.Resources[(int)Building.UsedResource].Amount - (Building.UsedResourceAmount * Building.Amount) > 0) || Building.UsedResource == RESOURCES.R_BUDGET)
+                        BuyButton.GetComponent<Button>().interactable = true;
+
+                }
+                else
+                    BuyButton.GetComponent<Button>().interactable = true;
+
             }
             else
             {
