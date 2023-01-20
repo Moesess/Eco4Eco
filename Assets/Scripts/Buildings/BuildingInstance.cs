@@ -34,32 +34,44 @@ namespace EcoGame
                 {
                     Building.IncreaseAmount();
                     ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
-                    Click.Play();
                 }
             }
             else
             {
                 Resource UsedRes = ResourceManager.Instance.Resources[(int)Building.UsedResource];
 
-                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost && (UsedRes.Amount - (Building.UsedResourceAmount * Building.Amount) > 0))
+                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
                 {
                     Building.IncreaseAmount();
                     ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
-                    Click.Play();
                 }
             }
+            Click.Play();
         }
 
         public void SellButtonClick()
         {
             _BaseBuilding Building = BuildingManager.Instance.Buildings[iBuildKey];
 
-            if (Building.Amount > 0)
+            if (Building.Resource == RESOURCES.R_NULL)
             {
-                Building.DecreaseAmount();
-                ResourceManager.Instance.Budget.Amount += this.iBuildCost;
+                if (Building.Amount > 0)
+                {
+                    Building.DecreaseAmount();
+                    ResourceManager.Instance.Budget.Amount += this.iBuildCost;
+                }
             }
+            else
+            {
+                Resource UsedRes = ResourceManager.Instance.Resources[(int)Building.Resource];
 
+                if (Building.Amount > 0 && UsedRes.Amount - UsedRes.UsedAmount > 0)
+                {
+                    Building.DecreaseAmount();
+                    ResourceManager.Instance.Budget.Amount += this.iBuildCost;
+                   
+                }
+            }
             Click.Play();
         }
 
@@ -80,7 +92,6 @@ namespace EcoGame
                 }
                 else
                     BuyButton.GetComponent<Button>().interactable = true;
-
             }
             else
             {

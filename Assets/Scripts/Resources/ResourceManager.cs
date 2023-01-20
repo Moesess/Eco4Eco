@@ -74,21 +74,35 @@ namespace EcoGame
 	        set { this.Resources[(int)R_LEAF] = value; }
         }
 
-        //public int iPower;
-        //public int iBudget;
-        //public int iTrash;
-        //public int iFood;
-        //public int iGoods;
-        //public int iOil;
-        //public int iCoal;
-        //public int iGas;
-        //public int iPollution;
-        //public int iUranium;
-        //public int iPeat;
-        //public int iLeaf;
-        //public int iHappy;
+        public int iPower;
+        public int iBudget;
+        public int iTrash;
+        public int iFood;
+        public int iGoods;
+        public int iOil;
+        public int iCoal;
+        public int iGas;
+        public int iPollution;
+        public int iUranium;
+        public int iPeat;
+        public int iLeaf;
+        public int iHappy;
 
-		private void Awake()
+        public int iUsedPower;
+        public int iUsedBudget;
+        public int iUsedTrash;
+        public int iUsedFood;
+        public int iUsedGoods;
+        public int iUsedOil;
+        public int iUsedCoal;
+        public int iUsedGas;
+        public int iUsedPollution;
+        public int iUsedUranium;
+        public int iUsedPeat;
+        public int iUsedLeaf;
+        public int iUsedHappy;
+
+        private void Awake()
         {
             // Set instance on scene awake
             if (Instance == null)
@@ -118,22 +132,36 @@ namespace EcoGame
             }
         }
 
-        //private void Update()
-        //{
-        //    iPower      = this.Resources[(int)R_POWER].Amount;
-        //    iBudget     = this.Resources[(int)R_BUDGET].Amount;
-        //    iTrash      = this.Resources[(int)R_TRASH].Amount;
-        //    iFood       = this.Resources[(int)R_FOOD].Amount;
-        //    iGoods      = this.Resources[(int)R_GOODS].Amount;
-        //    iOil        = this.Resources[(int)R_OIL].Amount;
-        //    iCoal       = this.Resources[(int)R_COAL].Amount;
-        //    iGas        = this.Resources[(int)R_GAS].Amount;
-        //    iPollution  = this.Resources[(int)R_POLLUTION].Amount;
-        //    iUranium    = this.Resources[(int)R_URANIUM].Amount;
-        //    iPeat       = this.Resources[(int)R_PEAT].Amount;
-        //    iLeaf       = this.Resources[(int)R_LEAF].Amount;
-        //    iHappy      = this.Resources[(int)R_HAPPY].Amount;
-        //}
+        private void Update()
+        {
+            iPower = this.Resources[(int)R_POWER].Amount;
+            iBudget = this.Resources[(int)R_BUDGET].Amount;
+            iTrash = this.Resources[(int)R_TRASH].Amount;
+            iFood = this.Resources[(int)R_FOOD].Amount;
+            iGoods = this.Resources[(int)R_GOODS].Amount;
+            iOil = this.Resources[(int)R_OIL].Amount;
+            iCoal = this.Resources[(int)R_COAL].Amount;
+            iGas = this.Resources[(int)R_GAS].Amount;
+            iPollution = this.Resources[(int)R_POLLUTION].Amount;
+            iUranium = this.Resources[(int)R_URANIUM].Amount;
+            iPeat = this.Resources[(int)R_PEAT].Amount;
+            iLeaf = this.Resources[(int)R_LEAF].Amount;
+            iHappy = this.Resources[(int)R_HAPPY].Amount;
+
+            iUsedPower = this.Resources[(int)R_POWER].UsedAmount;
+            iUsedBudget = this.Resources[(int)R_BUDGET].UsedAmount;
+            iUsedTrash = this.Resources[(int)R_TRASH].UsedAmount;
+            iUsedFood = this.Resources[(int)R_FOOD].UsedAmount;
+            iUsedGoods = this.Resources[(int)R_GOODS].UsedAmount;
+            iUsedOil = this.Resources[(int)R_OIL].UsedAmount;
+            iUsedCoal = this.Resources[(int)R_COAL].UsedAmount;
+            iUsedGas = this.Resources[(int)R_GAS].UsedAmount;
+            iUsedPollution = this.Resources[(int)R_POLLUTION].UsedAmount;
+            iUsedUranium = this.Resources[(int)R_URANIUM].UsedAmount;
+            iUsedPeat = this.Resources[(int)R_PEAT].UsedAmount;
+            iUsedLeaf = this.Resources[(int)R_LEAF].UsedAmount;
+            iUsedHappy = this.Resources[(int)R_HAPPY].UsedAmount;
+        }
 
         public void ResetResourceForRecalculation()
         {
