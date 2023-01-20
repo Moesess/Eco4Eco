@@ -13,11 +13,12 @@ namespace EcoGame
         {
             ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].OnAmountChange += GetCurrentFill;
             this.maximum = (float)ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].MaxAmount;
+            GetCurrentFill();
         }
 
-        void GetCurrentFill(int _iVal)
+        void GetCurrentFill()
         {
-            float fCurrent = _iVal - 0f;
+            float fCurrent = ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].Amount - 0f;
             mask.fillAmount = (fCurrent / maximum);
         }
     }

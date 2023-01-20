@@ -3,6 +3,7 @@ using UnityEngine;
 namespace EcoGame
 {
     using System.Collections.Generic;
+    using Unity.VisualScripting;
     using static Resources.RESOURCES;
 
     public class ResourceManager : MonoBehaviour
@@ -73,6 +74,20 @@ namespace EcoGame
 	        set { this.Resources[(int)R_LEAF] = value; }
         }
 
+        //public int iPower;
+        //public int iBudget;
+        //public int iTrash;
+        //public int iFood;
+        //public int iGoods;
+        //public int iOil;
+        //public int iCoal;
+        //public int iGas;
+        //public int iPollution;
+        //public int iUranium;
+        //public int iPeat;
+        //public int iLeaf;
+        //public int iHappy;
+
 		private void Awake()
         {
             // Set instance on scene awake
@@ -93,6 +108,52 @@ namespace EcoGame
                 this.Resources.Add((int)R_LEAF, new Resource("Listek", 0));
                 this.Resources.Add((int)R_HAPPY, new Resource("Zadowolenie", 50, 100, 0));
             }
+        }
+
+        private void Start()
+        {
+            foreach (Resource Res in this.Resources.Values)
+            {
+                Res.SetValue(Res.Amount);
+            }
+        }
+
+        //private void Update()
+        //{
+        //    iPower      = this.Resources[(int)R_POWER].Amount;
+        //    iBudget     = this.Resources[(int)R_BUDGET].Amount;
+        //    iTrash      = this.Resources[(int)R_TRASH].Amount;
+        //    iFood       = this.Resources[(int)R_FOOD].Amount;
+        //    iGoods      = this.Resources[(int)R_GOODS].Amount;
+        //    iOil        = this.Resources[(int)R_OIL].Amount;
+        //    iCoal       = this.Resources[(int)R_COAL].Amount;
+        //    iGas        = this.Resources[(int)R_GAS].Amount;
+        //    iPollution  = this.Resources[(int)R_POLLUTION].Amount;
+        //    iUranium    = this.Resources[(int)R_URANIUM].Amount;
+        //    iPeat       = this.Resources[(int)R_PEAT].Amount;
+        //    iLeaf       = this.Resources[(int)R_LEAF].Amount;
+        //    iHappy      = this.Resources[(int)R_HAPPY].Amount;
+        //}
+
+        public void ResetResourceForRecalculation()
+        {
+            this.Resources[(int)R_POWER].SetValue(0);
+            this.Resources[(int)R_FOOD].SetValue(0);
+            this.Resources[(int)R_GOODS].SetValue(0);
+            this.Resources[(int)R_OIL].SetValue(0);
+            this.Resources[(int)R_COAL].SetValue(0);
+            this.Resources[(int)R_GAS].SetValue(0);
+            this.Resources[(int)R_URANIUM].SetValue(0);
+            this.Resources[(int)R_PEAT].SetValue(0);
+
+            this.Resources[(int)R_POWER].SetUsedValue(0);
+            this.Resources[(int)R_FOOD].SetUsedValue(0);
+            this.Resources[(int)R_GOODS].SetUsedValue(0);
+            this.Resources[(int)R_OIL].SetUsedValue(0);
+            this.Resources[(int)R_COAL].SetUsedValue(0);
+            this.Resources[(int)R_GAS].SetUsedValue(0);
+            this.Resources[(int)R_URANIUM].SetUsedValue(0);
+            this.Resources[(int)R_PEAT].SetUsedValue(0);
         }
     }
 }

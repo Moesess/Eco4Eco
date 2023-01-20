@@ -11,8 +11,9 @@ namespace EcoGame
         private int iCost; // Koszt budowy
         private int iAmount; // Iloœæ posiadanych budynkow - technicznie mnoznik
         private int iProduction; // Produkcja surowca
+        private int iBaseProduction; // Podstawowa produkcja surowca
         private RESOURCES eUsedResource; // Uzycie surowca
-        private int iUsedResourceAmount; // Uzycie surowca wartosc
+        private int iUsedResourceAmount; // Ilosc uzytego surowca do produkcji
         private int iPollution; // Produkcja surowca Pollution
         private RESOURCES eResource; // Surowiec produkowany
         private int iCostMultiplier; // Mno¿nik kosztów budowy
@@ -20,7 +21,7 @@ namespace EcoGame
         private string sName; // Nazwa budynku
         private string spanelName; // Nazwa panelu, w jakim budynek ma siê wyœwietlaæ
 
-        public delegate void OnIChangeDelegate(int newAmount);
+        public delegate void OnIChangeDelegate();
         public event OnIChangeDelegate OnIAmountChange;
         public event OnIChangeDelegate OnIProductionChange;
 
@@ -37,7 +38,7 @@ namespace EcoGame
             set 
             { 
                 this.iAmount = value;
-                OnIAmountChange?.Invoke(iAmount);
+                OnIAmountChange?.Invoke();
             }
         }
 
@@ -45,10 +46,16 @@ namespace EcoGame
         {
             get { return this.iProduction; }
             set 
-            { 
+            {
                 this.iProduction = value;
-                OnIProductionChange?.Invoke(iProduction);
+                OnIProductionChange?.Invoke();
             }
+        }
+
+        public int BaseProduction
+        {
+            get { return this.iBaseProduction; }
+            set { this.iBaseProduction = value; }
         }
 
         public RESOURCES Resource
@@ -112,12 +119,12 @@ namespace EcoGame
         public _BaseBuilding(
             string sName = "", string sPanelName = "", RESOURCES eResource = 0, RESOURCES eUsedResource = 0, int iUsedResourceAmount = 0,
             int iBaseCost = 0, int iCost = 0, int iTechLevel = 0, 
-            int iAmount = 0, int iProduction = 0, int iPollution = 0,
+            int iAmount = 0, int iBaseProduction = 0, int iPollution = 0,
             int iCostMultiplier = 0, int iProductionMultiplier = 0)
         {
             this.Cost = iCost;
             this.Amount = iAmount;
-            this.Production = iProduction;
+            this.BaseProduction = iBaseProduction;
             this.Resource = eResource;
             this.UsedResource = eUsedResource;
             this.UsedResourceAmount = iUsedResourceAmount;
@@ -128,6 +135,7 @@ namespace EcoGame
             this.TechLevel = iTechLevel;
             this.BaseCost = iBaseCost;
             this.PanelName = sPanelName;
+            this.Production = Production;
         }
 
         public virtual void Tick()
@@ -140,23 +148,27 @@ namespace EcoGame
             this.Cost = (int)(this.BaseCost * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
         }
 
-        public virtual void RecalculateProduction() 
+        public virtual void RecalculateProduction()
         {
-            this.Production = (int)System.Math.Pow(this.TechLevel + 1, this.ProductionMultiplier) * this.Amount;
-            ResourceManager.Instance.Resources[(int)eResource].SetValue(this.Production);
+            Production = calcProduction();
         }
 
         // Methods
         public void SetCost(int _iVal)
         {
-            this.iCost = _iVal;
+            this.Cost = _iVal;
+        }
+
+        public int calcProduction()
+        {
+            return this.BaseProduction * this.Amount * this.ProductionMultiplier;
         }
 
         public void IncreaseAmount()
         {
             this.Amount++;
-            RecalculateCost();
-            RecalculateProduction();
+            //RecalculateCost();
+            //RecalculateProduction();
         }
 
         public void DecreaseAmount()
@@ -166,8 +178,8 @@ namespace EcoGame
             else
             {
                 this.Amount--;
-                RecalculateCost();
-                RecalculateProduction();
+                //RecalculateCost();
+                //RecalculateProduction();
             }
         }
     }

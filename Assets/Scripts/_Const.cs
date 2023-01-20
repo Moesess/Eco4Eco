@@ -212,11 +212,11 @@ namespace EcoGame
             B_MULT_COST_GOODS_CARFACTORY         = 1,
 
             B_MULT_PROD_MINE_OIL                 = 1,
-            B_MULT_PROD_MINE_COAL                = 1,
+            B_MULT_PROD_MINE_COAL                = 5,
             B_MULT_PROD_MINE_GAS                 = 1,
             B_MULT_PROD_MINE_URANIUM             = 1,
             B_MULT_PROD_MINE_PEAT                = 1,
-            B_MULT_PROD_POWERPLANT_COAL          = 1,
+            B_MULT_PROD_POWERPLANT_COAL          = 2,
             B_MULT_PROD_POWERPLANT_SOLAR         = 1,
             B_MULT_PROD_POWERPLANT_WIND          = 1,
             B_MULT_PROD_POWERPLANT_WATER         = 1,

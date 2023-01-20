@@ -43,12 +43,12 @@ namespace EcoGame
             data.requiredAmount *= Random.Range(2, 4);
         }
 
-        public void CheckComplete(int currentAmount)
+        public void CheckComplete()
         {
-            if (currentAmount >= data.requiredAmount)
-            {
-                Complete();
-            }
+            //if (currentAmount >= data.requiredAmount)
+            //{
+            //    Complete();
+            //}
         }
 
         private void Complete()

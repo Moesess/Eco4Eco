@@ -1,6 +1,4 @@
 using System;
-using Unity.VisualScripting;
-using UnityEngine;
 
 namespace EcoGame
 {
@@ -28,7 +26,7 @@ namespace EcoGame
             set 
             {
                 iAmount = value;
-                if(OnAmountChange != null) OnAmountChange(iAmount);
+                if(OnAmountChange != null) OnAmountChange();
             }
         }
 
@@ -38,7 +36,7 @@ namespace EcoGame
             set
             {
                 iUsedAmount = value;
-                if (OnAmountChange != null) OnUsedAmountChange(iUsedAmount);
+                if (OnAmountChange != null) OnUsedAmountChange();
             }
         }
 
@@ -54,7 +52,7 @@ namespace EcoGame
         }
 
 
-		public delegate void OnIChangeDelegate(int newAmount);
+		public delegate void OnIChangeDelegate();
         public event OnIChangeDelegate OnAmountChange;
         public event OnIChangeDelegate OnUsedAmountChange;
 
