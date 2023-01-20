@@ -1,4 +1,3 @@
-using EcoGame.Buildings;
 using EcoGame.Resources;
 using TMPro;
 using UnityEngine;
@@ -21,7 +20,8 @@ namespace EcoGame
         void Start()
         {
             BuildingManager.Instance.Buildings[iBuildKey].OnIAmountChange += OnAmountChange;
-            CheckButtonInteractable();
+            if (BuildingManager.Instance.Buildings[iBuildKey].UsedResource != RESOURCES.R_NULL)
+                ResourceManager.Instance.Resources[(int)BuildingManager.Instance.Buildings[iBuildKey].UsedResource].OnAmountChange += CheckButtonInteractable;
         }
 
         public void BuyButtonClick()
@@ -118,14 +118,11 @@ namespace EcoGame
                 else
                     SellButton.GetComponent<Button>().interactable = false;
 
-                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost && (UsedRes.Amount - UsedRes.UsedAmount) >= 0)
+                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
                 {
                     BuyButton.GetComponent<Button>().interactable = true;
                 }
                 else
-                    BuyButton.GetComponent<Button>().interactable = false;
-
-                if (UsedRes.Amount - UsedRes.UsedAmount == 0)
                     BuyButton.GetComponent<Button>().interactable = false;
             }
         }
