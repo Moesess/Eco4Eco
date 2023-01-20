@@ -94,7 +94,7 @@ namespace EcoGame
             B_TECH_GOODS_CLOTHESSEWING        = 1,
             B_TECH_GOODS_CARFACTORY           = 1,
         }
-
+        // Bazowa produkcja budynkow
         public enum BUILDINGS_BASE_PRODUCTION
         {
             B_PROD_MINE_OIL                   = 1,
@@ -123,7 +123,7 @@ namespace EcoGame
             B_PROD_GOODS_CLOTHESSEWING        = 1,
             B_PROD_GOODS_CARFACTORY           = 1,
         }
-
+        // Bazowe zanieczyszczenia budynkow
         public enum BUILDINGS_BASE_POLLUTION
         {
             B_POLLUTION_MINE_OIL                   = 1,
@@ -152,7 +152,7 @@ namespace EcoGame
             B_POLLUTION_GOODS_CLOTHESSEWING        = 1,
             B_POLLUTION_GOODS_CARFACTORY           = 1,
         }
-
+        // Bazowe uzycie surowcow przez budynek
         public enum BUILDINGS_USED_RESOURCE_AMOUNTS
         {
             B_USED_RES_AMOUNT_MINE_OIL                   = 1,
@@ -260,16 +260,15 @@ namespace EcoGame
             R_POLLUTION_MAXIMUM = 10000,
         }
     }
-
-    namespace Colors
+    
+    // Kolory dla wyswietlania zadowolenia
+    public static class Colors
     {
-        public static class Colors
-        {
-            public static Color Good = new(0.1529412f, 0.682353f, 0.3764706f);
-            public static Color Bad = new(0.9058824f, 0.2980392f, 0.2352941f);
-            public static Color Medium = new(0.9529412f, 0.6117647f, 0.07058824f);
-        }
+        public static Color Good = new(0.1529412f, 0.682353f, 0.3764706f);
+        public static Color Bad = new(0.9058824f, 0.2980392f, 0.2352941f);
+        public static Color Medium = new(0.9529412f, 0.6117647f, 0.07058824f);
     }
+    
 
     namespace Json
     {

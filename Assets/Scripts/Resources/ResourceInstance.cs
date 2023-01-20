@@ -15,6 +15,7 @@ namespace EcoGame
         {
             ResourceManager.Instance.Resources[(int)eResource].OnAmountChange += OnValueChange;
             this.Image.GetComponent<Image>().sprite = Sprite.Create(this.ImageTex, new Rect(0f, 0f, ImageTex.width, ImageTex.height), new Vector2(0.5f, 0.5f));
+            OnValueChange(ResourceManager.Instance.Resources[(int)eResource].Amount);
         }
 
         public void OnValueChange(int iAmount) 
@@ -26,11 +27,11 @@ namespace EcoGame
             {
                 // Dla zadowolenia zmieniamy kolor ikonki
                 if (((float)iAmount / (float)iMaxAmount) >= 0.75f)
-                    this.Image.GetComponent<Image>().color = Colors.Colors.Good;
+                    this.Image.GetComponent<Image>().color = Colors.Good;
                 else if (((float)iAmount / (float)iMaxAmount) < 0.75f && ((float)iAmount / (float)iMaxAmount) > 0.30f)
-                    this.Image.GetComponent<Image>().color = Colors.Colors.Medium;
+                    this.Image.GetComponent<Image>().color = Colors.Medium;
                 else
-                    this.Image.GetComponent<Image>().color = Colors.Colors.Bad;
+                    this.Image.GetComponent<Image>().color = Colors.Bad;
 
                 Value.text = iAmount.ToString() + " / " + iMaxAmount.ToString();
             }

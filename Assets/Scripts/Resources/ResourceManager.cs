@@ -1,6 +1,3 @@
-using System.Security.Cryptography;
-using MyNamespace;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace EcoGame
@@ -83,26 +80,19 @@ namespace EcoGame
             {
 	            Instance = this;
                 this.Resources.Add((int)R_POWER, new Resource("Pr¹d", 0));
-                this.Resources.Add((int)R_BUDGET, new Resource("Bud¿et", 0));
+                this.Resources.Add((int)R_BUDGET, new Resource("Bud¿et", 1000000));
                 this.Resources.Add((int)R_TRASH, new Resource("Œmieci", 0));
                 this.Resources.Add((int)R_FOOD, new Resource("¯ywnoœæ", 0));
                 this.Resources.Add((int)R_GOODS, new Resource("Towary konsumpcyjne", 0));
                 this.Resources.Add((int)R_OIL, new Resource("Ropa naftowa", 0));
                 this.Resources.Add((int)R_COAL, new Resource("Wêgiel", 0));
                 this.Resources.Add((int)R_GAS, new Resource("Gaz ziemny", 0));
-                this.Resources.Add((int)R_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 0, (int)R_POLLUTION_MAXIMUM, 0));
+                this.Resources.Add((int)R_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 500, (int)R_POLLUTION_MAXIMUM, 0));
                 this.Resources.Add((int)R_URANIUM, new Resource("Uran", 0));
                 this.Resources.Add((int)R_PEAT, new Resource("Torf", 0));
                 this.Resources.Add((int)R_LEAF, new Resource("Listek", 0));
-                this.Resources.Add((int)R_HAPPY, new Resource("Zadowolenie", 0, 100, 0));
+                this.Resources.Add((int)R_HAPPY, new Resource("Zadowolenie", 50, 100, 0));
             }
-        }
-
-        private void Start()
-        {
-            this.Resources[(int)R_BUDGET].SetValue(1000000);
-            this.Resources[(int)R_POLLUTION].SetValue(500);
-            this.Resources[(int)R_HAPPY].SetValue(50);
         }
     }
 }

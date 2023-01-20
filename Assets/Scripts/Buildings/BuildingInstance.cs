@@ -27,6 +27,7 @@ namespace EcoGame
         void Start()
         {
             BuildingManager.Instance.Buildings[iBuildKey].OnIAmountChange += OnAmountChange;
+            OnAmountChange(BuildingManager.Instance.Buildings[iBuildKey].Amount);
         }
 
         // Update is called once per frame

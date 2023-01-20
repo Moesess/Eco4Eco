@@ -31,6 +31,7 @@ namespace EcoGame
             BuildingManager.Instance.Buildings[(int)B_MINE_OIL].Tick();
             BuildingManager.Instance.Buildings[(int)B_MINE_COAL].Tick();
             BuildingManager.Instance.Buildings[(int)B_MINE_GAS].Tick();
+            BuildingManager.Instance.Buildings[(int)B_MINE_URANIUM].Tick();
             BuildingManager.Instance.Buildings[(int)B_POWERPLANT_COAL].Tick();
         }
     }
