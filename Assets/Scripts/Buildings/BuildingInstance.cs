@@ -1,3 +1,4 @@
+using Ecogame;
 using EcoGame.Resources;
 using TMPro;
 using UnityEngine;
@@ -12,6 +13,9 @@ namespace EcoGame
         [SerializeField] public GameObject AmountText;
         [SerializeField] public GameObject BuyButton;
         [SerializeField] public GameObject GenerateText;
+        [SerializeField] public GameObject CostText;
+        [SerializeField] public GameObject Image;
+        public Texture2D ImageTex;
         public int iBuildCost;
         public int iBuildAmount;
         public int iBuildKey;
@@ -22,6 +26,10 @@ namespace EcoGame
             BuildingManager.Instance.Buildings[iBuildKey].OnIAmountChange += OnAmountChange;
             if (BuildingManager.Instance.Buildings[iBuildKey].UsedResource != RESOURCES.R_NULL)
                 ResourceManager.Instance.Resources[(int)BuildingManager.Instance.Buildings[iBuildKey].UsedResource].OnAmountChange += CheckButtonInteractable;
+
+            this.CostText.GetComponent<TMP_Text>().text = BuildingManager.Instance.Buildings[iBuildKey].Cost.ToString() + "$";
+            this.ImageTex = Pictures.Instance.BuildingPictures[iBuildKey];
+            this.Image.GetComponent<Image>().sprite = Sprite.Create(this.ImageTex, new Rect(0f, 0f, this.ImageTex.width, this.ImageTex.height), new Vector2(0.5f, 0.5f));
         }
 
         public void BuyButtonClick()

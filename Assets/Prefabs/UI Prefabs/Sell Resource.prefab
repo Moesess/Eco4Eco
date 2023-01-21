@@ -877,7 +877,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Zarobki
+  m_text: 'Zarobki:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a498846b4c2b474392ddb484993199b, type: 2}
   m_sharedMaterial: {fileID: -7965072538430801676, guid: 8a498846b4c2b474392ddb484993199b, type: 2}
@@ -1012,7 +1012,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Cena
+  m_text: 'Cena:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a498846b4c2b474392ddb484993199b, type: 2}
   m_sharedMaterial: {fileID: -7965072538430801676, guid: 8a498846b4c2b474392ddb484993199b, type: 2}
@@ -1358,7 +1358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ilo\u015B\u0107"
+  m_text: "Ilo\u015B\u0107:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8a498846b4c2b474392ddb484993199b, type: 2}
   m_sharedMaterial: {fileID: -7965072538430801676, guid: 8a498846b4c2b474392ddb484993199b, type: 2}
