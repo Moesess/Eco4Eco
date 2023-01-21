@@ -16,8 +16,6 @@ namespace EcoGame
         [SerializeField] public GameObject CostText;
         [SerializeField] public GameObject Image;
         public Texture2D ImageTex;
-        public int iBuildCost;
-        public int iBuildAmount;
         public int iBuildKey;
 
         // Start is called before the first frame update
@@ -27,7 +25,7 @@ namespace EcoGame
             if (BuildingManager.Instance.Buildings[iBuildKey].UsedResource != RESOURCES.R_NULL)
                 ResourceManager.Instance.Resources[(int)BuildingManager.Instance.Buildings[iBuildKey].UsedResource].OnAmountChange += CheckButtonInteractable;
 
-            this.CostText.GetComponent<TMP_Text>().text = BuildingManager.Instance.Buildings[iBuildKey].Cost.ToString() + "$";
+            this.CostText.GetComponent<TMP_Text>().text = BuildingManager.Instance.Buildings[iBuildKey].GetFutureCost().ToString() + "$";
             this.ImageTex = Pictures.Instance.BuildingPictures[iBuildKey];
             this.Image.GetComponent<Image>().sprite = Sprite.Create(this.ImageTex, new Rect(0f, 0f, this.ImageTex.width, this.ImageTex.height), new Vector2(0.5f, 0.5f));
         }
@@ -38,20 +36,20 @@ namespace EcoGame
             //Jezeli budynek nie korzysta z surowcow
             if (Building.UsedResource == RESOURCES.R_NULL)
             {
-                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost)
+                if (ResourceManager.Instance.Budget.Amount >= Building.Cost)
                 {
                     Building.IncreaseAmount();
-                    ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
+                    ResourceManager.Instance.Budget.Amount -= Building.Cost;
                 }
             }
             else
             {
                 Resource UsedRes = ResourceManager.Instance.Resources[(int)Building.UsedResource];
 
-                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
+                if (ResourceManager.Instance.Budget.Amount >= Building.Cost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
                 {
                     Building.IncreaseAmount();
-                    ResourceManager.Instance.Budget.Amount -= this.iBuildCost;
+                    ResourceManager.Instance.Budget.Amount -= Building.Cost;
                 }
             }
 
@@ -67,7 +65,7 @@ namespace EcoGame
                 if (Building.Amount > 0)
                 {
                     Building.DecreaseAmount();
-                    ResourceManager.Instance.Budget.Amount += this.iBuildCost;
+                    ResourceManager.Instance.Budget.Amount += Building.Cost;
                 }
             }
             else
@@ -77,7 +75,7 @@ namespace EcoGame
                 if (Building.Amount > 0 && UsedRes.Amount - UsedRes.UsedAmount > 0)
                 {
                     Building.DecreaseAmount();
-                    ResourceManager.Instance.Budget.Amount += this.iBuildCost;
+                    ResourceManager.Instance.Budget.Amount += Building.Cost;
 
                 }
             }
@@ -90,7 +88,7 @@ namespace EcoGame
             BuildingManager.Instance.Recalculate();
             this.AmountText.GetComponent<TMP_Text>().text = Building.Amount.ToString();
             this.GenerateText.GetComponent<TMP_Text>().text = Building.Production.ToString() + " j.";
-            this.CostText.GetComponent<TMP_Text>().text = Building.Cost.ToString() + "$";
+            this.CostText.GetComponent<TMP_Text>().text = Building.GetFutureCost().ToString() + "$";
 
             CheckButtonInteractable();
         }
@@ -108,7 +106,7 @@ namespace EcoGame
                 else
                     SellButton.GetComponent<Button>().interactable = false;
 
-                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost)
+                if (ResourceManager.Instance.Budget.Amount >= Building.Cost)
                 {
                     BuyButton.GetComponent<Button>().interactable = true;
                 }
@@ -127,7 +125,7 @@ namespace EcoGame
                 else
                     SellButton.GetComponent<Button>().interactable = false;
 
-                if (ResourceManager.Instance.Budget.Amount >= this.iBuildCost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
+                if (ResourceManager.Instance.Budget.Amount >= Building.Cost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
                 {
                     BuyButton.GetComponent<Button>().interactable = true;
                 }

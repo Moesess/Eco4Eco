@@ -145,7 +145,12 @@ namespace EcoGame
 
         public virtual void RecalculateCost() 
         {
-            this.Cost += (int)(this.BaseCost * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
+            this.Cost = (int)(((this.Amount + 1) * this.BaseCost * 13) / 100 * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
+        }
+
+        public int GetFutureCost()
+        {
+            return (int)(((this.Amount + 2) * this.BaseCost * 13) / 100 * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
         }
 
         public virtual void RecalculateProduction()

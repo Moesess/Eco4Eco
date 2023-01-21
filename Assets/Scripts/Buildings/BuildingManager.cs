@@ -506,8 +506,6 @@ namespace EcoGame
                 buildingInstance.BuildingName.GetComponent<TMP_Text>().text = _Build.Name;
                 buildingInstance.AmountText.GetComponent<TMP_Text>().text = _Build.Amount.ToString();
                 buildingInstance.GenerateText.GetComponent<TMP_Text>().text = (_Build.BaseProduction * _Build.Amount).ToString() + " j.";
-                buildingInstance.iBuildAmount = _Build.Amount;
-                buildingInstance.iBuildCost = _Build.Cost;
                 buildingInstance.iBuildKey= this.Buildings.FirstOrDefault(x => x.Value.Equals(_Build)).Key;
                 
                 GameObject _Building = PrefabUtility.InstantiatePrefab(BuildingPrefab) as GameObject;
