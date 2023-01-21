@@ -122,7 +122,7 @@ namespace EcoGame
             int iAmount = 0, int iBaseProduction = 0, int iPollution = 0,
             int iCostMultiplier = 0, int iProductionMultiplier = 0)
         {
-            this.Cost = iCost;
+            this.Cost = 0;
             this.Amount = iAmount;
             this.BaseProduction = iBaseProduction;
             this.Resource = eResource;
@@ -145,7 +145,7 @@ namespace EcoGame
 
         public virtual void RecalculateCost() 
         {
-            this.Cost = (int)(this.BaseCost * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
+            this.Cost += (int)(this.BaseCost * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
         }
 
         public virtual void RecalculateProduction()

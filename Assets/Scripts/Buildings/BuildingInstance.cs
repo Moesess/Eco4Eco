@@ -90,6 +90,7 @@ namespace EcoGame
             BuildingManager.Instance.Recalculate();
             this.AmountText.GetComponent<TMP_Text>().text = Building.Amount.ToString();
             this.GenerateText.GetComponent<TMP_Text>().text = Building.Production.ToString() + " j.";
+            this.CostText.GetComponent<TMP_Text>().text = Building.Cost.ToString() + "$";
 
             CheckButtonInteractable();
         }

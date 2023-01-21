@@ -44,6 +44,8 @@ namespace EcoGame
                 Res.UsedAmount++;
                 TextUpdate();
             }
+
+            SfxManager.Instance.PlayClick();
         }
 
         public void DecButtonClick()
@@ -56,6 +58,8 @@ namespace EcoGame
                 Res.UsedAmount--;
                 TextUpdate();
             }
+
+            SfxManager.Instance.PlayClick();
         }
 
         private void TextUpdate()
