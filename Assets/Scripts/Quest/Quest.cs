@@ -52,7 +52,6 @@ namespace EcoGame
                 data.picture = Pictures.Instance.BuildingPictures[data.targetKey];
                 BuildingManager.Instance.Buildings[data.targetKey].OnIAmountChange += CheckComplete;
             }
-            Debug.Log(data.description);
             GameObject.Find("UI/Canvas/Center Panel/Left Panel/Quest Panel/Description").GetComponent<TMP_Text>().text = data.description;
             GameObject.Find("UI/Canvas/Center Panel/Left Panel/Quest Panel/Image").GetComponent<RawImage>().texture = data.picture;
         }
@@ -86,7 +85,6 @@ namespace EcoGame
 
         public void CheckComplete()
         {
-            Debug.Log(getCurrentAmount());
             if (getCurrentAmount() >= data.requiredAmount)
             {
                 if (data.building == true)
@@ -97,7 +95,7 @@ namespace EcoGame
                 {
                     ResourceManager.Instance.Resources[data.targetKey].OnAmountChange -= CheckComplete;
                 }
-                
+                ResourceManager.Instance.Resources[(int)Resources.RESOURCES.R_HAPPY].Amount += 1;
                 completed = true;
                 if (OnComplete != null) OnComplete();
             }
