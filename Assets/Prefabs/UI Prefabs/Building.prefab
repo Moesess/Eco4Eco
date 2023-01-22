@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3282693130717540611}
   - component: {fileID: 3282693130717540609}
   - component: {fileID: 3282693130717540608}
+  - component: {fileID: 5056656607726060165}
+  - component: {fileID: 1026510845796289597}
   m_Layer: 5
   m_Name: BuildingNameText
   m_TagString: Untagged
@@ -135,6 +137,67 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &5056656607726060165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282693130717540610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 3282693130717540608}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1026510845796289597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3282693130717540610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a79adab0423a044884a7adada63d23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  showInformationsButton: {fileID: 5056656607726060165}
+  informationsPanelPrefab: {fileID: 7447687761387944869, guid: 267c231bdb96a624a81bdeccab664992, type: 3}
+  arrowCursor: {fileID: 2800000, guid: 08ebbc45bfc7d75468b613477e11ace1, type: 3}
+  handCursor: {fileID: 2800000, guid: 5447296b9a73a164abd38d2e6690e123, type: 3}
+  Building: {fileID: 3282693132601378542}
 --- !u!1 &3282693131066590677
 GameObject:
   m_ObjectHideFlags: 0
@@ -1448,8 +1511,6 @@ MonoBehaviour:
   CostText: {fileID: 9069633414932950373}
   Image: {fileID: 4897158084402209197}
   ImageTex: {fileID: 0}
-  iBuildCost: 100
-  iBuildAmount: 0
   iBuildKey: 17
 --- !u!1 &4897158084402209197
 GameObject:

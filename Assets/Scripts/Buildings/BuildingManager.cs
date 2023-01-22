@@ -13,6 +13,7 @@ namespace EcoGame
     using static Buildings.BUILDINGS_BASE_PRODUCTION;
     using static Buildings.BUILDINGS_BASE_POLLUTION;
     using static Buildings.BUILDINGS_USED_RESOURCE_AMOUNTS;
+    using static Buildings.BUILDINGS_DESCRIPTIONS;
     using static Resources.RESOURCES;
 
     public class BuildingManager : MonoBehaviour
@@ -49,7 +50,8 @@ namespace EcoGame
                         (int)B_PROD_MINE_OIL,       // Bazowa produkcja
                         (int)B_POLLUTION_MINE_OIL,  // Generowane zanieczyszczenie
                         (int)B_MULT_COST_MINE_OIL,  // Mnoznik kosztow
-                        (int)B_MULT_PROD_MINE_OIL   // Mnoznik produkcji
+                        (int)B_MULT_PROD_MINE_OIL,   // Mnoznik produkcji,
+                        B_DESC_MINE_OIL //Opis
                     )
                 );
 
@@ -67,8 +69,9 @@ namespace EcoGame
                         (int)B_PROD_MINE_COAL,      // Bazowa produkcja
                         (int)B_POLLUTION_MINE_COAL, // Generowane zanieczyszczenie
                         (int)B_MULT_COST_MINE_COAL, // Mnoznik kosztow
-                        (int)B_MULT_PROD_MINE_COAL  // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_MINE_COAL,  // Mnoznik produkcji
+                        B_DESC_MINE_COAL //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_MINE_GAS, // Klucz budynku
@@ -85,8 +88,9 @@ namespace EcoGame
                         (int)B_PROD_MINE_GAS,       // Bazowa produkcja
                         (int)B_POLLUTION_MINE_GAS,  // Generowane zanieczyszczenie
                         (int)B_MULT_COST_MINE_GAS,  // Mnoznik kosztow
-                        (int)B_MULT_PROD_MINE_GAS   // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_MINE_GAS,   // Mnoznik produkcji
+                        B_DESC_MINE_GAS //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_MINE_PEAT, // Klucz budynku
@@ -103,8 +107,9 @@ namespace EcoGame
                         (int)B_PROD_MINE_PEAT,      // Bazowa produkcja
                         (int)B_POLLUTION_MINE_PEAT, // Generowane zanieczyszczenie
                         (int)B_MULT_COST_MINE_PEAT, // Mnoznik kosztow
-                        (int)B_MULT_PROD_MINE_PEAT  // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_MINE_PEAT,  // Mnoznik produkcji
+                        B_DESC_MINE_PEAT //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_MINE_URANIUM, // Klucz budynku
@@ -121,8 +126,9 @@ namespace EcoGame
                         (int)B_PROD_MINE_URANIUM,       // Bazowa produkcja
                         (int)B_POLLUTION_MINE_URANIUM,  // Generowane zanieczyszczenie
                         (int)B_MULT_COST_MINE_URANIUM,  // Mnoznik kosztow
-                        (int)B_MULT_PROD_MINE_URANIUM   // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_MINE_URANIUM,   // Mnoznik produkcji
+                        B_DESC_MINE_URANIUM //Opis
+					)
                 );
 
                 // ==================== DOBRA KONSUMPCYJNE ====================
@@ -141,8 +147,9 @@ namespace EcoGame
                         (int)B_PROD_GOODS_CARFACTORY,       // Bazowa produkcja
                         (int)B_POLLUTION_GOODS_CARFACTORY,  // Generowane zanieczyszczenie
                         (int)B_MULT_COST_GOODS_CARFACTORY,  // Mnoznik kosztow
-                        (int)B_MULT_PROD_GOODS_CARFACTORY   // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_GOODS_CARFACTORY,   // Mnoznik produkcji
+                        B_DESC_GOODS_CARFACTORY //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_GOODS_CLOTHESSEWING, // Klucz budynku
@@ -159,8 +166,9 @@ namespace EcoGame
                         (int)B_PROD_GOODS_CLOTHESSEWING,        // Bazowa produkcja
                         (int)B_POLLUTION_GOODS_CLOTHESSEWING,   // Generowane zanieczyszczenie
                         (int)B_MULT_COST_GOODS_CLOTHESSEWING,   // Mnoznik kosztow
-                        (int)B_MULT_PROD_GOODS_CLOTHESSEWING    // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_GOODS_CLOTHESSEWING,    // Mnoznik produkcji
+                        B_DESC_GOODS_CLOTHESSEWING //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_GOODS_ELECTRONICSFACTORY, // Klucz budynku
@@ -177,8 +185,9 @@ namespace EcoGame
                         (int)B_PROD_GOODS_ELECTRONICSFACTORY,       // Bazowa produkcja
                         (int)B_POLLUTION_GOODS_ELECTRONICSFACTORY,  // Generowane zanieczyszczenie
                         (int)B_MULT_COST_GOODS_ELECTRONICSFACTORY,  // Mnoznik kosztow
-                        (int)B_MULT_PROD_GOODS_ELECTRONICSFACTORY   // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_GOODS_ELECTRONICSFACTORY,   // Mnoznik produkcji
+                        B_DESC_GOODS_ELECTRONICSFACTORY //Opis
+					)
                 );
 
                 // ==================== JEDZENIE ====================
@@ -197,8 +206,9 @@ namespace EcoGame
                         (int)B_PROD_FOOD_ANIMALFARM,        // Bazowa produkcja
                         (int)B_POLLUTION_FOOD_ANIMALFARM,   // Generowane zanieczyszczenie
                         (int)B_MULT_COST_FOOD_ANIMALFARM,   // Mnoznik kosztow
-                        (int)B_MULT_PROD_FOOD_ANIMALFARM    // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_FOOD_ANIMALFARM,    // Mnoznik produkcji
+                        B_DESC_FOOD_ANIMALFARM //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_FOOD_DRINKINGWATER, // Klucz budynku
@@ -215,8 +225,9 @@ namespace EcoGame
                         (int)B_PROD_FOOD_DRINKINGWATER,        // Bazowa produkcja
                         (int)B_POLLUTION_FOOD_DRINKINGWATER,   // Generowane zanieczyszczenie
                         (int)B_MULT_COST_FOOD_DRINKINGWATER,   // Mnoznik kosztow
-                        (int)B_MULT_PROD_FOOD_DRINKINGWATER    // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_FOOD_DRINKINGWATER,    // Mnoznik produkcji
+                        B_DESC_FOOD_DRINKINGWATER //Opis
+					)
                 );
 
 
@@ -227,15 +238,16 @@ namespace EcoGame
                         R_FOOD,                       // Surowiec jaki produkuje
                         R_POWER,                       // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_FOOD_EXPERIMENTALMEAT,    // Ile Surowca wykorzystuje
-                        (int)B_COST_FOOD_ANIMALFARM,        // Koszt podstawowy
-                        (int)B_COST_FOOD_ANIMALFARM,        // Koszt aktualny
-                        (int)B_TECH_FOOD_ANIMALFARM,        // Poziom technologii
+                        (int)B_COST_FOOD_EXPERIMENTALMEAT,        // Koszt podstawowy
+                        (int)B_COST_FOOD_EXPERIMENTALMEAT,        // Koszt aktualny
+                        (int)B_TECH_FOOD_EXPERIMENTALMEAT,        // Poziom technologii
                         0,                                  // Ilosc budynkow
-                        (int)B_PROD_FOOD_ANIMALFARM,        // Bazowa produkcja
-                        (int)B_POLLUTION_FOOD_ANIMALFARM,   // Generowane zanieczyszczenie
-                        (int)B_MULT_COST_FOOD_ANIMALFARM,   // Mnoznik kosztow
-                        (int)B_MULT_PROD_FOOD_ANIMALFARM    // Mnoznik produkcji
-                    )
+                        (int)B_PROD_FOOD_EXPERIMENTALMEAT,        // Bazowa produkcja
+                        (int)B_POLLUTION_FOOD_EXPERIMENTALMEAT,   // Generowane zanieczyszczenie
+                        (int)B_MULT_COST_FOOD_EXPERIMENTALMEAT,   // Mnoznik kosztow
+                        (int)B_MULT_PROD_FOOD_EXPERIMENTALMEAT,    // Mnoznik produkcji
+                        B_DESC_FOOD_EXPERIMENTALMEAT //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_FOOD_FARMLAND, // Klucz budynku
@@ -245,15 +257,16 @@ namespace EcoGame
                         R_FOOD,                       // Surowiec jaki produkuje
                         R_POWER,                       // Surowiec jaki wykorzystuje
                         (int)B_USED_RES_AMOUNT_FOOD_FARMLAND,    // Ile Surowca wykorzystuje
-                        (int)B_COST_FOOD_ANIMALFARM,        // Koszt podstawowy
-                        (int)B_COST_FOOD_ANIMALFARM,        // Koszt aktualny
-                        (int)B_TECH_FOOD_ANIMALFARM,        // Poziom technologii
+                        (int)B_COST_FOOD_FARMLAND,        // Koszt podstawowy
+                        (int)B_COST_FOOD_FARMLAND,        // Koszt aktualny
+                        (int)B_TECH_FOOD_FARMLAND,        // Poziom technologii
                         0,                                  // Ilosc budynkow
-                        (int)B_PROD_FOOD_ANIMALFARM,        // Bazowa produkcja
-                        (int)B_POLLUTION_FOOD_ANIMALFARM,   // Generowane zanieczyszczenie
-                        (int)B_MULT_COST_FOOD_ANIMALFARM,   // Mnoznik kosztow
-                        (int)B_MULT_PROD_FOOD_ANIMALFARM    // Mnoznik produkcji
-                    )
+                        (int)B_PROD_FOOD_FARMLAND,        // Bazowa produkcja
+                        (int)B_POLLUTION_FOOD_FARMLAND,   // Generowane zanieczyszczenie
+                        (int)B_MULT_COST_FOOD_FARMLAND,   // Mnoznik kosztow
+                        (int)B_MULT_PROD_FOOD_FARMLAND,    // Mnoznik produkcji
+                        B_DESC_FOOD_FARMLAND //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_FOOD_FISHING, // Klucz budynku
@@ -270,8 +283,9 @@ namespace EcoGame
                         (int)B_PROD_FOOD_FISHING,        // Bazowa produkcja
                         (int)B_POLLUTION_FOOD_FISHING,   // Generowane zanieczyszczenie
                         (int)B_MULT_COST_FOOD_FISHING,   // Mnoznik kosztow
-                        (int)B_MULT_PROD_FOOD_FISHING    // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_FOOD_FISHING,    // Mnoznik produkcji
+                        B_DESC_FOOD_FISHING //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_FOOD_PROCESSEDFOOD, // Klucz budynku
@@ -288,8 +302,9 @@ namespace EcoGame
                         (int)B_PROD_FOOD_PROCESSEDFOOD,        // Bazowa produkcja
                         (int)B_POLLUTION_FOOD_PROCESSEDFOOD,   // Generowane zanieczyszczenie
                         (int)B_MULT_COST_FOOD_PROCESSEDFOOD,   // Mnoznik kosztow
-                        (int)B_MULT_PROD_FOOD_PROCESSEDFOOD    // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_FOOD_PROCESSEDFOOD,    // Mnoznik produkcji
+                        B_DESC_FOOD_PROCESSEDFOOD //Opis
+					)
                 );
 
                 //==================== ELEKTROWNIE ====================
@@ -308,8 +323,9 @@ namespace EcoGame
                         (int)B_PROD_POWERPLANT_BIOMASS,         // Bazowa produkcja
                         (int)B_POLLUTION_POWERPLANT_BIOMASS,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_POWERPLANT_BIOMASS,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_POWERPLANT_BIOMASS     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_POWERPLANT_BIOMASS,     // Mnoznik produkcji
+                        B_DESC_POWERPLANT_BIOMASS //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_POWERPLANT_COAL, // Klucz budynku
@@ -326,8 +342,9 @@ namespace EcoGame
                         (int)B_PROD_POWERPLANT_COAL,         // Bazowa produkcja
                         (int)B_POLLUTION_POWERPLANT_COAL,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_POWERPLANT_COAL,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_POWERPLANT_COAL     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_POWERPLANT_COAL,     // Mnoznik produkcji
+                        B_DESC_POWERPLANT_COAL //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_POWERPLANT_NUCLEAR, // Klucz budynku
@@ -344,8 +361,9 @@ namespace EcoGame
                         (int)B_PROD_POWERPLANT_NUCLEAR,         // Bazowa produkcja
                         (int)B_POLLUTION_POWERPLANT_NUCLEAR,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_POWERPLANT_NUCLEAR,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_POWERPLANT_NUCLEAR     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_POWERPLANT_NUCLEAR,     // Mnoznik produkcji
+                        B_DESC_POWERPLANT_NUCLEAR //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_POWERPLANT_SOLAR, // Klucz budynku
@@ -362,8 +380,9 @@ namespace EcoGame
                         (int)B_PROD_POWERPLANT_SOLAR,         // Bazowa produkcja
                         (int)B_POLLUTION_POWERPLANT_SOLAR,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_POWERPLANT_SOLAR,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_POWERPLANT_SOLAR     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_POWERPLANT_SOLAR,     // Mnoznik produkcji
+                        B_DESC_POWERPLANT_SOLAR //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_POWERPLANT_WATER, // Klucz budynku
@@ -380,8 +399,9 @@ namespace EcoGame
                         (int)B_PROD_POWERPLANT_WATER,         // Bazowa produkcja
                         (int)B_POLLUTION_POWERPLANT_WATER,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_POWERPLANT_WATER,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_POWERPLANT_WATER     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_POWERPLANT_WATER,     // Mnoznik produkcji
+                        B_DESC_POWERPLANT_WATER //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_POWERPLANT_WIND, // Klucz budynku
@@ -398,8 +418,9 @@ namespace EcoGame
                         (int)B_PROD_POWERPLANT_WIND,         // Bazowa produkcja
                         (int)B_POLLUTION_POWERPLANT_WIND,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_POWERPLANT_WIND,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_POWERPLANT_WIND     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_POWERPLANT_WIND,     // Mnoznik produkcji
+                        B_DESC_POWERPLANT_WIND //Opis
+					)
                 );
 
                  //==================== BUDYNKI KOMUNALNE ====================
@@ -418,8 +439,9 @@ namespace EcoGame
                         (int)B_PROD_TRASH_COMPOSTINGPLANT,         // Bazowa produkcja
                         (int)B_POLLUTION_TRASH_COMPOSTINGPLANT,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_TRASH_COMPOSTINGPLANT,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_TRASH_COMPOSTINGPLANT     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_TRASH_COMPOSTINGPLANT,     // Mnoznik produkcji
+                        B_DESC_TRASH_COMPOSTINGPLANT //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_TRASH_GARBAGEDUMP, // Klucz budynku
@@ -436,8 +458,9 @@ namespace EcoGame
                         (int)B_PROD_TRASH_GARBAGEDUMP,         // Bazowa produkcja
                         (int)B_POLLUTION_TRASH_GARBAGEDUMP,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_TRASH_GARBAGEDUMP,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_TRASH_GARBAGEDUMP     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_TRASH_GARBAGEDUMP,     // Mnoznik produkcji
+                        B_DESC_TRASH_GARBAGEDUMP //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_TRASH_GARBAGEINCINERATOR, // Klucz budynku
@@ -454,8 +477,9 @@ namespace EcoGame
                         (int)B_PROD_TRASH_GARBAGEINCINERATOR,         // Bazowa produkcja
                         (int)B_POLLUTION_TRASH_GARBAGEINCINERATOR,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_TRASH_GARBAGEINCINERATOR,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_TRASH_GARBAGEINCINERATOR     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_TRASH_GARBAGEINCINERATOR,     // Mnoznik produkcji
+                        B_DESC_TRASH_GARBAGEINCINERATOR //Opis
+					)
                 );
 
                 this.Buildings.Add((int)B_TRASH_GARBAGESHIP, // Klucz budynku
@@ -472,8 +496,10 @@ namespace EcoGame
                         (int)B_PROD_TRASH_GARBAGESHIP,         // Bazowa produkcja
                         (int)B_POLLUTION_TRASH_GARBAGESHIP,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_TRASH_GARBAGESHIP,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_TRASH_GARBAGESHIP     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_TRASH_GARBAGESHIP,     // Mnoznik produkcji
+                        B_DESC_TRASH_GARBAGESHIP //Opis
+
+					)
                 );
 
                 this.Buildings.Add((int)B_TRASH_RECYCLING, // Klucz budynku
@@ -490,8 +516,9 @@ namespace EcoGame
                         (int)B_PROD_TRASH_RECYCLING,         // Bazowa produkcja
                         (int)B_POLLUTION_TRASH_RECYCLING,    // Generowane zanieczyszczenie
                         (int)B_MULT_COST_TRASH_RECYCLING,    // Mnoznik kosztow
-                        (int)B_MULT_PROD_TRASH_RECYCLING     // Mnoznik produkcji
-                    )
+                        (int)B_MULT_PROD_TRASH_RECYCLING,     // Mnoznik produkcji
+                        B_DESC_TRASH_RECYCLING //Opis
+					)
                 );
                 Instance = this;
                 InstantiateBuildings();
