@@ -97,6 +97,11 @@ namespace EcoGame
                 }
                 ResourceManager.Instance.Resources[(int)Resources.RESOURCES.R_HAPPY].Amount += 1;
                 completed = true;
+                //GameObject popUpWindow = UnityEngine.Resources.Load("Prefabs/Panels/Information Panel", typeof(GameObject)) as GameObject;
+                //popUpWindow.Instantiate();
+                //popUpWindow.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
+                //popUpWindow.transform.Find("Text Group/Title").GetComponent<TMP_Text>().text = "Zadanie wykonano!";
+                //popUpWindow.transform.Find("Text Group/Descritpion").GetComponent<TMP_Text>().text = "Wykona³eœ zadanie! Zadowolenie spo³eczne roœnie.";
                 if (OnComplete != null) OnComplete();
             }
         }
