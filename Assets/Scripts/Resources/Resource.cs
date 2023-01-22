@@ -41,7 +41,7 @@ namespace EcoGame
             set
             {
                 iUsedAmount = value;
-                if (OnAmountChange != null) OnUsedAmountChange();
+                if (OnUsedAmountChange != null) OnUsedAmountChange();
             }
         }
 

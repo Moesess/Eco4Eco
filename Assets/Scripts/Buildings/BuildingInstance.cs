@@ -1,4 +1,3 @@
-using Ecogame;
 using EcoGame.Resources;
 using TMPro;
 using UnityEngine;
