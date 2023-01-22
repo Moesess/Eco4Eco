@@ -20,6 +20,7 @@ namespace EcoGame
         private int iProductionMultiplier; // Mno¿nik produkcji
         private string sName; // Nazwa budynku
         private string spanelName; // Nazwa panelu, w jakim budynek ma siê wyœwietlaæ
+        private string sDescription; // Opis danego budynku
 
         public delegate void OnIChangeDelegate();
         public event OnIChangeDelegate OnIAmountChange;
@@ -116,11 +117,17 @@ namespace EcoGame
 			set { this.spanelName = value; }
 		}
 
+        public string Description
+        {
+	        get { return this.sDescription;}
+            set { this.sDescription = value; }
+        }
+
         public _BaseBuilding(
             string sName = "", string sPanelName = "", RESOURCES eResource = 0, RESOURCES eUsedResource = 0, int iUsedResourceAmount = 0,
             int iBaseCost = 0, int iCost = 0, int iTechLevel = 0, 
             int iAmount = 0, int iBaseProduction = 0, int iPollution = 0,
-            int iCostMultiplier = 0, int iProductionMultiplier = 0)
+            int iCostMultiplier = 0, int iProductionMultiplier = 0, string sDescription = "")
         {
             this.Cost = 0;
             this.Amount = iAmount;
@@ -136,6 +143,7 @@ namespace EcoGame
             this.BaseCost = iBaseCost;
             this.PanelName = sPanelName;
             this.Production = Production;
+            this.Description = sDescription;
         }
 
         public virtual void Tick()
