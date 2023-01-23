@@ -153,12 +153,12 @@ namespace EcoGame
 
         public virtual void RecalculateCost() 
         {
-            this.Cost = (int)(((this.Amount + 1) * this.BaseCost * 13) / 100 * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
+            this.Cost = (int)(((this.Amount + 1) * this.BaseCost * 13) / 100 * System.Math.Pow(this.TechLevel + 1, (float)this.CostMultiplier/100f));
         }
 
         public int GetFutureCost()
         {
-            return (int)(((this.Amount + 2) * this.BaseCost * 13) / 100 * System.Math.Pow(this.TechLevel + 1, this.CostMultiplier));
+            return (int)(((this.Amount + 2) * this.BaseCost * 13) / 100 * System.Math.Pow(this.TechLevel + 1, (float)this.CostMultiplier/100f));
         }
 
         public virtual void RecalculateProduction()
@@ -174,7 +174,7 @@ namespace EcoGame
 
         public int calcProduction()
         {
-            return this.BaseProduction * this.Amount * this.ProductionMultiplier;
+            return (int)(this.BaseProduction * this.Amount * (float)this.ProductionMultiplier/100f);
         }
 
         public void IncreaseAmount()

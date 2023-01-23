@@ -11,13 +11,11 @@ namespace EcoGame
 {
 	public class Reset : MonoBehaviour
 	{
-		public delegate void OnClickResetDelegate();
-		public event OnClickResetDelegate onClickReset;
 		public void CallReset()
 		{
-			if (ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].Amount == 0
+			/*if (ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].Amount == 0
 			&& ResourceManager.Instance.Resources[(int)RESOURCES.R_TRASH].Amount <= 25)
-			{
+			{*/
 			ResourceManager.Instance.Resources[(int)RESOURCES.R_COAL].SetValue(0);
 			ResourceManager.Instance.Resources[(int)RESOURCES.R_GAS].SetValue(0);
 			ResourceManager.Instance.Resources[(int)RESOURCES.R_OIL].SetValue(0);
@@ -34,15 +32,7 @@ namespace EcoGame
 			{
 				VARIABLE.Value.Amount = 0;
 			}
-			}
-		}
-
-		private void Start()
-		{
-			onClickReset += CallReset;
-			if(resetButton != null)
-				resetButton.onClick.AddListener(delegate { onClickReset(); });
-
+			//}
 		}
 
 		[SerializeField] private Button resetButton;

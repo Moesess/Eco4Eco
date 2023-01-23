@@ -1,0 +1,37 @@
+[
+  {
+    "Title": "Sieci rozwijane na oceanach",
+    "Description": "Statki zbierające odpady z wód mogą teraz rozkładać sieci na oceanach. Ich wydajność zwiększa się o 40%.",
+    "CostAmount": 0,
+    "ProductionAmount": 40,
+    "BuildingKey": 21
+  },
+  {
+    "Title": "Przywysypiskowe miejsca recyklingu",
+    "Description": "Miejsca recyklingu mogą być teraz budowane tuż przy wysypiskach, dzięki czemu ich budowa kosztuje 30% mniej.",
+    "CostAmount": -30,
+    "ProductionAmount": 0,
+    "BuildingKey": 17
+  },
+  {
+    "Title": "łożyska nowego typu",
+    "Description": "Montaż łożysk nowego typu w wiatrakach elektrowni wiatrowych zwiększa ich wydajność o 20%.",
+    "CostAmount": 0,
+    "ProductionAmount": 20,
+    "BuildingKey": 7
+  },
+  {
+    "Title": "Ubrania z recyklingu",
+    "Description": "Produkcja ubrań z recyklingu sprawia, że budowa kolejnych fabryk jest tańsza o 45%.",
+    "CostAmount": -45,
+    "ProductionAmount": 0,
+    "BuildingKey": 23
+  },
+  {
+    "Title": "Nowoczesne dysze palników",
+    "Description": "Zastosowanie nowego rodzaju dyszy w palnikach pozwoli obniżyć koszty budowy o 15% i zwiększyć wydajność o 25%.",
+    "CostAmount": -15,
+    "ProductionAmount": 25,
+    "BuildingKey": 18
+  }
+]

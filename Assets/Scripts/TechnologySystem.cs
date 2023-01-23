@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using EcoGame;
 using Newtonsoft.Json;
 using Unity.VisualScripting;
@@ -26,12 +27,7 @@ namespace EcoGame
 				Instance = this;
 
 			}
-			FillTechnologies($"[\r\n   {{\r\n      \"Title\":\"Opis\",\r\n      \"Description\":\"Opis\",\r\n      \"CostAmount\":10,\r\n      \"ProductionAmount\":0,\r\n      \"BuildingKey\":0\r\n   }},\r\n   {{\r\n      \"Title\":\"Opis\",\r\n      \"Description\":\"Opis\",\r\n      \"CostAmount\":10,\r\n      \"ProductionAmount\":0,\r\n      \"BuildingKey\":0\r\n   }}\r\n]");
-		}
-		public void BuyTechnology(Technology technology)
-		{
-			BuildingManager.Instance.Buildings[technology.BuildingKey].CostMultiplier += technology.CostAmount;
-			BuildingManager.Instance.Buildings[technology.BuildingKey].ProductionMultiplier += technology.ProductionAmount;
+			FillTechnologies(File.ReadAllText($"{Application.dataPath}/json/{Json.JsonConsts.TECHNOLOGY_FILE_NAME}"));
 		}
 
 		public void FillTechnologies(string json)

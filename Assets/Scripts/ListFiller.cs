@@ -15,9 +15,11 @@ namespace EcoGame
 			{
 				var newlistElement = Instantiate(listElement);
 				newlistElement.transform.SetParent(parentObject.transform);
-				newlistElement.transform.Find("Title").GetComponent<TMP_Text>().text = technology.Title;
-				newlistElement.transform.Find("Description").GetComponent<TMP_Text>().text = technology.Description;
-				newlistElement.transform.Find("Prices").GetComponent<TMP_Text>().text = "1 listek";
+				ListElement listElementComponent = newlistElement.GetComponent<ListElement>();
+				listElementComponent.title.GetComponent<TMP_Text>().text = technology.Title;
+				listElementComponent.description.GetComponent<TMP_Text>().text = technology.Description;
+				listElementComponent.price.GetComponent<TMP_Text>().text = "1 listek";
+				listElementComponent.technology = technology;
 			}
 		}
 
