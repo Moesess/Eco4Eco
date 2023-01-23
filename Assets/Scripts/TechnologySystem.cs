@@ -17,7 +17,7 @@ namespace EcoGame
 	{
 		public IList<Technology> technologies;
 		public static TechnologySystem Instance;
-		private void Start()
+		private void Awake()
 		{
 			if (Instance == null)
 			{
