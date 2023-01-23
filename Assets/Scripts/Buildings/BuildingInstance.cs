@@ -97,7 +97,6 @@ namespace EcoGame
         public void PollutionChange() 
         {
             _BaseBuilding Building = BuildingManager.Instance.Buildings[iBuildKey];
-            BuildingManager.Instance.Recalculate();
             this.AmountText.GetComponent<TMP_Text>().text = Building.Amount.ToString();
             this.GenerateText.GetComponent<TMP_Text>().text = Building.Production.ToString() + " j.";
             this.CostText.GetComponent<TMP_Text>().text = Building.GetFutureCost().ToString() + "$";
