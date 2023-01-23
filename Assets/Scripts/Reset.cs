@@ -7,7 +7,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace MyNamespace
+namespace EcoGame
 {
 	public class Reset : MonoBehaviour
 	{
@@ -15,9 +15,9 @@ namespace MyNamespace
 		public event OnClickResetDelegate onClickReset;
 		public void CallReset()
 		{
-			//if (ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_POLLUTION].Amount == 0
-			//&& ResourceManager.Instance.Resources[(int)RESOURCES.RESOURCE_TRASH].Amount <= 25)
-			//{
+			if (ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].Amount == 0
+			&& ResourceManager.Instance.Resources[(int)RESOURCES.R_TRASH].Amount <= 25)
+			{
 			ResourceManager.Instance.Resources[(int)RESOURCES.R_COAL].SetValue(0);
 			ResourceManager.Instance.Resources[(int)RESOURCES.R_GAS].SetValue(0);
 			ResourceManager.Instance.Resources[(int)RESOURCES.R_OIL].SetValue(0);
@@ -34,7 +34,7 @@ namespace MyNamespace
 			{
 				VARIABLE.Value.Amount = 0;
 			}
-			//}
+			}
 		}
 
 		private void Start()

@@ -316,7 +316,8 @@ namespace EcoGame
     {
         public static class JsonConsts 
         {
-            public static readonly string EVENT_FILE_NAME       = "events.json";
+	        public static readonly string TECHNOLOGY_FILE_NAME = "technologies.json";
+			public static readonly string EVENT_FILE_NAME       = "events.json";
             public static readonly string SAVE_FILE_NAME        = "save.json";
         }
     }
