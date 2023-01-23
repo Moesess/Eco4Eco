@@ -21,6 +21,8 @@ namespace EcoGame
         void Start()
         {
             BuildingManager.Instance.Buildings[iBuildKey].OnIAmountChange += OnAmountChange;
+            ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].OnAmountChange += PollutionChange;
+
             if (BuildingManager.Instance.Buildings[iBuildKey].UsedResource != RESOURCES.R_NULL)
                 ResourceManager.Instance.Resources[(int)BuildingManager.Instance.Buildings[iBuildKey].UsedResource].OnAmountChange += CheckButtonInteractable;
 
@@ -90,6 +92,15 @@ namespace EcoGame
             this.CostText.GetComponent<TMP_Text>().text = Building.GetFutureCost().ToString() + "$";
 
             CheckButtonInteractable();
+        }
+
+        public void PollutionChange() 
+        {
+            _BaseBuilding Building = BuildingManager.Instance.Buildings[iBuildKey];
+            BuildingManager.Instance.Recalculate();
+            this.AmountText.GetComponent<TMP_Text>().text = Building.Amount.ToString();
+            this.GenerateText.GetComponent<TMP_Text>().text = Building.Production.ToString() + " j.";
+            this.CostText.GetComponent<TMP_Text>().text = Building.GetFutureCost().ToString() + "$";
         }
 
         public void CheckButtonInteractable()

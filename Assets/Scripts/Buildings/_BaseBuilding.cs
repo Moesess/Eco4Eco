@@ -146,7 +146,7 @@ namespace EcoGame
             this.Description = sDescription;
         }
 
-        public virtual void Tick()
+        public virtual void TickPollution()
         {
             ResourceManager.Instance.Resources[(int)R_POLLUTION].Add(this.Pollution * this.Amount);
         }
@@ -174,7 +174,7 @@ namespace EcoGame
 
         public int calcProduction()
         {
-            return this.BaseProduction * this.Amount * this.ProductionMultiplier;
+            return (int)(this.BaseProduction * this.Amount * this.ProductionMultiplier * ResourceManager.Instance.PollutionEffectPercent);
         }
 
         public void IncreaseAmount()
