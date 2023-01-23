@@ -423,9 +423,28 @@ namespace EcoGame
 					)
                 );
 
-                 //==================== BUDYNKI KOMUNALNE ====================
+                this.Buildings.Add((int)B_POWERPLANT_GAS, // Klucz budynku
+	                new _BaseBuilding(
+		                "Elektrownia gazowa",               // Nazwa Budynku
+		                "Power Panel",                          // Panel na ktorym budynek sie pojawia
+		                R_POWER,                           // Surowiec jaki produkuje
+		                R_GAS,                            // Surowiec jaki wykorzystuje
+		                (int)B_USED_RES_AMOUNT_POWERPLANT_GAS, // Ile Surowca wykorzystuje
+		                (int)B_COST_POWERPLANT_GAS,         // Koszt podstawowy
+		                (int)B_COST_POWERPLANT_GAS,         // Koszt aktualny
+		                (int)B_TECH_POWERPLANT_GAS,         // Poziom technologii
+		                0,                                      // Ilosc budynkow
+		                (int)B_PROD_POWERPLANT_GAS,         // Bazowa produkcja
+		                (int)B_POLLUTION_POWERPLANT_GAS,    // Generowane zanieczyszczenie
+		                (int)B_MULT_COST_POWERPLANT_GAS,    // Mnoznik kosztow
+		                (int)B_MULT_PROD_POWERPLANT_GAS,     // Mnoznik produkcji
+		                B_DESC_POWERPLANT_GAS //Opis
+	                )
+                );
 
-                this.Buildings.Add((int)B_TRASH_COMPOSTINGPLANT, // Klucz budynku
+				//==================== BUDYNKI KOMUNALNE ====================
+
+				this.Buildings.Add((int)B_TRASH_COMPOSTINGPLANT, // Klucz budynku
                     new _BaseBuilding(
                         "Kompostownia odpadów",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia

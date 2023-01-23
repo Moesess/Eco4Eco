@@ -33,7 +33,7 @@ namespace EcoGame
             B_GOODS_ELECTRONICSFACTORY      = 22,
             B_GOODS_CLOTHESSEWING           = 23,
             B_GOODS_CARFACTORY              = 24,
-            B_POWERPLANT_GAS                = 25
+            B_POWERPLANT_GAS                = 25,
         }
 
         // Koszta bazowe budynków
@@ -64,6 +64,7 @@ namespace EcoGame
             B_COST_GOODS_ELECTRONICSFACTORY   = 100,
             B_COST_GOODS_CLOTHESSEWING        = 100,
             B_COST_GOODS_CARFACTORY           = 100,
+            B_COST_POWERPLANT_GAS             = 100,
         }
 
         // Poziomy technologiczne budynków
@@ -94,6 +95,7 @@ namespace EcoGame
             B_TECH_GOODS_ELECTRONICSFACTORY   = 1,
             B_TECH_GOODS_CLOTHESSEWING        = 1,
             B_TECH_GOODS_CARFACTORY           = 1,
+            B_TECH_POWERPLANT_GAS             = 1,
         }
         // Bazowa produkcja budynkow
         public enum BUILDINGS_BASE_PRODUCTION
@@ -123,6 +125,7 @@ namespace EcoGame
             B_PROD_GOODS_ELECTRONICSFACTORY   = 1,
             B_PROD_GOODS_CLOTHESSEWING        = 1,
             B_PROD_GOODS_CARFACTORY           = 1,
+            B_PROD_POWERPLANT_GAS             = 1,
         }
         // Bazowe zanieczyszczenia budynkow
         public enum BUILDINGS_BASE_POLLUTION
@@ -152,6 +155,7 @@ namespace EcoGame
             B_POLLUTION_GOODS_ELECTRONICSFACTORY   = 1,
             B_POLLUTION_GOODS_CLOTHESSEWING        = 1,
             B_POLLUTION_GOODS_CARFACTORY           = 1,
+            B_POLLUTION_POWERPLANT_GAS             = 1,
         }
         // Bazowe uzycie surowcow przez budynek
         public enum BUILDINGS_USED_RESOURCE_AMOUNTS
@@ -181,6 +185,7 @@ namespace EcoGame
             B_USED_RES_AMOUNT_GOODS_ELECTRONICSFACTORY   = 1,
             B_USED_RES_AMOUNT_GOODS_CLOTHESSEWING        = 1,
             B_USED_RES_AMOUNT_GOODS_CARFACTORY           = 1,
+            B_USED_RES_AMOUNT_POWERPLANT_GAS             = 1,
         }
 
         // Do ustalenia jakie mno¿niki DEFAULTOWE bêdziemy mieæ
@@ -211,6 +216,7 @@ namespace EcoGame
             B_MULT_COST_GOODS_ELECTRONICSFACTORY = 100,
             B_MULT_COST_GOODS_CLOTHESSEWING      = 100,
             B_MULT_COST_GOODS_CARFACTORY         = 100,
+            B_MULT_COST_POWERPLANT_GAS           = 100,
 
             B_MULT_PROD_MINE_OIL                 = 100,
             B_MULT_PROD_MINE_COAL                = 500,
@@ -237,6 +243,7 @@ namespace EcoGame
             B_MULT_PROD_GOODS_ELECTRONICSFACTORY = 100,
             B_MULT_PROD_GOODS_CLOTHESSEWING      = 100,
             B_MULT_PROD_GOODS_CARFACTORY         = 100,
+            B_MULT_PROD_POWERPLANT_GAS           = 100,
         }
 
         public static class BUILDINGS_DESCRIPTIONS
@@ -266,6 +273,7 @@ namespace EcoGame
 	        public static readonly string B_DESC_GOODS_ELECTRONICSFACTORY = "temp";
 	        public static readonly string B_DESC_GOODS_CLOTHESSEWING = "temp";
 	        public static readonly string B_DESC_GOODS_CARFACTORY = "temp";
+	        public static readonly string B_DESC_POWERPLANT_GAS = "temp";
         }
     }
     namespace Resources
