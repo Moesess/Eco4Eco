@@ -1,25 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
-using EcoGame;
 using TMPro;
 using UnityEngine;
 
 namespace EcoGame
 {
-	public class ListFiller : MonoBehaviour
+	public class RegulationListFiller : MonoBehaviour
 	{
 		// Start is called before the first frame update
 		void Start()
 		{
-			foreach (var technology in TechnologySystem.Instance.technologies)
+			foreach (var regulation in RegulationsSystem.Instance.regulations)
 			{
 				var newlistElement = Instantiate(listElement);
 				newlistElement.transform.SetParent(parentObject.transform);
-				ListElement listElementComponent = newlistElement.GetComponent<ListElement>();
-				listElementComponent.title.GetComponent<TMP_Text>().text = technology.Title;
-				listElementComponent.description.GetComponent<TMP_Text>().text = technology.Description;
+				RegulationListElement listElementComponent = newlistElement.GetComponent<RegulationListElement>();
+				listElementComponent.title.GetComponent<TMP_Text>().text = regulation.Title;
+				listElementComponent.description.GetComponent<TMP_Text>().text = regulation.Description;
 				listElementComponent.price.GetComponent<TMP_Text>().text = "1 listek";
-				listElementComponent.technology = technology;
+				listElementComponent.regulation = regulation;
 			}
 		}
 
@@ -28,4 +27,5 @@ namespace EcoGame
 		[SerializeField]
 		public GameObject parentObject;
 	}
+
 }

@@ -174,7 +174,7 @@ namespace EcoGame
 
         public int calcProduction()
         {
-	        return (int)(this.BaseProduction * this.Amount * (float)this.ProductionMultiplier / 100f * ResourceManager.Instance.PollutionEffectPercent * ResourceManager.Instance.HappyEffectPercent);
+            return (int)(this.BaseProduction * this.Amount * (float)this.ProductionMultiplier / 100f * ResourceManager.Instance.PollutionEffectPercent * ResourceManager.Instance.HappyEffectPercent);
         }
 
         public void IncreaseAmount()

@@ -1,0 +1,42 @@
+[
+  {
+    "Title": "Sieci rozwijane na oceanach",
+    "Description": "Statki zbieraj¹ce odpady z wód mog¹ teraz rozk³adaæ sieci na oceanach. Ich wydajnoœæ zwiêksza siê o 40%.",
+    "CostAmount": 0,
+    "ProductionAmount": 40,
+    "HappyAMount": 0,
+    "BuildingKey": 21
+  },
+  {
+    "Title": "Przywysypiskowe miejsca recyklingu",
+    "Description": "Miejsca recyklingu mog¹ byæ teraz budowane tu¿ przy wysypiskach, dziêki czemu ich budowa kosztuje 30% mniej.",
+    "CostAmount": -30,
+    "ProductionAmount": 0,
+    "HappyAMount": 0,
+    "BuildingKey": 17
+  },
+  {
+    "Title": "³o¿yska nowego typu",
+    "Description": "Monta¿ ³o¿ysk nowego typu w wiatrakach elektrowni wiatrowych zwiêksza ich wydajnoœæ o 20%.",
+    "CostAmount": 0,
+    "ProductionAmount": 20,
+    "HappyAMount": 0,
+    "BuildingKey": 7
+  },
+  {
+    "Title": "Ubrania z recyklingu",
+    "Description": "Produkcja ubrañ z recyklingu sprawia, ¿e budowa kolejnych fabryk jest tañsza o 45%.",
+    "CostAmount": -45,
+    "ProductionAmount": 0,
+    "HappyAMount": 0,
+    "BuildingKey": 23
+  },
+  {
+    "Title": "Nowoczesne dysze palników",
+    "Description": "Zastosowanie nowego rodzaju dyszy w palnikach pozwoli obni¿yæ koszty budowy o 15% i zwiêkszyæ wydajnoœæ o 25%.",
+    "CostAmount": -15,
+    "ProductionAmount": 25,
+    "HappyAMount": 0,
+    "BuildingKey": 18
+  }
+]

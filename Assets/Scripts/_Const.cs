@@ -273,7 +273,7 @@ namespace EcoGame
 	        public static readonly string B_DESC_GOODS_ELECTRONICSFACTORY = "temp";
 	        public static readonly string B_DESC_GOODS_CLOTHESSEWING = "temp";
 	        public static readonly string B_DESC_GOODS_CARFACTORY = "temp";
-	        public static readonly string B_DESC_POWERPLANT_GAS = "temp";
+	        public static readonly string B_DESC_POWERPLANT_GAS = "Elektrownie gazowe to zak³ady, które produkuj¹ energiê elektryczn¹ z wykorzystaniem procesu spalania gazu ziemnego. Turbiny gazowe zamieniaj¹ energiê spalin bêd¹cych rezultatem spalania gazu w energiê mechaniczn¹. Istnieje kilka metod pozyskiwania energii za pomoc¹ turbin, gdzie w jednej spaliny s¹ wykorzystywane ca³y czas, w drugiej s¹ one wykorzystywane do momentu wytworzenia pary wodnej, która napêdza turbinê, a ta z kolei odpowiada za napêd dla generatora.";
         }
     }
     namespace Resources
@@ -325,6 +325,7 @@ namespace EcoGame
         public static class JsonConsts 
         {
 	        public static readonly string TECHNOLOGY_FILE_NAME = "technologies.json";
+	        public static readonly string REGULATION_FILE_NAME = "regulations.json";
 			public static readonly string EVENT_FILE_NAME       = "events.json";
             public static readonly string SAVE_FILE_NAME        = "save.json";
         }
