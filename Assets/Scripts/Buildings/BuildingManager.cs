@@ -433,7 +433,7 @@ namespace EcoGame
 		                (int)B_COST_POWERPLANT_GAS,         // Koszt podstawowy
 		                (int)B_COST_POWERPLANT_GAS,         // Koszt aktualny
 		                (int)B_TECH_POWERPLANT_GAS,         // Poziom technologii
-		                5,                                      // Ilosc budynkow
+		                0,                                      // Ilosc budynkow
 		                (int)B_PROD_POWERPLANT_GAS,         // Bazowa produkcja
 		                (int)B_POLLUTION_POWERPLANT_GAS,    // Generowane zanieczyszczenie
 		                (int)B_MULT_COST_POWERPLANT_GAS,    // Mnoznik kosztow
