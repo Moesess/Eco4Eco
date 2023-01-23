@@ -12,6 +12,7 @@ namespace EcoGame
 
         public Dictionary<int, Resource> Resources = new();
         public float PollutionEffectPercent;
+        public float HappyEffectPercent;
 		public Resource Power // Energia
         {
             get { return Resources[(int)R_POWER]; }
@@ -109,6 +110,7 @@ namespace EcoGame
             {
 	            Instance = this;
                 this.PollutionEffectPercent = 1f;
+                this.HappyEffectPercent = 1f;
                 this.Resources.Add((int)R_POWER, new Resource("Pr¹d", 0, R_PRICE_POWER));
                 this.Resources.Add((int)R_BUDGET, new Resource("Bud¿et", 1000));
                 this.Resources.Add((int)R_TRASH, new Resource("Œmieci", 0));
@@ -128,6 +130,7 @@ namespace EcoGame
         private void Start()
         {
             this.Resources[(int)R_POLLUTION].OnAmountChange += PollutionChecker;
+            this.Resources[(int)R_HAPPY].OnAmountChange += HappyChecker;
 
             foreach (Resource Res in this.Resources.Values)
             {
@@ -197,6 +200,30 @@ namespace EcoGame
                 this.PollutionEffectPercent = 0.9f;
             else
                 this.PollutionEffectPercent = 1f;
+
+            if (this.Resources[(int)R_POLLUTION].Amount == this.Resources[(int)R_POLLUTION].MaxAmount)
+            {
+                // TODO PRZEGRANKO
+            } 
+            else if(this.Resources[(int)R_POLLUTION].Amount == 0)
+            {
+                // TODO WYGRANKO
+            }
+        }
+
+        public void HappyChecker()
+        {
+            if (Resources[(int)R_HAPPY].Amount >= 75)
+                this.HappyEffectPercent = 1.1f;
+            else if (Resources[(int)R_HAPPY].Amount < 75 && Resources[(int)R_HAPPY].Amount >= 45)
+                this.PollutionEffectPercent = 1f;
+            else
+                this.PollutionEffectPercent = 0.9f;
+
+            if(Resources[(int)R_HAPPY].Amount == 0)
+            {
+                // TODO RESET PRZEGRANKO LUDZIE CIE NA WIDLACH WYNOSZA 
+            }
         }
     }
 }
