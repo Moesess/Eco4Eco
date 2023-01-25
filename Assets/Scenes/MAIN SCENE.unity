@@ -3395,6 +3395,7 @@ MonoBehaviour:
   listElement: {fileID: 8248562263179803287, guid: 293b86992574ffe458c14ea35712cb40, type: 3}
   numberOfObjects: 10
   parentObject: {fileID: 851133742}
+  PriceTexture: {fileID: 2800000, guid: ef9b144f4b7d611489541bd5174e37ce, type: 3}
 --- !u!1001 &862497773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6306,6 +6307,7 @@ MonoBehaviour:
   listElement: {fileID: 8248562263179803287, guid: 293b86992574ffe458c14ea35712cb40, type: 3}
   numberOfObjects: 10
   parentObject: {fileID: 1515269103}
+  PriceTexture: {fileID: 2800000, guid: ef9b144f4b7d611489541bd5174e37ce, type: 3}
 --- !u!1 &1531602463
 GameObject:
   m_ObjectHideFlags: 0
