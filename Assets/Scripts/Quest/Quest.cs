@@ -32,13 +32,14 @@ namespace EcoGame
         public virtual void Initialize() // inizjalizacja
         {
             completed = false;
-            if (Random.Range(0, 1) == 0)
+            Debug.Log(Random.Range(0, 2));
+            if (Random.Range(0, 2) == 0)
             {
                 data.building = false;
                 getRandomResource();
                 data.currentAmount = ResourceManager.Instance.Resources[data.targetKey].Amount;
                 data.requiredAmount = calculateRequiredAmount(data.currentAmount);
-                data.description = "Zdob¹dŸ " + data.requiredAmount + " " + ResourceManager.Instance.Resources[data.targetKey].Name.ToLower();
+                data.description = "ZdobÄ…dÅº " + data.requiredAmount + " " + ResourceManager.Instance.Resources[data.targetKey].Name.ToLower();
                 data.picture = Pictures.Instance.ResourcePictures[data.targetKey];
                 ResourceManager.Instance.Resources[data.targetKey].OnAmountChange += CheckComplete;
             }
@@ -101,7 +102,7 @@ namespace EcoGame
                 //popUpWindow.Instantiate();
                 //popUpWindow.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
                 //popUpWindow.transform.Find("Text Group/Title").GetComponent<TMP_Text>().text = "Zadanie wykonano!";
-                //popUpWindow.transform.Find("Text Group/Descritpion").GetComponent<TMP_Text>().text = "Wykona³eœ zadanie! Zadowolenie spo³eczne roœnie.";
+                //popUpWindow.transform.Find("Text Group/Descritpion").GetComponent<TMP_Text>().text = "Wykonaï¿½eï¿½ zadanie! Zadowolenie spoï¿½eczne roï¿½nie.";
                 if (OnComplete != null) OnComplete();
             }
         }
