@@ -32,7 +32,6 @@ namespace EcoGame
         public virtual void Initialize() // inizjalizacja
         {
             completed = false;
-            Debug.Log(Random.Range(0, 2));
             if (Random.Range(0, 2) == 0)
             {
                 data.building = false;
@@ -96,6 +95,7 @@ namespace EcoGame
                 {
                     ResourceManager.Instance.Resources[data.targetKey].OnAmountChange -= CheckComplete;
                 }
+                ResourceManager.Instance.Resources[(int)Resources.RESOURCES.R_BUDGET].Amount += Random.Range(100, 1000);
                 ResourceManager.Instance.Resources[(int)Resources.RESOURCES.R_HAPPY].Amount += 1;
                 completed = true;
                 //GameObject popUpWindow = UnityEngine.Resources.Load("Prefabs/Panels/Information Panel", typeof(GameObject)) as GameObject;
