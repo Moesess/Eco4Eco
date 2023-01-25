@@ -281,20 +281,21 @@ namespace EcoGame
         // Klucze do ResourceManager.Resources
         public enum RESOURCES
         {
-	        R_NULL              = 99,
-            R_COAL              = 0,
-            R_GAS               = 1,
-            R_OIL               = 2,
-            R_URANIUM           = 3,
-            R_PEAT              = 4,
-            R_POWER             = 5,
-            R_BUDGET            = 6,
-            R_TRASH             = 7,
-            R_FOOD              = 8,
-            R_GOODS             = 9,
-            R_POLLUTION         = 10,
-            R_LEAF              = 11,
-            R_HAPPY             = 12,
+
+	        R_NULL = 99,
+            R_COAL = 0,
+            R_GAS = 1,
+            R_OIL = 2,
+            R_URANIUM = 3,
+            R_PEAT = 4,
+            R_POWER = 5,
+            R_BUDGET = 6,
+            R_TRASH = 7,
+            R_FOOD  = 8,
+            R_GOODS = 9,
+            R_POLLUTION = 10,
+            R_LEAF  = 11,
+            R_HAPPY = 12,
             R_POLLUTION_MAXIMUM = 10000,
         }
 

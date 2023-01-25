@@ -1397,7 +1397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a521d6140e1d30542840f66a99cb0f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetButton: {fileID: 1429494827}
+  resetButton: {fileID: 0}
 --- !u!1 &460301073 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1562757223947511894, guid: 4c5e7ae29a3d94044b1a408a8d351c3f, type: 3}
@@ -3393,8 +3393,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listElement: {fileID: 8248562263179803287, guid: 293b86992574ffe458c14ea35712cb40, type: 3}
-  numberOfObjects: 10
+  numberOfObjects: 0
   parentObject: {fileID: 851133742}
+  PriceTexture: {fileID: 2800000, guid: ef9b144f4b7d611489541bd5174e37ce, type: 3}
 --- !u!1001 &862497773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6240,17 +6241,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2910238141970112392, guid: ff403041daf457b419c86e1442334c96, type: 3}
   m_PrefabInstance: {fileID: 1429494824}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1429494827 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2910238141970112394, guid: ff403041daf457b419c86e1442334c96, type: 3}
-  m_PrefabInstance: {fileID: 1429494824}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1429494826}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1429494828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6263,7 +6253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a521d6140e1d30542840f66a99cb0f31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resetButton: {fileID: 1429494827}
+  resetButton: {fileID: 0}
 --- !u!114 &1482238216 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2910238141970112394, guid: ff403041daf457b419c86e1442334c96, type: 3}
@@ -6304,8 +6294,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   listElement: {fileID: 8248562263179803287, guid: 293b86992574ffe458c14ea35712cb40, type: 3}
-  numberOfObjects: 10
+  numberOfObjects: 0
   parentObject: {fileID: 1515269103}
+  PriceTexture: {fileID: 2800000, guid: ef9b144f4b7d611489541bd5174e37ce, type: 3}
 --- !u!1 &1531602463
 GameObject:
   m_ObjectHideFlags: 0
