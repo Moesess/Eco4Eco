@@ -553,8 +553,8 @@ namespace EcoGame
                 buildingInstance.AmountText.GetComponent<TMP_Text>().text = _Build.Amount.ToString();
                 buildingInstance.GenerateText.GetComponent<TMP_Text>().text = (_Build.BaseProduction * _Build.Amount).ToString() + " j.";
                 buildingInstance.iBuildKey= this.Buildings.FirstOrDefault(x => x.Value.Equals(_Build)).Key;
-                
-                GameObject _Building = PrefabUtility.InstantiatePrefab(BuildingPrefab) as GameObject;
+
+                GameObject _Building = Instantiate(BuildingPrefab);
                 _Building.transform.SetParent(GameObject.Find("UI/Canvas/Center Panel/Right Panel/Main Panel/"+_Build.PanelName).transform, false);
             }
         }
