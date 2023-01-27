@@ -1,10 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Security.Cryptography;
 using EcoGame;
-using EcoGame.Buildings;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -34,7 +29,7 @@ public class ShowInformations : MonoBehaviour, IPointerEnterHandler, IPointerExi
     }
     public void DisplayInformations()
     {
-		informationPanel = PrefabUtility.InstantiatePrefab(informationsPanelPrefab) as GameObject;
+		informationPanel = Instantiate(informationsPanelPrefab);
 		informationPanel.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
 		var title = informationPanel.transform.Find("Text Group/Title").GetComponent<TMP_Text>();
 		var description = informationPanel.transform.Find("Text Group/Description").GetComponent<TMP_Text>();
