@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 7447687761387944870}
   - component: {fileID: 7447687761387944871}
   - component: {fileID: 1301187088360305334}
+  - component: {fileID: 5910505248916803641}
   m_Layer: 0
   m_Name: Event Panel
   m_TagString: EventPanel
@@ -315,6 +316,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &5910505248916803641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7447687761387944869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8edaae516c81fba44b0f74533a4e7b1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventPanel: {fileID: 7447687761387944869}
+  TitlePlaceholder: {fileID: 7447687761417195444}
+  DescriptionPlaceholder: {fileID: 7447687762296008390}
 --- !u!1 &7447687761417195444
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,6 +681,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 5910505248916803641}
+        m_TargetAssemblyTypeName: EcoGame.CustomEventInstance, Assembly-CSharp
+        m_MethodName: YesAction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1390534490762300677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -803,6 +831,18 @@ MonoBehaviour:
       - m_Target: {fileID: 6674121785454725209}
         m_TargetAssemblyTypeName: EcoGame.PlayButton, Assembly-CSharp
         m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5910505248916803641}
+        m_TargetAssemblyTypeName: EcoGame.CustomEventInstance, Assembly-CSharp
+        m_MethodName: NoAction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

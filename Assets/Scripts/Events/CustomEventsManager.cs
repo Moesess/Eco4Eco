@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,9 +12,8 @@ namespace EcoGame
 		float deltaTime;
 		[SerializeField]
 		GameObject tempEventPanel;
-
-		// Start is called before the first frame update
-		void Start()
+        // Start is called before the first frame update
+        void Start()
 		{
 			InvokeRepeating("DisplayEvent", 1f, (float)Random.Range(900, 1800));
 		}
@@ -44,31 +42,17 @@ namespace EcoGame
 
 		private void DisplayEvent()
 		{
+			// Pobierz nowy event
 			CustomEvent drawnEvent = new CustomEvent();
-			GameObject eventPanel = PrefabUtility.InstantiatePrefab(tempEventPanel) as GameObject;
-			eventPanel.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
-			TMP_Text title = GameObject.Find("Event Panel/Text Group/Title").GetComponent<TMP_Text>();
-			TMP_Text description = GameObject.Find("Event Panel/Text Group/Description").GetComponent<TMP_Text>();
-			Button yesButton = GameObject.Find("Event Panel/Button Group/Yes Button").GetComponent<Button>();
-			Button noButton = GameObject.Find("Event Panel/Button Group/No Button").GetComponent<Button>();
 
-			yesButton.onClick.AddListener(YesAction);
-			noButton.onClick.AddListener(NoAction);
+			// Ustaw placeholdery
+            CustomEventInstance EventInstance = tempEventPanel.GetComponent<CustomEventInstance>();
+            EventInstance.TitlePlaceholder.GetComponent<TMP_Text>().text = drawnEvent.Title;
+            EventInstance.DescriptionPlaceholder.GetComponent<TMP_Text>().text = drawnEvent.Description;
 
-			title.text = drawnEvent.Title;
-			description.text = drawnEvent.Description;
-
-		}
-
-		private void YesAction()
-		{
-			//something happens
-			Destroy(GameObject.Find("Event Panel"));
-		}
-		private void NoAction()
-		{
-			//something happens
-			Destroy(GameObject.Find("Event Panel"));
-		}
-	}
+            // Zainicjuj event jako game object
+            GameObject eventPanel = Instantiate(tempEventPanel);
+            eventPanel.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
+        }
+    }
 }

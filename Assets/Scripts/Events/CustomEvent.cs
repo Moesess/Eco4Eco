@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EcoGame
+﻿namespace EcoGame
 {
-	internal class CustomEvent
+	public class CustomEvent
 	{
 		public int Id { get; set; }
 		public string Title { get; set; }
@@ -43,5 +37,5 @@ namespace EcoGame
 			this.CoalmineCoefficientDifference = 0;
 			this.GasMineCoefficientDifference = 0;
 		}
-	}
+    }
 }

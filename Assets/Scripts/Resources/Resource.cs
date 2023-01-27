@@ -25,6 +25,9 @@ namespace EcoGame
 		private int iUsedAmount; // Uzywana ilosc surowca
 		private int iPrice;      // Cena surowca
 
+        public delegate void OnIChangeDelegate();
+        public event OnIChangeDelegate OnAmountChange;
+        public event OnIChangeDelegate OnUsedAmountChange;
 		public int Amount
         {
             get { return iAmount; }
@@ -63,9 +66,6 @@ namespace EcoGame
         }
 
 
-        public delegate void OnIChangeDelegate();
-        public event OnIChangeDelegate OnAmountChange;
-        public event OnIChangeDelegate OnUsedAmountChange;
 
 // Konstruktory ============================================================
 
