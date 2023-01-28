@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 namespace EcoGame
 {
+    using static Buildings.BUILDINGS;
+    using static Resources.RESOURCES;
     public class BuildingInstance : MonoBehaviour
     {
         [SerializeField] public GameObject BuildingName;
@@ -46,14 +48,12 @@ namespace EcoGame
             else
             {
                 Resource UsedRes = ResourceManager.Instance.Resources[(int)Building.UsedResource];
-
                 if (ResourceManager.Instance.Budget.Amount >= Building.Cost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
                 {
                     Building.IncreaseAmount();
-                    ResourceManager.Instance.Budget.Amount -= Building.Cost;
+                    ResourceManager.Instance.Budget.Amount -= Building.Cost;   
                 }
             }
-
             SfxManager.Instance.PlayClick();
         }
 

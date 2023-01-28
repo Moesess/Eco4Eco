@@ -71,7 +71,7 @@ namespace EcoGame
         private int calculateRequiredAmount(int currentAmount)
         {
             if (currentAmount == 0) return 3;
-            return currentAmount * Random.Range(2, 4);
+            return currentAmount + Random.Range(2, 5);
         }
 
         private int getCurrentAmount()
@@ -97,7 +97,7 @@ namespace EcoGame
                 }
                 ResourceManager.Instance.Resources[(int)Resources.RESOURCES.R_BUDGET].Amount += Random.Range(100, 1000);
                 ResourceManager.Instance.Resources[(int)Resources.RESOURCES.R_HAPPY].Amount += 1;
-                ResourceManager.Instance.Resources[(int)Resources.RESOURCES.R_POLLUTION].Amount -= Random.Range(100, 1000);
+                ResourceManager.Instance.Resources[(int)Resources.RESOURCES.R_POLLUTION].Amount -= Random.Range(100, 400);
 
                 completed = true;
                 //GameObject popUpWindow = UnityEngine.Resources.Load("Prefabs/Panels/Information Panel", typeof(GameObject)) as GameObject;

@@ -448,8 +448,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Kompostownia odpadów",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        R_NULL,                           // Surowiec jaki produkuje
                         R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
                         (int)B_USED_RES_AMOUNT_TRASH_COMPOSTINGPLANT, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_COMPOSTINGPLANT,         // Koszt podstawowy
                         (int)B_COST_TRASH_COMPOSTINGPLANT,         // Koszt aktualny
@@ -467,8 +467,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Wysypisko œmieci",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        R_NULL,                           // Surowiec jaki produkuje
                         R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
                         (int)B_USED_RES_AMOUNT_TRASH_GARBAGEDUMP, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_GARBAGEDUMP,         // Koszt podstawowy
                         (int)B_COST_TRASH_GARBAGEDUMP,         // Koszt aktualny
@@ -486,8 +486,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Spalarnia œmieci",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        R_NULL,                           // Surowiec jaki produkuje
                         R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
                         (int)B_USED_RES_AMOUNT_TRASH_GARBAGEINCINERATOR, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_GARBAGEINCINERATOR,         // Koszt podstawowy
                         (int)B_COST_TRASH_GARBAGEINCINERATOR,         // Koszt aktualny
@@ -505,8 +505,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Statek ³owi¹cy œmieci",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        R_NULL,                           // Surowiec jaki produkuje
                         R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
                         (int)B_USED_RES_AMOUNT_TRASH_GARBAGESHIP, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_GARBAGESHIP,         // Koszt podstawowy
                         (int)B_COST_TRASH_GARBAGESHIP,         // Koszt aktualny
@@ -525,8 +525,8 @@ namespace EcoGame
                     new _BaseBuilding(
                         "Miejsce Recyklingu",               // Nazwa Budynku
                         "Trash Panel",                          // Panel na ktorym budynek sie pojawia
-                        R_NULL,                           // Surowiec jaki produkuje
                         R_TRASH,                            // Surowiec jaki wykorzystuje
+                        R_NULL,                           // Surowiec jaki produkuje
                         (int)B_USED_RES_AMOUNT_TRASH_RECYCLING, // Ile Surowca wykorzystuje
                         (int)B_COST_TRASH_RECYCLING,         // Koszt podstawowy
                         (int)B_COST_TRASH_RECYCLING,         // Koszt aktualny

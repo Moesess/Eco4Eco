@@ -313,7 +313,7 @@ namespace EcoGame
 
         public enum START_RESOURCE_VALUES
         {
-            S_BUDGET = 10000000,
+            S_BUDGET = 1500,
             S_POLLUTION = 2500,
         }
     }
