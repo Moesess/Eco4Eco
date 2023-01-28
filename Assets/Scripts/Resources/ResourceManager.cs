@@ -180,6 +180,7 @@ namespace EcoGame
             this.Resources[(int)R_GAS].SetValue(0);
             this.Resources[(int)R_URANIUM].SetValue(0);
             this.Resources[(int)R_PEAT].SetValue(0);
+            this.Resources[(int)R_TRASH].SetValue(0);
 
             this.Resources[(int)R_POWER].SetUsedValue(0);
             this.Resources[(int)R_FOOD].SetUsedValue(0);
@@ -189,6 +190,7 @@ namespace EcoGame
             this.Resources[(int)R_GAS].SetUsedValue(0);
             this.Resources[(int)R_URANIUM].SetUsedValue(0);
             this.Resources[(int)R_PEAT].SetUsedValue(0);
+            this.Resources[(int)R_TRASH].SetUsedValue(0);
         }
 
         public void PollutionChecker()

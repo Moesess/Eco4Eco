@@ -1,0 +1,13 @@
+[
+  {
+    "Title": "Dzień ekologii",
+    "Description": "Jeden z Twoich obywateli wyszedł z propozycją zorganizowania dnia ekologii pełnego festynów i imprez promujących ekologię. Ten dzień byłby wolny od pracy.",
+    "EffectYesDescription": "Zadowolenie społeczne wzrosło, wydajność fabryki elektroniki spadła.",
+    "EffectNoDescription": "Zadowolenie społeczne zmalało, wydajność fabryki elektroniki wzrosła.",
+    "YesProductionAmount": -15,
+    "NoProductionAmount": 15,
+    "YesHappinessAmount": 20,
+    "NoHappinessAmount": -20,
+    "BuildingKey": 22
+  }
+]
