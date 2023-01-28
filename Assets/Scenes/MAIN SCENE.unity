@@ -9391,6 +9391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96f01feea96c77b49accdbbd0f38a5e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InfoPanel: {fileID: 7447687761387944869, guid: 267c231bdb96a624a81bdeccab664992, type: 3}
 --- !u!1001 &2099898025
 PrefabInstance:
   m_ObjectHideFlags: 0
