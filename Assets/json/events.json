@@ -17,15 +17,15 @@
     "EffectNoDescription": "Zadowolenie społeczne zmalało.",
     "YesProductionAmount": 0,
     "NoProductionAmount": 0,
-    "YesHappinessAmount": 10
+    "YesHappinessAmount": 10,
     "NoHappinessAmount": -10,
     "BuildingKey": 1
-  }
+  },
   {
-    "Title": "Promocja samochodów"
+    "Title": "Promocja samochodów",
     "Description": "Właściciel lokalnej fabryki samochodów prosi Cię o zorganizowanie eventu promującego dojazdy do pracy samochodem. Miałoby to zwiększyć produkcję samochodów w jego fabryce.",
-    "EffectYesDescription": "Zadowolenie społeczne wzrosło",
-    "EffectNoDescription": "Zadowolenie społeczne zmalało.",
+    "EffectYesDescription": "Zadowolenie społeczne zmalało, produkcja fabryk samochodów wzrosła.",
+    "EffectNoDescription": "Zadowolenie społeczne wzrosło, produkcja fabryk samochodów zmalała.",
     "YesProductionAmount": 15,
     "NoProductionAmount": -15,
     "YesHappinessAmount": -15,

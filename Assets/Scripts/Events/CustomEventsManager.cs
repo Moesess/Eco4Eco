@@ -38,7 +38,7 @@ namespace EcoGame
 
 		private CustomEvent DrawNewEvent()
 		{
-			int randomEventIndex = Random.Range(0, events.Count - 1);
+			int randomEventIndex = Random.Range(0, events.Count);
 			return events[randomEventIndex];
 		}
 
