@@ -12,13 +12,12 @@ namespace EcoGame
 	{
 		public static CustomEventsManager Instance;
 		IList<CustomEvent> events;
-		float deltaTime;
 		[SerializeField]
 		GameObject tempEventPanel;
         // Start is called before the first frame update
         void Start()
 		{
-			InvokeRepeating("DisplayEvent", 1f, (float)Random.Range(900, 1800));
+			InvokeRepeating("DisplayEvent", 30f, (float)Random.Range(30, 60));
 		}
 
 
