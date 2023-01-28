@@ -20,7 +20,7 @@ namespace EcoGame
             InvokeRepeating("TickHappiness", 1f, 10f);  //1s delay, repeat every 3s
 
             this.InfoPanel.transform.Find("Text Group/Title").GetComponent<TMP_Text>().text = "Witamy w Eco4Eco!";
-            this.InfoPanel.transform.Find("Text Group/Description").GetComponent<TMP_Text>().text = "Twoim zadaniem jest przeprowadziæ transformacjê energetyczn¹ kraju jakim przysz³o Ci sterowaæ. \n\nZarz¹dzaj surowcami i buduj budynki rozs¹dnie, wa¿nym czynnikiem jest równie¿ zadowolenie spo³eczne.\n\n\nGrê mo¿esz opuœciæ wciskaj¹c klawisz - ESC / Escape";
+            this.InfoPanel.transform.Find("Text Group/Description").GetComponent<TMP_Text>().text = "Twoim zadaniem jest przeprowadziæ transformacjê energetyczn¹ kraju jakim przysz³o Ci sterowaæ.\n\nZarz¹dzaj surowcami i buduj budynki rozs¹dnie, wa¿nym czynnikiem jest równie¿ zadowolenie spo³eczne.\n\nJeœli uda Ci siê osi¹gn¹æ neutralnoœæ emisyjn¹ i odpowiednie zadowolenie spo³eczne, bêdziesz móg³ dokonaæ resetu. Otrzymasz listki które mo¿esz wydaæ na specjalne technologie.\n\nGrê mo¿esz opuœciæ wciskaj¹c klawisz - ESC / Escape";
             GameObject panel = Instantiate(this.InfoPanel);
             panel.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
         }
