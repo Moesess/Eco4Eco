@@ -1,4 +1,7 @@
 using System.Collections.Generic;
+using System.IO;
+using EcoGame.Json;
+using Newtonsoft.Json;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,10 +31,9 @@ namespace EcoGame
 			}
 		}
 
-		private IList<CustomEvent> LoadAllPossibleEvents()
+		public IList<CustomEvent> LoadAllPossibleEvents()
 		{
-			//return JsonConvert.DeserializeObject<IList<CustomEvent>>(JsonConsts.EVENT_FILE_NAME);
-			return new List<CustomEvent>();
+			return JsonConvert.DeserializeObject<IList<CustomEvent>>(File.ReadAllText($"{Application.dataPath}/json/{Json.JsonConsts.EVENT_FILE_NAME}"));
 		}
 
 		private CustomEvent DrawNewEvent()
@@ -43,16 +45,14 @@ namespace EcoGame
 		private void DisplayEvent()
 		{
 			// Pobierz nowy event
-			CustomEvent drawnEvent = new CustomEvent();
-
-			// Ustaw placeholdery
-            CustomEventInstance EventInstance = tempEventPanel.GetComponent<CustomEventInstance>();
-            EventInstance.TitlePlaceholder.GetComponent<TMP_Text>().text = drawnEvent.Title;
-            EventInstance.DescriptionPlaceholder.GetComponent<TMP_Text>().text = drawnEvent.Description;
+			CustomEvent drawnEvent = DrawNewEvent();
+			
 
             // Zainicjuj event jako game object
             GameObject eventPanel = Instantiate(tempEventPanel);
             eventPanel.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
-        }
+            CustomEventInstance EventInstance = eventPanel.GetComponent<CustomEventInstance>();
+            EventInstance.Event = drawnEvent;
+		}
     }
 }

@@ -331,6 +331,7 @@ MonoBehaviour:
   EventPanel: {fileID: 7447687761387944869}
   TitlePlaceholder: {fileID: 7447687761417195444}
   DescriptionPlaceholder: {fileID: 7447687762296008390}
+  InformationWindow: {fileID: 7447687761387944869, guid: 267c231bdb96a624a81bdeccab664992, type: 3}
 --- !u!1 &7447687761417195444
 GameObject:
   m_ObjectHideFlags: 0
