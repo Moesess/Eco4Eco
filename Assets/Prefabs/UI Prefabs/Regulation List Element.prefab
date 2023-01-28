@@ -673,7 +673,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: KUP
+  m_Text: PODPISZ
 --- !u!1 &7907146106135741513
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,9 +796,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3080129617486532958}
-        m_TargetAssemblyTypeName: EcoGame.ListElement, Assembly-CSharp
-        m_MethodName: BuyTechnology
+      - m_Target: {fileID: 7446313141784518415}
+        m_TargetAssemblyTypeName: RegulationListElement, Assembly-CSharp
+        m_MethodName: BuyRegulation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -821,8 +821,9 @@ GameObject:
   - component: {fileID: 8507502138978024195}
   - component: {fileID: 2669329892815952363}
   - component: {fileID: 3080129617486532958}
+  - component: {fileID: 7446313141784518415}
   m_Layer: 0
-  m_Name: List Element
+  m_Name: Regulation List Element
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -926,6 +927,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4121be699458d61458694b157927e3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  title: {fileID: 5774118711288293864}
+  description: {fileID: 3996934861848523086}
+  PriceValue: {fileID: 8642521608696148745}
+  Image: {fileID: 355256321166889945}
+--- !u!114 &7446313141784518415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8248562263179803287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379cfb1d5705eec4187980947bfaeae3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   title: {fileID: 5774118711288293864}

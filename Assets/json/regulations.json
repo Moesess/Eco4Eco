@@ -1,0 +1,47 @@
+[
+  {
+    "Title": "Ulga podatkowa dla rowerzystów",
+    "Description": "Ulga podatkowa odciążająca portfele osób deklarujących, że dojezdżają rowerami do pracy. -10% do produkcji samochodów, +10% do zadowolenia społecznego.",
+    "CostAmount": 0,
+    "ProductionAmount": -10,
+    "HappinessAmount": 10,
+    "BuildingKey": 24,
+    "Price": 1000
+  },
+  {
+    "Title": "Kampania promująca recykling",
+    "Description": "Kampania promująca recykling wśród obywateli. +5% do produkcji recyklingu, -5% do ceny kupna recyklingu, +5% do zadowolenia społecznego.",
+    "CostAmount": -5,
+    "ProductionAmount": 5,
+    "HappinessAmount": 5,
+    "BuildingKey": 17,
+    "Price": 1000
+  },
+  {
+    "Title": "Zakaz wjazdu samochodami",
+    "Description": "Zakaz wjazdu samochodami do centrum miast w godzinach od 10 do 18. -10% do produkcji samochodów, +15% do zadowolenia społecznego.",
+    "CostAmount": 0,
+    "ProductionAmount": -10,
+    "HappinessAmount": 15,
+    "BuildingKey": 24,
+    "Price": 1000
+  },
+  {
+    "Title": "Neutralność emisyjna w produkcji elektroniki",
+    "Description": "Nakaz dojścia do neutralności emisyjnej w fabrykach elektroniki. -20% do produkcji elektroniki, +25% do zadowolenia społecznego.",
+    "CostAmount": 0,
+    "ProductionAmount": -20,
+    "HappinessAmount": 25,
+    "BuildingKey": 22,
+    "Price": 1000
+  },
+  {
+    "Title": "Kampania promująca świadome kupno jedzenia",
+    "Description": "Kampania na temat szkodliwości jedzenia przetworzonego. -15 do produkcji w fabrykach żywności przetworzonej. +20% do zadowolenia społecznego. ",
+    "CostAmount": 0,
+    "ProductionAmount": -15,
+    "HappinessAmount": 20,
+    "BuildingKey": 11,
+    "Price": 1000
+  }
+]
