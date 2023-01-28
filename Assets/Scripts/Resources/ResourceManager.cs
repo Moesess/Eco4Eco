@@ -225,7 +225,7 @@ namespace EcoGame
 
             if(Resources[(int)R_HAPPY].Amount == 0)
             {
-                // TODO RESET PRZEGRANKO LUDZIE CIE NA WIDLACH WYNOSZA 
+                // TODO RESET PRZEGRANKO
             }
         }
     }
