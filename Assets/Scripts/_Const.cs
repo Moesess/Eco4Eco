@@ -310,8 +310,14 @@ namespace EcoGame
             R_PRICE_FOOD = 10,
             R_PRICE_GOODS = 18,
         }
+
+        public enum START_RESOURCE_VALUES
+        {
+            S_BUDGET = 10000000,
+            S_POLLUTION = 2500,
+        }
     }
-    
+
     // Kolory dla wyswietlania zadowolenia
     public static class Colors
     {

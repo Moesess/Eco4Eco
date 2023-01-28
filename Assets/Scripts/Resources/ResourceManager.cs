@@ -5,6 +5,7 @@ namespace EcoGame
     using System.Collections.Generic;
     using static Resources.RESOURCES;
     using static Resources.RESOURCE_PRICES;
+    using static Resources.START_RESOURCE_VALUES;
 
     public class ResourceManager : MonoBehaviour
     {
@@ -112,14 +113,14 @@ namespace EcoGame
                 this.PollutionEffectPercent = 1f;
                 this.HappyEffectPercent = 1f;
                 this.Resources.Add((int)R_POWER, new Resource("Pr¹d", 0, R_PRICE_POWER));
-                this.Resources.Add((int)R_BUDGET, new Resource("Bud¿et", 1000));
+                this.Resources.Add((int)R_BUDGET, new Resource("Bud¿et", (int)S_BUDGET));
                 this.Resources.Add((int)R_TRASH, new Resource("Œmieci", 0));
                 this.Resources.Add((int)R_FOOD, new Resource("¯ywnoœæ", 0, R_PRICE_FOOD));
                 this.Resources.Add((int)R_GOODS, new Resource("Towary konsumpcyjne", 0,R_PRICE_GOODS));
                 this.Resources.Add((int)R_OIL, new Resource("Ropa naftowa", 0, R_PRICE_OIL));
                 this.Resources.Add((int)R_COAL, new Resource("Wêgiel", 0, R_PRICE_COAL));
                 this.Resources.Add((int)R_GAS, new Resource("Gaz ziemny", 0, R_PRICE_GAS));
-                this.Resources.Add((int)R_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", 5000, (int)R_POLLUTION_MAXIMUM, 0, 0));
+                this.Resources.Add((int)R_POLLUTION, new Resource("Zanieczyszczenie œrodowiska", (int)S_POLLUTION, (int)R_POLLUTION_MAXIMUM, 0, 0));
                 this.Resources.Add((int)R_URANIUM, new Resource("Uran", 0, R_PRICE_URANIUM));
                 this.Resources.Add((int)R_PEAT, new Resource("Torf", 0, R_PRICE_PEAT));
                 this.Resources.Add((int)R_LEAF, new Resource("Listek", 0));
