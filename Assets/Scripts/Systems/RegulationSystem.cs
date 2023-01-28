@@ -29,7 +29,7 @@ namespace EcoGame
 				Instance = this;
 			}
 
-			FillRegulations(File.ReadAllText($"{Application.dataPath}/json/{Json.JsonConsts.REGULATION_FILE_NAME}"));
+			FillRegulations(File.ReadAllText($"{Application.streamingAssetsPath}/{Json.JsonConsts.REGULATION_FILE_NAME}"));
 		}
 
 		public void FillRegulations(string json)

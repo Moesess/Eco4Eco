@@ -24,7 +24,7 @@ namespace EcoGame
 				Instance = this;
 
 			}
-			FillTechnologies(File.ReadAllText($"{Application.dataPath}/json/{Json.JsonConsts.TECHNOLOGY_FILE_NAME}"));
+			FillTechnologies(File.ReadAllText($"{Application.streamingAssetsPath}/{Json.JsonConsts.TECHNOLOGY_FILE_NAME}"));
 		}
 
 		public void FillTechnologies(string json)

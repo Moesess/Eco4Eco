@@ -106,7 +106,7 @@ namespace EcoGame
 
         private void Awake()
         {
-            // Set instance on scene awake
+	        // Set instance on scene awake
             if (Instance == null)
             {
 	            Instance = this;

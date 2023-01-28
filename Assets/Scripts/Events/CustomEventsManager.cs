@@ -33,7 +33,7 @@ namespace EcoGame
 
 		public IList<CustomEvent> LoadAllPossibleEvents()
 		{
-			return JsonConvert.DeserializeObject<IList<CustomEvent>>(File.ReadAllText($"{Application.dataPath}/json/{Json.JsonConsts.EVENT_FILE_NAME}"));
+			return JsonConvert.DeserializeObject<IList<CustomEvent>>(File.ReadAllText($"{Application.streamingAssetsPath}/{Json.JsonConsts.EVENT_FILE_NAME}"));
 		}
 
 		private CustomEvent DrawNewEvent()
