@@ -43,6 +43,12 @@ namespace EcoGame
                 {
                     Building.IncreaseAmount();
                     ResourceManager.Instance.Budget.Amount -= Building.Cost;
+                    if (iBuildKey != (int)B_POWERPLANT_SOLAR && iBuildKey != (int)B_POWERPLANT_WATER && iBuildKey != (int)B_POWERPLANT_WIND &&
+                        iBuildKey != (int)B_TRASH_COMPOSTINGPLANT && iBuildKey != (int)B_TRASH_GARBAGEDUMP && iBuildKey != (int)B_TRASH_GARBAGEINCINERATOR &&
+                        iBuildKey != (int)B_TRASH_GARBAGESHIP && iBuildKey != (int)B_TRASH_RECYCLING)
+                    {
+                        ResourceManager.Instance.Resources[(int)R_TRASH].UsedAmount += 1;
+                    }
                 }
             }
             else
@@ -51,9 +57,17 @@ namespace EcoGame
                 if (ResourceManager.Instance.Budget.Amount >= Building.Cost && (UsedRes.Amount - UsedRes.UsedAmount) > 0)
                 {
                     Building.IncreaseAmount();
-                    ResourceManager.Instance.Budget.Amount -= Building.Cost;   
+                    ResourceManager.Instance.Budget.Amount -= Building.Cost;
+                    if (iBuildKey != (int)B_POWERPLANT_SOLAR && iBuildKey != (int)B_POWERPLANT_WATER && iBuildKey != (int)B_POWERPLANT_WIND &&
+                        iBuildKey != (int)B_TRASH_COMPOSTINGPLANT && iBuildKey != (int)B_TRASH_GARBAGEDUMP && iBuildKey != (int)B_TRASH_GARBAGEINCINERATOR &&
+                        iBuildKey != (int)B_TRASH_GARBAGESHIP && iBuildKey != (int)B_TRASH_RECYCLING)
+                    {
+                        ResourceManager.Instance.Resources[(int)R_TRASH].UsedAmount += 1;
+                    }
                 }
             }
+
+
             SfxManager.Instance.PlayClick();
         }
 
@@ -67,6 +81,12 @@ namespace EcoGame
                 {
                     Building.DecreaseAmount();
                     ResourceManager.Instance.Budget.Amount += Building.Cost;
+                    if (iBuildKey != (int)B_POWERPLANT_SOLAR && iBuildKey != (int)B_POWERPLANT_WATER && iBuildKey != (int)B_POWERPLANT_WIND &&
+                        iBuildKey != (int)B_TRASH_COMPOSTINGPLANT && iBuildKey != (int)B_TRASH_GARBAGEDUMP && iBuildKey != (int)B_TRASH_GARBAGEINCINERATOR &&
+                        iBuildKey != (int)B_TRASH_GARBAGESHIP && iBuildKey != (int)B_TRASH_RECYCLING)
+                    {
+                        ResourceManager.Instance.Resources[(int)R_TRASH].UsedAmount -= 1;
+                    }
                 }
             }
             else
@@ -78,8 +98,15 @@ namespace EcoGame
                     Building.DecreaseAmount();
                     ResourceManager.Instance.Budget.Amount += Building.Cost;
 
+                    if (iBuildKey != (int)B_POWERPLANT_SOLAR && iBuildKey != (int)B_POWERPLANT_WATER && iBuildKey != (int)B_POWERPLANT_WIND &&
+                        iBuildKey != (int)B_TRASH_COMPOSTINGPLANT && iBuildKey != (int)B_TRASH_GARBAGEDUMP && iBuildKey != (int)B_TRASH_GARBAGEINCINERATOR &&
+                        iBuildKey != (int)B_TRASH_GARBAGESHIP && iBuildKey != (int)B_TRASH_RECYCLING)
+                    {
+                        ResourceManager.Instance.Resources[(int)R_TRASH].UsedAmount -= 1;
+                    }
                 }
             }
+
             SfxManager.Instance.PlayClick();
         }
 
@@ -94,7 +121,7 @@ namespace EcoGame
             CheckButtonInteractable();
         }
 
-        public void PollutionChange() 
+        public void PollutionChange()
         {
             _BaseBuilding Building = BuildingManager.Instance.Buildings[iBuildKey];
             this.AmountText.GetComponent<TMP_Text>().text = Building.Amount.ToString();

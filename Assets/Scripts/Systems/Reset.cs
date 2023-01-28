@@ -53,7 +53,7 @@ namespace EcoGame
 				return;
             }
 			if (ResourceManager.Instance.Resources[(int)RESOURCES.R_POLLUTION].Amount <= 0
-			&& ResourceManager.Instance.Resources[(int)RESOURCES.R_TRASH].Amount <= 25)
+			&& ResourceManager.Instance.Resources[(int)RESOURCES.R_TRASH].Amount - ResourceManager.Instance.Resources[(int)RESOURCES.R_TRASH].UsedAmount >= 0)
 			{
 				isReset = true;
 				resetButton.GetComponent<Button>().interactable = true;
