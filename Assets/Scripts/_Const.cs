@@ -39,32 +39,32 @@ namespace EcoGame
         // Koszta bazowe budynków
         public enum BUILDINGS_BASE_COSTS
         {
-            B_COST_MINE_OIL                   = 100,
-            B_COST_MINE_COAL                  = 100,
-            B_COST_MINE_GAS                   = 100,
-            B_COST_MINE_URANIUM               = 100,
-            B_COST_MINE_PEAT                  = 100,
-            B_COST_POWERPLANT_COAL            = 100,
-            B_COST_POWERPLANT_SOLAR           = 100,
-            B_COST_POWERPLANT_WIND            = 100,
-            B_COST_POWERPLANT_WATER           = 100,
-            B_COST_POWERPLANT_NUCLEAR         = 100,
-            B_COST_POWERPLANT_BIOMASS         = 100,
-            B_COST_FOOD_PROCESSEDFOOD         = 100,
-            B_COST_FOOD_FISHING               = 100,
-            B_COST_FOOD_ANIMALFARM            = 100,
-            B_COST_FOOD_DRINKINGWATER         = 100,
-            B_COST_FOOD_EXPERIMENTALMEAT      = 100,
-            B_COST_FOOD_FARMLAND              = 100,
+            B_COST_MINE_OIL                   = 673,
+            B_COST_MINE_COAL                  = 448,
+            B_COST_MINE_GAS                   = 583,
+            B_COST_MINE_URANIUM               = 1337,
+            B_COST_MINE_PEAT                  = 269,
+            B_COST_POWERPLANT_COAL            = 333,
+            B_COST_POWERPLANT_SOLAR           = 520,
+            B_COST_POWERPLANT_WIND            = 570,
+            B_COST_POWERPLANT_WATER           = 645,
+            B_COST_POWERPLANT_NUCLEAR         = 1000,
+            B_COST_POWERPLANT_BIOMASS         = 700,
+            B_COST_FOOD_PROCESSEDFOOD         = 525,
+            B_COST_FOOD_FISHING               = 244,
+            B_COST_FOOD_ANIMALFARM            = 321,
+            B_COST_FOOD_DRINKINGWATER         = 255,
+            B_COST_FOOD_EXPERIMENTALMEAT      = 600,
+            B_COST_FOOD_FARMLAND              = 356,
             B_COST_TRASH_RECYCLING            = 100,
             B_COST_TRASH_GARBAGEINCINERATOR   = 100,
             B_COST_TRASH_GARBAGEDUMP          = 100,
             B_COST_TRASH_COMPOSTINGPLANT      = 100,
             B_COST_TRASH_GARBAGESHIP          = 100,
-            B_COST_GOODS_ELECTRONICSFACTORY   = 100,
-            B_COST_GOODS_CLOTHESSEWING        = 100,
-            B_COST_GOODS_CARFACTORY           = 100,
-            B_COST_POWERPLANT_GAS             = 100,
+            B_COST_GOODS_ELECTRONICSFACTORY   = 600,
+            B_COST_GOODS_CLOTHESSEWING        = 555,
+            B_COST_GOODS_CARFACTORY           = 690,
+            B_COST_POWERPLANT_GAS             = 420,
         }
 
         // Poziomy technologiczne budynków
@@ -155,7 +155,7 @@ namespace EcoGame
             B_POLLUTION_GOODS_ELECTRONICSFACTORY   = 1,
             B_POLLUTION_GOODS_CLOTHESSEWING        = 1,
             B_POLLUTION_GOODS_CARFACTORY           = 1,
-            B_POLLUTION_POWERPLANT_GAS             = 1,
+            B_POLLUTION_POWERPLANT_GAS             = 2,
         }
         // Bazowe uzycie surowcow przez budynek
         public enum BUILDINGS_USED_RESOURCE_AMOUNTS
@@ -191,43 +191,43 @@ namespace EcoGame
         // Do ustalenia jakie mno¿niki DEFAULTOWE bêdziemy mieæ
         public enum BUILDINGS_MULTIPLIERS
         {
-            B_MULT_COST_MINE_OIL                 = 100,
-            B_MULT_COST_MINE_COAL                = 100,
-            B_MULT_COST_MINE_GAS                 = 100,
-            B_MULT_COST_MINE_URANIUM             = 100,
-            B_MULT_COST_MINE_PEAT                = 100,
-            B_MULT_COST_POWERPLANT_COAL          = 100,
-            B_MULT_COST_POWERPLANT_SOLAR         = 100,
-            B_MULT_COST_POWERPLANT_WIND          = 100,
-            B_MULT_COST_POWERPLANT_WATER         = 100,
-            B_MULT_COST_POWERPLANT_NUCLEAR       = 100,
-            B_MULT_COST_POWERPLANT_BIOMASS       = 100,
-            B_MULT_COST_FOOD_PROCESSEDFOOD       = 100,
-            B_MULT_COST_FOOD_FISHING             = 100,
-            B_MULT_COST_FOOD_ANIMALFARM          = 100,
-            B_MULT_COST_FOOD_DRINKINGWATER       = 100,
-            B_MULT_COST_FOOD_EXPERIMENTALMEAT    = 100,
-            B_MULT_COST_FOOD_FARMLAND            = 100,
-            B_MULT_COST_TRASH_RECYCLING          = 100,
-            B_MULT_COST_TRASH_GARBAGEINCINERATOR = 100,
-            B_MULT_COST_TRASH_GARBAGEDUMP        = 100,
-            B_MULT_COST_TRASH_COMPOSTINGPLANT    = 100,
-            B_MULT_COST_TRASH_GARBAGESHIP        = 100,
-            B_MULT_COST_GOODS_ELECTRONICSFACTORY = 100,
-            B_MULT_COST_GOODS_CLOTHESSEWING      = 100,
-            B_MULT_COST_GOODS_CARFACTORY         = 100,
-            B_MULT_COST_POWERPLANT_GAS           = 100,
+            B_MULT_COST_MINE_OIL                 = 200,
+            B_MULT_COST_MINE_COAL                = 200,
+            B_MULT_COST_MINE_GAS                 = 200,
+            B_MULT_COST_MINE_URANIUM             = 200,
+            B_MULT_COST_MINE_PEAT                = 200,
+            B_MULT_COST_POWERPLANT_COAL          = 200,
+            B_MULT_COST_POWERPLANT_SOLAR         = 200,
+            B_MULT_COST_POWERPLANT_WIND          = 200,
+            B_MULT_COST_POWERPLANT_WATER         = 200,
+            B_MULT_COST_POWERPLANT_NUCLEAR       = 200,
+            B_MULT_COST_POWERPLANT_BIOMASS       = 200,
+            B_MULT_COST_FOOD_PROCESSEDFOOD       = 200,
+            B_MULT_COST_FOOD_FISHING             = 200,
+            B_MULT_COST_FOOD_ANIMALFARM          = 200,
+            B_MULT_COST_FOOD_DRINKINGWATER       = 200,
+            B_MULT_COST_FOOD_EXPERIMENTALMEAT    = 200,
+            B_MULT_COST_FOOD_FARMLAND            = 200,
+            B_MULT_COST_TRASH_RECYCLING          = 200,
+            B_MULT_COST_TRASH_GARBAGEINCINERATOR = 200,
+            B_MULT_COST_TRASH_GARBAGEDUMP        = 200,
+            B_MULT_COST_TRASH_COMPOSTINGPLANT    = 200,
+            B_MULT_COST_TRASH_GARBAGESHIP        = 200,
+            B_MULT_COST_GOODS_ELECTRONICSFACTORY = 200,
+            B_MULT_COST_GOODS_CLOTHESSEWING      = 200,
+            B_MULT_COST_GOODS_CARFACTORY         = 200,
+            B_MULT_COST_POWERPLANT_GAS           = 200,
 
             B_MULT_PROD_MINE_OIL                 = 100,
-            B_MULT_PROD_MINE_COAL                = 500,
+            B_MULT_PROD_MINE_COAL                = 400,
             B_MULT_PROD_MINE_GAS                 = 100,
             B_MULT_PROD_MINE_URANIUM             = 100,
-            B_MULT_PROD_MINE_PEAT                = 100,
-            B_MULT_PROD_POWERPLANT_COAL          = 200,
+            B_MULT_PROD_MINE_PEAT                = 200,
+            B_MULT_PROD_POWERPLANT_COAL          = 100,
             B_MULT_PROD_POWERPLANT_SOLAR         = 100,
             B_MULT_PROD_POWERPLANT_WIND          = 100,
             B_MULT_PROD_POWERPLANT_WATER         = 100,
-            B_MULT_PROD_POWERPLANT_NUCLEAR       = 100,
+            B_MULT_PROD_POWERPLANT_NUCLEAR       = 500,
             B_MULT_PROD_POWERPLANT_BIOMASS       = 100,
             B_MULT_PROD_FOOD_PROCESSEDFOOD       = 100,
             B_MULT_PROD_FOOD_FISHING             = 100,
@@ -269,11 +269,11 @@ namespace EcoGame
 	        public static readonly string B_DESC_TRASH_GARBAGEINCINERATOR = "Spalarnie œmieci to miejsce, gdzie utylizacja odpadów odbywa siê poprzez ich spalenie. Proces spalania powoduje ca³kowite strawienie lub roz³o¿enie odpadów w prostsze zwi¹zki chemiczne. Spalarnie œmieci s¹ dobr¹ alternatyw¹ dla wysypisk komunalnych, poniewa¿ znacznie redukuj¹ iloœæ odpadów i zajmuj¹ mniej miejsca. Spalarnie mog¹ równie¿ przynosiæ korzyœci ekologiczne, poniewa¿ wytworzona w nich energia cieplna mo¿e byæ wykorzystana do ogrzania budynków w mieœcie lub wytworzenia energii elektrycznej. Mimo tych wszystkich zalet spalarnie œmieci s¹ te¿ czêsto krytykowane ze wzglêdu na emisjê szkodliwych substancji do powietrza, co nie do koñca jest prawd¹, gdy¿ nowoczesne spalarnie wyposa¿one s¹ w szereg filtrów wy³apuj¹cych zanieczyszczenia.";
 	        public static readonly string B_DESC_TRASH_GARBAGEDUMP = "Wysypiska komunalne to miejsca sk³adowania i przetwarzania odpadów z gospodarstw domowych, przedsiêbiorstw i innych instytucji i miejsc. S¹ one zarz¹dzane przez lokalne samorz¹dy lub powo³ane w tym celu przedsiêbiorstwa wyspecjalizowane w gospodarce odpadami. Wysypiska to bardzo trudne w zbudowaniu obiekty, poniewa¿ twórcom zale¿y na tym, aby by³y one jak najbardziej szczelne i jak najmniej oddzia³ywa³y na œrodowisko, a jednoczeœnie musz¹ one mieæ jak najwiêksz¹ powierzchniê, aby móc je eksploatowaæ przez lata. Przy wysypisku czêsto dzia³aj¹ równie¿ ró¿nego rodzaju instalacje, takie jak na przyk³ad sortownie. ";
 	        public static readonly string B_DESC_TRASH_COMPOSTINGPLANT = "Kompostownie zielonych odpadów to miejsca w których sk³adowane s¹ odpady organiczne,       z których wytworzyæ mo¿na kompost. Zbierane s¹ tam resztki jedzenia, liœcie, ga³êzie, skoszona trawa itp., które dziêki dzia³aniu mikroorganizmów ulegaj¹ rozk³adowi i przeradzaj¹ siê w kompost. Proces kompostowania odpadów odbywa siê przy u¿yciu tlenu i wody. W rezultacie powstaje substancja zawieraj¹ca wysok¹ iloœæ sk³adników od¿ywczych. S¹ one wykorzystywane jako nawóz do upraw rolnych i ogrodowych.";
-	        public static readonly string B_DESC_TRASH_GARBAGESHIP = "temp";
-	        public static readonly string B_DESC_GOODS_ELECTRONICSFACTORY = "temp";
-	        public static readonly string B_DESC_GOODS_CLOTHESSEWING = "temp";
-	        public static readonly string B_DESC_GOODS_CARFACTORY = "temp";
-	        public static readonly string B_DESC_POWERPLANT_GAS = "temp";
+	        public static readonly string B_DESC_TRASH_GARBAGESHIP = "Statki zbieraj¹ce odpady z wód to specjalistyczne jednostki p³ywaj¹ce przeznaczone do usuwania zanieczyszczeñ z powierzchni mórz, rzek, oceanów i innych zbiorników wodnych. Maj¹ one mo¿liwoœæ zbierania odpadów zarówno z powierzchni wody jak i z innych jednostek p³ywaj¹cych. Statki te s¹ przystosowane do u¿ytku na wodach otwartych oraz ciasnych akwenach o ograniczonej powierzchni jak porty czy przystanie. Warto wspomnieæ, ¿e statek jest zasilany energi¹ elektryczn¹, a wiêc jest w pe³ni ekologiczny.";
+	        public static readonly string B_DESC_GOODS_ELECTRONICSFACTORY = "Fabryka elektroniki to miejsce wytwarzaj¹ce najnowszy sprzêt elektroniczny, RTV oraz AGD. Te urz¹dzenia u³atwiaj¹ pracê i podstawowe czynnoœci ka¿demu. Technologia zmienia siê bardzo szybko. Tak jak przy zakupie pralki czy lodówki nie musimy jej wymieniaæ przez bardzo d³ugo, tak przy zakupie nowego komputera, telewizora czy telefonu musimy pamiêtaæ o ograniczonym czasie wsparcia danego urz¹dzenia. W dzisiejszych czasach ludzie korzystaj¹cy z telefonu z fizycznymi przyciskami stanowi¹ bardzo ma³¹ grupê. Ka¿de z tych urz¹dzeñ musia³o zostaæ poddane recyklingowi. Nowe urz¹dzenia elektroniczne powinniœmy kupowaæ z rozs¹dkiem, a zu¿yte oddawaæ w odpowiednio do tego przeznaczone miejsca, aby zosta³y odpowiednio zutylizowane.";
+	        public static readonly string B_DESC_GOODS_CLOTHESSEWING = "Szwalnie ubrañ to wielkie zak³ady zajmuj¹ce siê produkcj¹ ubrañ w wielu stylach, wzorach i kolorach na ró¿ne okazje. Do wytworzenia odzie¿y wykorzystuje siê bardzo du¿e iloœci mniej i bardziej ekologicznych odmian materia³ów. Szybko zmieniaj¹ce siê trendy modowe oraz du¿a iloœæ sklepów typu “fast-fashion” sprawiaj¹, ¿e klienci czêsto nie wynosz¹ kupionych przez siebie ubrañ i kupuj¹ kolejne. Chc¹ nad¹¿yæ za mod¹, co nie wi¹¿e siê z byciem ekologicznym. Niemodne i nienoszone przez nich ju¿ ubrania trafiaj¹ do kosza. Wiele sieci popularnych sklepów odzie¿owych ma programy recyklingu ubrañ, przyjmuj¹ oni stare ubrania swoich klientów i daj¹ im nowe ¿ycie. ";
+	        public static readonly string B_DESC_GOODS_CARFACTORY = "Fabryka samochodów to miejsce wytwarzaj¹ce jeden z najbardziej powszechnych w dzisiejszych czasach œrodków lokomocji. Du¿a czêœæ osób u¿ywa samochodów w celu szybkiego przetransportowania siê w inne miejsce. S¹ jednak równie¿ mi³oœnicy motoryzacji, którzy kolekcjonuj¹ luksusowe modele. Fabryka do wytworzenia auta potrzebuje wielu ró¿nego rodzaju przetworzonych materia³ów w tym np. specjalnego plastiku do kloszy i wykoñczenia wnêtrza czy chocia¿by gumy do opon i uszczelek. Ka¿de z wytworzonych aut musi byæ serwisowane. Zu¿yte czêœci eksploatacyjne jest niestety ciê¿ko wykorzystaæ ponownie lub przetworzyæ, a na dodatek rozk³adaj¹ siê bardzo d³ugo.";
+	        public static readonly string B_DESC_POWERPLANT_GAS = "Elektrownie gazowe to zak³ady, które produkuj¹ energiê elektryczn¹ z wykorzystaniem procesu spalania gazu ziemnego. Turbiny gazowe zamieniaj¹ energiê spalin bêd¹cych rezultatem spalania gazu w energiê mechaniczn¹. Elektrownie gazowe maj¹ du¿o plusów. Przede wszystkim s¹ du¿o bardziej ekologiczne ni¿ kopalnie wêglowe, podczas produkcji energii nie wydzielaj¹ tyle szkodliwych substancji. \r\nElektrownie gazowe maj¹ niestety równie¿ i wady. Jest ona dro¿sza w eksploatacji ni¿ kopalnie wêglowe. Elektrownia jest równie¿ mniej wydajna ni¿ jej wêglowe odpowiedniki.";
         }
     }
     namespace Resources
@@ -301,17 +301,23 @@ namespace EcoGame
 
         public enum RESOURCE_PRICES
         {
-            R_PRICE_COAL = 3,
-            R_PRICE_GAS = 4,
-            R_PRICE_OIL = 6,
-            R_PRICE_URANIUM = 20,
-            R_PRICE_PEAT = 1,
-            R_PRICE_POWER = 2,
-            R_PRICE_FOOD = 1,
-            R_PRICE_GOODS = 2,
+            R_PRICE_COAL = 4,
+            R_PRICE_GAS = 11,
+            R_PRICE_OIL = 15,
+            R_PRICE_URANIUM = 35,
+            R_PRICE_PEAT = 3,
+            R_PRICE_POWER = 20,
+            R_PRICE_FOOD = 10,
+            R_PRICE_GOODS = 18,
+        }
+
+        public enum START_RESOURCE_VALUES
+        {
+            S_BUDGET = 10000000,
+            S_POLLUTION = 2500,
         }
     }
-    
+
     // Kolory dla wyswietlania zadowolenia
     public static class Colors
     {

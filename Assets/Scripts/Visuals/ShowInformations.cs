@@ -35,12 +35,6 @@ public class ShowInformations : MonoBehaviour, IPointerEnterHandler, IPointerExi
 		var description = informationPanel.transform.Find("Text Group/Description").GetComponent<TMP_Text>();
 		title.text = BuildingManager.Instance.Buildings[Building.GetComponent<BuildingInstance>().iBuildKey].Name;
 		description.text = BuildingManager.Instance.Buildings[Building.GetComponent<BuildingInstance>().iBuildKey].Description;
-        informationPanel.GetComponentInChildren<Button>().onClick.AddListener(CloseWindow);
-    }
-
-    public void CloseWindow()
-    {
-        Destroy(informationPanel);
     }
 
     public void OnPointerEnter(PointerEventData eventData)

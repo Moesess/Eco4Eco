@@ -10,8 +10,6 @@ namespace EcoGame
         [SerializeField]
         public GameObject listElement;
         [SerializeField]
-        public int numberOfObjects;
-        [SerializeField]
         public GameObject parentObject;
         [SerializeField]
         public Texture2D PriceTexture;
