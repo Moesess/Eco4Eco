@@ -9,5 +9,27 @@
     "YesHappinessAmount": 20,
     "NoHappinessAmount": -20,
     "BuildingKey": 22
+  },
+  {
+    "Title": "Zakaz wjazdu",
+    "Description": "Przedstawiciel grupy przedsiębiorców prowadzących biznesy w centrum miasta przyszedł ze skargą, że centrum miasta jest zakorkowanie i zawalone autami. W imieniu wszystkich przedsiębiorców chce, aby wprowadzono zakaz wjazdu autami do centrum w godzinach od 10 do 18.",
+    "EffectYesDescription": "Zadowolenie społeczne wzrosło",
+    "EffectNoDescription": "Zadowolenie społeczne zmalało.",
+    "YesProductionAmount": 0,
+    "NoProductionAmount": 0,
+    "YesHappinessAmount": 10
+    "NoHappinessAmount": -10,
+    "BuildingKey": 1
+  }
+  {
+    "Title": "Promocja samochodów"
+    "Description": "Właściciel lokalnej fabryki samochodów prosi Cię o zorganizowanie eventu promującego dojazdy do pracy samochodem. Miałoby to zwiększyć produkcję samochodów w jego fabryce.",
+    "EffectYesDescription": "Zadowolenie społeczne wzrosło",
+    "EffectNoDescription": "Zadowolenie społeczne zmalało.",
+    "YesProductionAmount": 15,
+    "NoProductionAmount": -15,
+    "YesHappinessAmount": -15,
+    "NoHappinessAmount": 15,
+    "BuildingKey": 24
   }
 ]

@@ -1,3 +1,4 @@
+using EcoGame.Resources;
 using TMPro;
 using UnityEngine;
 
@@ -19,7 +20,7 @@ namespace EcoGame
         public void YesAction()
         {
 	        BuildingManager.Instance.Buildings[Event.BuildingKey].ProductionMultiplier += Event.YesProductionAmount;
-            ResourceManager.Instance.HappyEffectPercent += Event.YesHappinessAmount;
+            ResourceManager.Instance.Resources[(int)RESOURCES.R_HAPPY].Amount += Event.YesHappinessAmount;
             Destroy(EventPanel);
             var newInformationWindow = Instantiate(InformationWindow);
             newInformationWindow.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
@@ -31,7 +32,7 @@ namespace EcoGame
         public void NoAction()
         {
 	        BuildingManager.Instance.Buildings[Event.BuildingKey].ProductionMultiplier += Event.NoProductionAmount;
-	        ResourceManager.Instance.HappyEffectPercent += Event.NoHappinessAmount;
+	        ResourceManager.Instance.Resources[(int)RESOURCES.R_HAPPY].Amount += Event.NoHappinessAmount;
 			Destroy(EventPanel);
 			var newInformationWindow = Instantiate(InformationWindow);
 			newInformationWindow.transform.SetParent(GameObject.Find("UI/Canvas").transform, false);
